@@ -1,0 +1,99 @@
+//
+// helper.scss
+//
+
+/*********************************/
+/*     Helper-RTL      */
+/*===============================*/
+
+.text-start {
+    text-align: right !important;
+}
+
+.text-end {
+    text-align: left !important;
+}
+
+.float-end {
+    float: left !important;
+}
+@media (min-width: 768px) {
+    .float-md-end {
+        float: left!important;
+    }
+    
+}
+
+.float-start {
+    float: right !important;
+}
+dd {
+    margin-right: 0 !important;
+}
+
+// Text Slider
+@keyframes moveSlideshow {
+    100% { 
+        transform: translateX(45%);  
+    }
+}
+
+
+//Cookies
+.cookie-popup {
+    .cookie-popup-actions {
+        button {
+            left: 5px !important;
+            right: auto;
+        }
+    }
+}
+
+
+
+.round-effect {
+    .primary-round {
+        right: 0 !important;
+        left: auto;
+    }
+
+    .gradient-round {
+        left: 0 !important;
+        right: auto;
+    }
+}
+
+//Bg-animation-lines
+.background-lines {
+    .line {
+        right: 50% !important;
+        left: 0;
+        &:after {
+            right: 0 !important;
+            left: 0;
+        }
+        &:nth-child(1) {
+            margin-right: -25% !important;
+            margin-left:  0;
+        }
+        &:nth-child(3) {
+            margin-right: 25% !important;
+            margin-left: 0;
+        }
+    }
+}
+
+@keyframes run {
+    0% {
+        top: -50%;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+//Skewed
+.img-skewed {
+    transform: perspective(650px) rotateX(0deg) rotateY(10deg) !important;
+}

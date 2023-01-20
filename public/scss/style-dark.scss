@@ -1,0 +1,61 @@
+/* Template Name: Superex - NFT Marketplace HTML Template
+   Author: Shreethemes
+   E-mail: support@shreethemes.in
+   Website: https://shreethemes.in
+   Created: February 2022
+   Version: 1.5.0
+   File Description: Main Css file of the template
+*/
+/*********************************/
+/*         INDEX                 */
+/*================================
+ *     01.  Variables            *
+ *     02.  General              *
+ *     03.  Bootstrap Custom     *
+ *     04.  Components           *
+ *     05.  Helper               *
+ *     06.  Menu                 *
+ *     07.  Home / Landing       *
+ *     08.  Features / Services  *
+ *     09.  Testimonial          *
+ *     10.  Team                 *
+ *     11.  Blog / Careers / Job *
+ *     12.  Contact              *
+ *     13.  Footer               *
+ *********************************
+ 
+ *********************************
+ *         Dark SCSS             *
+ *********************************
+ *     01.  Variables            *
+ *     02.  General              *
+ *     03.  Bootstrap Custom     *
+ *     04.  Components           *
+ *     05.  Helper               *
+ *     06.  Menu                 *
+ *     07.  Custom               *
+ ================================*/
+
+@import "variables";
+@import "bootstrap-custom";
+@import "components";
+@import "general";
+@import "helper";
+@import "menu";
+@import "home";
+@import "features";
+@import "testi";
+@import "team";
+@import "blog";
+@import "contact";
+@import "footer";
+@import "switcher";
+
+//Dark 
+@import "dark/variables";
+@import "dark/general";
+@import "dark/bootstrap-custom";
+@import "dark/components";
+@import "dark/helper";
+@import "dark/menu";
+@import "dark/custom";

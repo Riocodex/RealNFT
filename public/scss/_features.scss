@@ -1,0 +1,387 @@
+//
+// _features.scss
+//
+
+/*********************************/
+/*         Features              */
+/*===============================*/
+
+.features {
+    @each $name,
+    $value in $colors {
+        &.feature-#{$name} {
+            .icons {
+                i {
+                    background: rgba($value, 0.1);
+                    color: $value;
+                }
+            }
+            .title {
+                &:hover {
+                    color: $value !important;
+                }
+            }
+            .fea-icon,
+            .link {
+                color: $value !important;
+            }
+        }
+    }
+}
+
+.features {
+    transition: all 0.5s ease;
+    &.feature-clean {
+        .icons {
+            i {
+                height: 85px;
+                width: 85px;
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+
+/*********************************/
+/*         Creator               */
+/*===============================*/
+
+@each $name,
+$value in $colors {
+    .creators {
+        &.creator-#{$name} {
+            .name {
+                &:hover {
+                    color: $value !important;
+                }
+            }
+        }
+    }
+}
+
+.creators {
+    &.creators-two {
+        transition: all 0.5s ease;
+        &:hover {
+            box-shadow: $shadow-md !important;
+        }
+    }
+    .verified {
+        i {
+            font-size: 20px;
+            position: absolute;
+            bottom: -5px;
+            right: -5px;
+        }
+    }
+    .online {
+        i {
+            position: absolute;
+            top: 3px;
+            left: 0px;
+            font-size: 12px;
+        }
+    }
+}
+
+@each $name,
+$value in $colors {
+    .users {
+        &.user-#{$name} {
+            .name {
+                &:hover {
+                    color: $value !important;
+                }
+            }
+        }
+    }
+}
+
+.users {
+    .user-item {
+        opacity: 0.5;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+  
+//Edit Profile
+.profile-pic,
+.profile-banner {
+    position: relative;
+    color: transparent;
+    input {
+        display: none;
+    }
+    
+    .icons {
+        cursor: pointer;
+        z-index: 1;
+    }
+}
+.profile-banner {
+    img {
+        width: 1200px;
+        height: 200px;
+    }
+}
+
+.profile-edit {
+    .form-control {
+        border-bottom: 1px solid $gray-200 !important;
+        border-radius: 0;
+        border: 0;
+        padding: 10px 0;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+.preview-box {
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+    }
+}
+
+/*********************************/
+/*         Explore Items         */
+/*===============================*/
+
+@each $name,
+$value in $colors {
+    .nft-items {
+        &.nft-#{$name} {
+            .title,
+            .creator-name {
+                &:hover {
+                    color: $value !important;
+                }
+            }
+            .rate {
+                color: $value !important;
+            }
+
+            .btn {
+                background-color: #{$value} !important;
+                border: 1px solid #{$value} !important;
+                color: $white !important;
+                box-shadow: 0 3px 5px 0 rgba($value, 0.1);
+                &:hover, &:focus, &:active, &.active, &.focus{
+                    background-color: darken($value, 10%) !important;
+                    border-color: darken($value, 10%) !important;
+                    color: $white !important;
+                }
+            }
+        }
+    }
+}
+
+.nft-items {
+    transition: all 0.5s ease;
+    .nft-image {
+        img {
+            transition: all 0.5s ease;
+        }
+        .icons {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            left: 0;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+        .bid-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            right: 0;
+            text-align: center;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+        &:hover {
+            .icons,
+            .bid-btn {
+                opacity: 1;
+            }
+        }
+    }
+    .like-icon {
+        width: 36px;
+        height: 36px;
+        background-color: $white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .icon {
+            -webkit-text-stroke: 1px $dark;
+            -webkit-text-fill-color: transparent;
+            &:hover, &:focus {
+                -webkit-text-stroke: $danger;
+                -webkit-text-fill-color: $danger;
+            }
+        }
+    }
+    .content {
+        .img-group {
+            position: absolute;
+            top: -18px;
+        }
+    }
+
+    &:hover {
+        margin-top: -5px;
+        &.nft-margin-minus {
+            margin-top: 0 !important;
+        }
+        .nft-image {
+            img {
+                transform: scale(1.1);
+            }
+        }
+        &.img-skewed {
+            margin-top: 0 !important;
+        }
+    }
+
+    &.nft-auction {
+        &:hover {
+            margin-top: 0 !important;
+            box-shadow: $shadow-md !important;
+        }
+    }
+}
+
+.img-group {
+    .user-avatar {
+        img {
+            position: relative;
+            transition: all 0.5s ease;
+            &:hover {
+                z-index: 1;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+/*********************************/
+/*             Filter            */
+/*===============================*/
+
+.container-filter {
+    li {
+        margin: 6px !important;
+        letter-spacing: 0.8px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        color: $muted !important;
+        padding: 3px 15px;
+        border-radius: 10px;
+        border: 1px solid transparent;
+        &.active,
+        &:hover {
+            color: $primary !important;
+            background-color: $white;
+            border-color: rgba($primary, 0.5);
+        }
+    }
+}
+
+// .container-filter {
+//     li {
+//         margin: 0px 15px 10px !important;
+//         font-size: 14px;
+//         letter-spacing: 0.8px;
+//         cursor: pointer;
+//         transition: all 0.5s ease;
+//         color: $muted !important;
+//         border-bottom: 1px solid transparent;
+//         font-weight: 500;
+//         &.active,
+//         &:hover {
+//             color: $primary !important;
+//             border-bottom-color: $primary;
+//         }
+//     }
+// }
+
+
+/*********************************/
+/*         Collection            */
+/*===============================*/
+@each $name,
+$value in $colors {
+    .collections {
+        &.collection-#{$name} {
+            .title {
+                &:hover {
+                    color: $value !important;
+                }
+            }
+        }
+    }
+}
+.collections {
+    .verified {
+        i {
+            font-size: 24px;
+            position: absolute;
+            bottom: -5px;
+            right: -5px;
+        }
+    }
+    .online {
+        i {
+            position: absolute;
+            top: 3px;
+            left: 0px;
+            font-size: 12px;
+        }
+    }
+}
+
+/*********************************/
+/*         Activity              */
+/*===============================*/
+@each $name,
+$value in $colors {
+    .activity {
+        &.activity-#{$name} {
+            .title {
+                &:hover {
+                    color: $value !important;
+                }
+            }
+            .link {
+                color: $value !important;
+            }
+        }
+    }
+}
+
+/*********************************/
+/*         Wallets               */
+/*===============================*/
+
+@each $name,
+$value in $colors {
+    .wallet {
+        &.wallet-#{$name} {
+            .link {
+                color: $value !important;
+            }
+        }
+    }
+}

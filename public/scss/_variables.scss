@@ -1,0 +1,101 @@
+//
+// variables.scss
+//
+
+/*********************************/
+/*         Variables             */
+/*===============================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap');
+
+
+// Color
+$white:                     #ffffff;
+
+$primary:                   #1066e7; //2f55d4; //2a52c3
+$secondary:                 #5a6d90;
+$success:                   #1cb59f;
+$warning:                   #fa693e;
+$info:                      #17a2b8;
+$danger:                    #d93030;
+$dark:                      #3c4858;
+$black:                     #161c2d;
+$muted:                     #8492a6;
+$light:                     #f8f9fc;
+
+//Color Picker/Switcher
+$blue:                      #1066e7;
+$yellow:                    #ffa432;
+$green:                     #04724d;
+$red:                       #ef2917;
+$purple:                    #7b2cbf;
+$saffron:                   #eac435;
+$pink:                      #e40066;
+$gradient:                  #ffa432;
+
+// Gray
+$gray-100:                  #f8f9fa;
+$gray-200:                  #e9ecef;
+$gray-300:                  #dee2e6;
+$gray-400:                  #ced4da;
+$gray-500:                  #adb5bd;
+$gray-600:                  #6c757d; 
+$gray-700:                  #495057;
+
+// Overlay
+$overlay:                   rgba($dark, 0.65);
+$bg-overlay-white:          rgba($white, 0.5);
+$bg-gradient-primary:       linear-gradient(to left, darken($purple, 10%) 0%, darken($primary, 10%) 100%);
+$linear-gradient:           linear-gradient(to bottom, rgba($black, 0) 0%, rgba($black, 0.0) 50%, rgba($black, 0.3) 80%, rgba($black, 1) 100%);
+$linear-gradient-2:         linear-gradient(to bottom, rgba($black, 0) 0%, rgba($black, 0.3) 50%, rgba($black, 0.7) 75%, rgba($black, 1) 100%);
+$linear-gradient-3:         linear-gradient(to right, rgba($black, 1) 0%, rgba($black, 1) 25%, rgba($black, 1) 50%, rgba($black, 0.5) 75%, rgba($black, 0) 100%);
+$gradient-overlay:          linear-gradient(to bottom, rgba($black, 0) 0%, rgba($black, 0.5) 25%, rgba($black, 0.75) 50%, rgba($black, 1) 100%);
+$gradient-overlay-2:        linear-gradient(to bottom, rgba($black,0.5) 0%, rgba($black,0.6) 25%, rgba($black,0.7) 50%, rgba($black,0.8) 100%);
+$primary-gradient-overlay:  linear-gradient(to bottom, rgba($primary, 0) 0%, rgba($primary, 0.25) 25%, rgba($primary, 0.50) 50%, rgba($primary, 0.75) 75%, rgba($primary, 1) 100%);
+$gradient-white-overlay:    linear-gradient(to bottom, rgba($white, 0) 0%, rgba($white, 0) 25%, rgba($white, 0) 50%, rgba($white, 0.5) 100%);
+$card-overlay:              linear-gradient(to bottom, transparent 0%, transparent 25%, transparent 35%, rgba($black, 0.9) 100%);
+
+//Shadow
+$shadow:                    0 0 3px rgba($dark,.15);
+$shadow-sm:                 0 2px 4px rgba($dark,.15);
+$shadow-md:                 0 5px 13px rgba($dark, .2);
+$shadow-lg:                 0 10px 25px rgba($dark, 0.15);
+$footer:                    lighten($black, 6%);
+
+// Base font
+$font-size-base:            16px;
+
+$font-family-base:          'Manrope', sans-serif;
+$font-family-secondary:     'Manrope', sans-serif;
+
+
+$colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "warning": $warning,
+    "info": $info,
+    "danger": $danger,
+    "dark": $dark,
+    "muted": $muted,
+    "light": $light,
+    "footer": $footer
+);
+
+$heading-font-sizes: (
+    "h1": 42px,
+    "h2": 36px,
+    "h3": 30px,
+    "h4": 24px,
+    "h5": 20px,
+    "h6": 16px,
+);
+
+$display-font-sizes: (
+    "display-1": 80px,
+    "display-2": 72px,
+    "display-3": 64px,
+    "display-4": 56px,
+    "display-5": 48px,
+    "display-6": 40px,
+)

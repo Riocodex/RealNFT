@@ -1,0 +1,157 @@
+//
+// components-rtl.scss
+//
+
+/*********************************/
+/*         Components-rtl        */
+/*===============================*/
+.btn {
+    &.btn-link {
+        &.active,
+        &:hover {
+            &:after {
+                right: 0 !important;
+                left: auto !important;
+            }
+        }
+    }
+}
+
+.dropdown {
+    .dropdown-toggle {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+//Alert
+.alert {
+    &.alert-dismissible {
+        padding-left: 30px !important;
+        padding-right: 0 !important;
+        .btn-close {
+            left: 10px !important;
+            right: auto;
+        }
+    }
+}
+
+//Breadcrumb
+.breadcrumb {
+    .breadcrumb-item {
+        &:before {
+            content: "\F0141";
+            font-family: 'Material Design Icons';
+            color: rgba($white, 0.5); 
+            padding: 0 6px !important;
+        }   
+        &:after {
+            display: none;
+        }
+        &:last-child {
+            &:before {
+                display: none !important;
+            }
+        }       
+    }
+}
+
+//Pagination
+.pagination {
+    .page-item {
+        &:first-child .page-link {
+            border-top-right-radius: 8px !important;
+            border-bottom-right-radius: 8px !important;
+
+            border-top-left-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
+            border-left: 0 !important;
+        } 
+        &:last-child .page-link {
+            border-top-left-radius: 8px !important;
+            border-bottom-left-radius: 8px !important;
+
+            border-top-right-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
+        }
+    }
+}
+
+//Accordion
+.accordion {
+    .accordion-item {
+        .accordion-button {
+            text-align: left;
+            padding: 1rem 1.25em 1rem 2.5rem;
+            &:after {
+                left: 10px !important;
+                right: auto !important;
+            }
+            &.collapsed {
+                &:after {
+                    left: 20px !important;
+                    right: auto !important;
+                }
+            }
+        }
+    }
+}
+
+//Forms
+.form-floating {
+    &>label {
+        right: 0 !important;
+        left: auto !important;
+    }
+}
+
+.form-check {
+    .form-check-input {
+        margin-right: 0 !important;
+        margin-left: 0;
+        float: right !important;
+    }
+}
+
+.form-icon {
+    .icons {
+        right: 18px !important;
+        left: auto !important;
+    } 
+}
+//subscribe form
+.subcribe-form {
+    input {
+        padding: 12px 16px 12px 20px !important;
+        padding-left: 160px !important;
+    }
+    button {
+        left: 2px !important;
+        right: auto;
+    }
+}
+
+// Loader
+#preloader {
+    #status {
+        .spinner {
+            .double-bounce1, .double-bounce2 {
+                right: 0 !important;
+                left: auto;
+            }
+        }
+    }
+}
+
+//back to top
+.back-to-top {
+    left: 30px !important;
+    right: auto !important;
+}
+
+//back-to-home
+.back-to-home {
+    left: 15px !important;
+    right: auto !important;
+}

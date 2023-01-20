@@ -1,0 +1,117 @@
+//
+// testi.scss
+//
+
+/*********************************/
+/*         Testimonial           */
+/*===============================*/
+.customer-testi {
+    cursor: e-resize;
+    .content {
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 50%;
+            transform: translateX(50%);
+            box-sizing: border-box;
+            border: 8px solid $dark;
+            border-color: transparent $white $white transparent;
+            transform-origin: 0 0;
+            transform: rotate(45deg);
+            box-shadow: 2px 2px 2px -1px rgba($dark, 0.15);
+        }
+    }
+}
+
+.tns-nav {
+    text-align: center;
+    margin-top: 10px;
+    button {
+        border: 4px solid rgba($primary, 0.5) !important;
+        border-radius: 2px;
+        transition: all 0.5s ease;
+        border: none;
+        margin: 0 3px;
+        padding: 1px;
+        &.tns-nav-active {
+            border-color: $primary !important;
+        }
+    }
+}
+
+//Tns control
+.tns-controls {
+    button[data-controls="prev"],
+    button[data-controls="next"] {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: $white;
+        color: $dark;
+        border: none;
+        transition: all 0.5s ease;
+        z-index: 1;
+        box-shadow: $shadow-sm;
+        &:hover {
+            background: $primary;
+            color: $white;
+        }
+    }
+    button[data-controls="prev"] {
+        left: 0;
+    }
+    button[data-controls="next"] {
+        right: 0;
+    }
+}
+
+//Smoth Slider
+$animationSpeed: 60s;
+$animationSpeed2: 54s;
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-360px * 6))}
+}
+.slider,
+.slider2 {
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: 2;
+	}
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(360deg);
+	}
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(360px * 12);
+	}
+	.slide {
+		height: auto;
+		width: 360px;
+	}
+}
+
+.slider2 {
+    .slide-track {
+		animation: scroll $animationSpeed2 linear infinite;
+		width: calc(360px * 12);
+	}
+}

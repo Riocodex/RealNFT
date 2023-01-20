@@ -1,0 +1,87 @@
+//
+// Bootstrap-custom.scss
+//
+
+/*********************************/
+/*     Bootstrap-custom-DARK     */
+/*===============================*/
+
+@each $heading,
+$size in $heading-font-sizes {
+    #{$heading}, .#{$heading} {
+        font-size: $size !important;
+    }
+}
+
+@each $heading,
+$size in $display-font-sizes {
+    .#{$heading} {
+        font-size: $size !important;
+    }
+}
+
+@each $name,
+$value in $colors {
+    .bg-#{$name} {
+        background-color: #{$value} !important;
+    }
+    .bg-soft-#{$name} {
+        background-color: rgba($value, 0.05) !important;
+        color: #{$value} !important;
+    }
+    .bg-gradient-#{$name} {
+        background: linear-gradient(to right, $value 0%, $gradient 100%);
+    }
+    .text-#{$name} {
+        color: #{$value} !important;
+    }
+
+    .text-gradient-#{$name} {
+        background: linear-gradient(to right, $value 0%, $gradient 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    a {
+        &.text-#{$name} {
+            &:hover,
+            &:focus {
+                color: darken($value, 5%) !important;
+            }
+        }
+    }
+}
+
+.bg-black {
+    background: $black !important;
+}
+
+//Card
+.card {
+    background-color: transparent;
+}
+
+//Border
+.border {
+    border: 1px solid $gray-800 !important;
+    &.border-light {
+        border-color: $dark !important;
+    }
+}
+.border-top {
+    border-top: 1px solid $gray-800 !important;    
+}
+.border-bottom {
+    border-bottom: 1px solid $gray-800 !important;    
+}
+.border-left {
+    border-left: 1px solid $gray-800 !important;    
+}
+.border-right {
+    border-right: 1px solid $gray-800 !important;    
+}
+
+.img-thumbnail {
+    background-color: $gray-100 !important;
+    box-shadow: $shadow-md;
+    border: 0 !important;
+}

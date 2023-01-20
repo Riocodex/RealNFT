@@ -1,0 +1,187 @@
+//
+// custom.scss
+//
+
+/*********************************/
+/*     Custom-RTL               */
+/*===============================*/
+
+/*********************************/
+/*         Blogs or News         */
+/*===============================*/
+//Sidebar
+.sidebar {
+    .widget {
+        .widget-search, .searchform { 
+            input[type="text"] {
+                padding-right: 15px;
+                padding-left: 45px;
+            }
+            input[type="submit"] {
+                left: 10px !important;
+                right: auto !important;
+            }
+        }
+        .widget-search {
+            .searchform:after {
+                left: 16px !important;
+                right: auto !important;
+            }
+        }
+    }
+}
+
+
+.tagcloud {
+    > a {
+        margin: 5px 0 5px 10px !important;
+    }
+}
+
+
+/*********************************/
+/*         Contact us            */
+/*===============================*/
+
+.filter-search-form {
+    .icons {
+        right: 12px !important;
+        left: auto;
+    }
+}
+@media (min-width:992px) {
+    .filter-border {
+        &:before {
+            border-left: 1px solid $gray-200 !important;
+            border-right: none;
+            left: 0px;
+            right: 0px;
+        }
+    }
+    .registration-form {
+        .form-control {
+            border-radius: 6px 6px 0px 0 !important;
+        }
+    }
+}
+.filter-input-box,
+.filter-input-box.form-select,
+.filter-search-form .choices__inner {
+    padding: 13px 45px 15px 6px;
+}
+
+.choices[data-type*=select-one]:after {
+    right: auto !important;
+    left: 11.5px !important;
+}
+
+
+/*********************************/
+/*         Creator               */
+/*===============================*/
+.creators {
+    .verified {
+        i {
+            right: auto;
+            left: -5px !important;
+        }
+    }
+    .online {
+        i {
+            right: 0px !important;
+            left: auto;
+        }
+    }
+}
+
+/*********************************/
+/*         Collection            */
+/*===============================*/
+.collections {
+    .verified {
+        i {
+            right: auto;
+            left: -5px !important;
+        }
+    }
+    .online {
+        i {
+            right: 0px !important;
+            left: auto;
+        }
+    }
+}
+
+
+/*********************************/
+/*         Footer                */
+/*===============================*/
+footer {
+    .footer-subscribe, .foot-subscribe {
+        input {
+            padding-right: 48px !important;
+            padding-left: 20px !important;
+        }
+        button {
+            left: 5px !important;
+            right: 0;
+        }
+    }
+}
+
+/*********************************/
+/*         Testimonial           */
+/*===============================*/
+.swiper-slider-hero, .tns-inner, .tns-nav, .slider, .slider2 {
+    direction: ltr;
+}
+
+.tns-visually-hidden {
+    left: 0 !important;
+    visibility: hidden;
+}
+
+.customer-testi {
+    img {
+        margin-right: 16px !important;
+        margin-left: auto !important;
+    }
+    .content {
+        text-align: left !important;
+    }
+}
+
+//Modal
+.modal-header .btn-close {
+    margin: -0.5rem auto -0.5rem -0.5rem;
+}
+
+/*********************************/
+/*         Ribbon                */
+/*===============================*/
+.ribbon {
+    &.ribbon-right {
+        left: -4px;
+        right: auto;
+        span {
+            left: -23px;
+            right: auto;
+            transform: rotate(-45deg);
+        }
+    }
+    &.ribbon-left {
+        right: -6px;
+        left: auto;
+        span {
+            right: -21px;
+            left: auto;
+            transform: rotate(45deg);
+        }
+    }
+    span {
+        &:before,
+        &:after {
+            border: 3px solid transparent;
+        }
+    }
+}

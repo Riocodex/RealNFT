@@ -1,0 +1,268 @@
+.bg-soft-primary,
+.text-primary,
+.btn-soft-primary,
+.btn-outline-primary,
+.btn-link.primary:hover,
+.btn-link.primary:focus,
+.btn-link.primary:active,
+.btn-link.primary.active,
+.btn-link.primary.focus,
+.btn-link.primary:not(:disabled):not(.disabled):active,
+.dropdown-primary .dropdown-menu .dropdown-item:hover,
+.dropdown-primary .dropdown-menu .dropdown-item.active,
+.dropdown-primary .dropdown-menu .dropdown-item:active,
+.dropdown-primary .dropdown-menu .dropdown-item.focus,
+.dropdown-primary .dropdown-menu .dropdown-item:focus,
+.alert-primary,
+.alert-outline-primary,
+.breadcrumb .breadcrumb-item a:hover,
+.breadcrumb .breadcrumb-item.active,
+.pagination .page-item .page-link:hover,
+.pagination .page-item.active .page-link,
+.accordion .accordion-item .accordion-button:not(.collapsed),
+.nav-tabs .nav-link.active,
+#topnav .has-submenu.active .submenu li.active>a,
+#topnav .navigation-menu>li:hover>a,
+#topnav .navigation-menu>li.active>a,
+#topnav .navigation-menu>li>a:hover,
+#topnav .navigation-menu>li>a:active,
+#topnav.scroll .navigation-menu>li:hover>a,
+#topnav.scroll .navigation-menu>li.active>a,
+#topnav.nav-sticky .navigation-menu.nav-light>li.active>a,
+#topnav.nav-sticky .navigation-menu.nav-light>li:hover>a,
+#topnav.nav-sticky .navigation-menu.nav-light>li.active>a,
+#topnav .navigation-menu>li .submenu li a:hover,
+#topnav .navigation-menu>li:hover>a,
+#topnav .navigation-menu>li.active>a,
+#topnav .navigation-menu>li>a:hover,
+#topnav .navigation-menu>li .submenu li a:hover,
+#topnav .navigation-menu>li.has-submenu.open>a,
+#topnav .has-submenu.active a,
+#navmenu-nav li.active a,
+.features.feature-primary .icons i,
+.features.feature-primary .title:hover,
+.features.feature-primary .fea-icon,
+.features.feature-primary .link,
+.creators.creator-primary .name:hover,
+.users.user-primary .name:hover,
+.nft-items.nft-primary .title:hover,
+.nft-items.nft-primary .creator-name:hover,
+.nft-items.nft-primary .rate,
+.container-filter li.active,
+.container-filter li:hover,
+.collections.collection-primary .title:hover,
+.activity.activity-primary .title:hover,
+.activity.activity-primary .link,
+.wallet.wallet-primary .link,
+.team.team-primary .title:hover,
+.blog.blog-primary .title:hover,
+.blog.blog-primary .link,
+.blog.blog-primary .btn-link:hover,
+.blog.blog-primary .btn-link:focus,
+.blog.blog-primary .btn-link:active,
+.blog.blog-primary .btn-link.active,
+.blog.blog-primary .btn-link.focus,
+.blog.blog-primary .btn-link:not(:disabled):not(.disabled):active,
+.sidebar .widget .title:hover,
+.filter-search-form .icons,
+.accordion .accordion-item .accordion-button:not(.collapsed),
+.accordion .accordion-item .accordion-button:after {
+    color: #04724d !important;
+}
+
+.bg-primary,
+.btn-primary,
+.btn-soft-primary:hover,
+.btn-soft-primary:focus,
+.btn-soft-primary:active,
+.btn-soft-primary.active,
+.btn-soft-primary.focus,
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary.active,
+.btn-outline-primary.focus,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-link.primary:after,
+.form-check-input.form-check-input:checked,
+.nav-pills .nav-link.active,
+#preloader #status .spinner .double-bounce1,
+#preloader #status .spinner .double-bounce2,
+.social-icon li a:hover,
+.back-to-top,
+.ribbon.ribbon-primary span,
+.round-effect .primary-round,
+#topnav .navbar-toggle.open span:hover,
+#navmenu-nav li.account-menu.active .navbar-link,
+#navmenu-nav li.account-menu:hover .navbar-link,
+.nft-items.nft-primary .btn,
+.tns-controls button[data-controls="prev"]:hover,
+.tns-controls button[data-controls="next"]:hover,
+.team.team-primary .btn,
+.blog.blog-primary .tag,
+.blog.blog-primary .btn-link:after,
+.tagcloud>a:hover,
+.contact-show-btn:before,
+.qs-datepicker-container .qs-squares .qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover,
+.qs-datepicker-container .qs-squares .qs-square.qs-current {
+    background-color: #04724d !important;
+}
+
+
+.btn-primary,
+.btn-soft-primary:hover,
+.btn-soft-primary:focus,
+.btn-soft-primary:active,
+.btn-soft-primary.active,
+.btn-soft-primary.focus,
+.btn-outline-primary,
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary.active,
+.btn-outline-primary.focus,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.alert-outline-primary,
+.form-check-input:focus,
+.form-check-input.form-check-input:checked,
+.nav-tabs .nav-link.active,
+.social-icon li a:hover,
+#topnav .has-submenu.active.active .menu-arrow,
+#topnav .has-submenu .submenu .has-submenu:hover .submenu-arrow,
+#topnav.scroll .navigation-menu>li:hover>.menu-arrow,
+#topnav.scroll .navigation-menu>li.active>.menu-arrow,
+#topnav.nav-sticky .navigation-menu.nav-light>li:hover>.menu-arrow,
+#topnav.nav-sticky .navigation-menu.nav-light>li.active>.menu-arrow,
+#topnav .navigation-menu>li:hover>.menu-arrow,
+.tns-nav button.tns-nav-active,
+.team.team-primary .btn,
+.nft-items.nft-primary .btn {
+    border-color: #04724d !important;
+}
+
+.social-icon li a:hover .fea-social {
+    fill: #04724d !important;
+}
+
+.play-btn .icons {
+    -webkit-text-stroke: 2px #04724d !important;
+}
+
+.play-btn .icons:hover {
+    -webkit-text-stroke: 2px #04724d !important;
+    -webkit-text-fill-color: #04724d !important;
+}
+
+.btn-soft-primary,
+.background-lines .line,
+.features.feature-primary .icons i {
+    background-color: rgba(4, 114, 77, 0.1) !important;
+}
+
+.btn-soft-primary {
+    border-color: rgba(4, 114, 77, 0.1) !important;
+}
+
+.nft-items.nft-primary .btn,
+.team.team-primary .btn {
+    box-shadow: 0 3px 5px 0 rgba(4, 114, 77, 0.1) !important;
+}
+
+.contact-show-btn:before {
+    box-shadow: 0 10px 25px rgba(4, 114, 77, 0.5) !important;
+}
+
+.tns-nav button,
+.container-filter li.active, .container-filter li:hover {
+    border-color: rgba(4, 114, 77, 0.5) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.focus,
+.nft-items.nft-primary .btn:hover,
+.nft-items.nft-primary .btn:focus,
+.nft-items.nft-primary .btn:active,
+.nft-items.nft-primary .btn.active,
+.nft-items.nft-primary .btn.focus,
+.team.team-primary .btn:hover,
+.team.team-primary .btn:focus,
+.team.team-primary .btn:active,
+.team.team-primary .btn.active,
+.team.team-primary .btn.focus {
+    background-color: #02412c !important;
+    border-color: #02412c !important;
+}
+
+.ribbon.ribbon-primary span:before {
+    border-left-color: #02412c !important;
+    border-top-color: #02412c !important;
+}
+
+.ribbon.ribbon-primary span:after {
+    border-right-color: #02412c !important;
+    border-top-color: #02412c !important;
+}
+
+.alert-primary,
+::selection {
+    background-color: rgba(4, 114, 77, 0.9) !important;
+}
+
+.nav-tabs .nav-link:hover {
+    color: rgba(4, 114, 77, 0.8) !important;
+}
+
+.background-effect .circles li {
+    background: rgba(4, 114, 77, 0.25) !important;
+}
+
+.btn-primary,
+.btn-soft-primary,
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary.active,
+.btn-outline-primary.focus,
+.btn-outline-primary:not(:disabled):not(.disabled):active {
+    box-shadow: 0 3px 5px 0 rgba(4, 114, 77, 0.3) !important;
+}
+
+#topnav.gradient {
+    background: linear-gradient(to right, #04724d 0%, #ffa432 100%);
+}
+
+.bg-primary-gradient-overlay {
+    background: linear-gradient(to bottom, rgba(4, 114, 77, 0) 0%, rgba(4, 114, 77, 0.25) 25%, rgba(4, 114, 77, 0.5) 50%, rgba(4, 114, 77, 0.75) 75%, #04724d 100%) !important;
+}
+
+.background-lines .line:after {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(4, 114, 77, 0.3) 75%, rgba(4, 114, 77, 0.3) 100%) !important;
+}
+
+.bg-soft-primary {
+    background-color: rgba(4, 114, 77, 0.05) !important;
+}
+
+.bg-gradient-primary,
+.blog.blog-primary .tag.gradient {
+    background: linear-gradient(to right, #04724d 0%, #ffa432 100%) !important;
+}
+
+.text-gradient-primary {
+    background: linear-gradient(to right, #04724d 0%, #ffa432 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+a.text-primary:hover,
+a.text-primary:focus {
+    color: #03593c !important;
+}
+
+
+.alert-primary .alert-link {
+    color: #000000 !important;
+}
