@@ -10,7 +10,7 @@ import {
   client01, client02, client03, client04, client05, client06, client07, client08,
   client09, client10, client11, client12, client13,
   gif8, gif9, gif3, gif4, gif10, gif7, item11, item12, item3, item4, item13, item14,
-  bgImage, bg1, bg2, bg3
+  bgImage, bg1, bg2, bg3,home1, home2, home3, home4, home5, home6, home7, home8, home9, home10
 } from '../../components/imageImport'
 
 const DarkVersionThree = () => {
@@ -102,54 +102,62 @@ const DarkVersionThree = () => {
     },
   ]
 
-  const AuctionData = [
+  const HomeData = [
     {
-      image: gif7,
-      title: 'Deep Sea Phantasy',
-      type: 'GIFs',
-      filter: ['all', 'games'],
+      image: home10,
+      title: '8999 Franklin Trenton Rd, Franklin, OH 45005',
+      type: 'Rental',
+      filter: ['all', 'homes'],
+      payment: "$1,426/month"
     },
     {
-      image: item11,
-      title: 'CyberPrimal 042 LAN',
-      type: 'Arts',
-      filter: ['all', 'art'],
+      image: home9,
+      title: '112 Cottage St, Camden, OH 45311',
+      type: 'Mortgage',
+      filter: ['all', 'mortgage'],
+      payment: "$2,426/month"
     },
     {
-      image: gif8,
-      title: 'Crypto Egg Stamp #5',
-      type: 'GIFs',
-      filter: ['all', 'music', 'meme'],
+      image: home3,
+      title: '310 Donna Dr, Camden, OH 45311',
+      type: 'Mortgage',
+      filter: ['all', 'homes', ],
+      payment: "$3,426/month"
     },
     {
-      image: item12,
-      title: 'Colorful Abstract Painting',
-      type: 'Memes',
-      filter: ['all', 'video'],
+      image: home4,
+      title: '31 S Lafayette St, Camden, OH 45311',
+      type: 'Homes',
+      filter: ['all', 'homes'],
+      payment: "$4,426/month"
     },
     {
-      image: item13,
-      title: 'Liquid Forest Princess',
-      type: 'Illustration',
-      filter: ['all', 'video', 'meme'],
+      image: home5,
+      title: '4820 Hollywreath Ct, Dayton, OH 45424',
+      type: 'Rental',
+      filter: ['all', 'mortgage', 'homes'],
+      payment: "$5,426/month"
     },
     {
-      image: gif9,
-      title: 'Spider Eyes Modern Art',
-      type: 'GIFs',
-      filter: ['all', 'games'],
+      image: home6,
+      title: '2276 Cobblestone Ct, Beavercreek, OH 45431',
+      type: 'Homes',
+      filter: ['all', 'rental'],
+      payment: "$6,426/month"
     },
     {
-      image: item14,
-      title: 'Synthwave Painting',
-      type: 'Games',
-      filter: ['all', 'art'],
+      image: home7,
+      title: '4754 Fox Run, Fairborn, OH 45324',
+      type: 'Rental',
+      filter: ['all', 'mortgage'],
+      payment: "$10,426/month"
     },
     {
-      image: gif10,
-      title: 'Contemporary Abstract',
-      type: 'GIFs',
-      filter: ['all', 'music'],
+      image: home8,
+      title: '9755 Olde Park Dr, Tipp City, OH 45371Contemporary Abstract',
+      type: 'Rental',
+      filter: ['all', 'homes'],
+      payment: "$11,426/month"
     },
   ]
 
@@ -207,7 +215,7 @@ const DarkVersionThree = () => {
       author: 'KristyHoney',
     },
   ]
-  const [allData, setAllData] = useState(AuctionData)
+  const [allData, setAllData] = useState(HomeData)
   const [type, setType] = useState('all')
   const location = useLocation()
 
@@ -228,7 +236,7 @@ const DarkVersionThree = () => {
 
   const setFilter = type => {
     setType(type)
-    const newOne = AuctionData?.filter(data => data?.filter?.includes(type))
+    const newOne = HomeData?.filter(data => data?.filter?.includes(type))
     setAllData(newOne)
   }
   return (
@@ -390,7 +398,7 @@ const DarkVersionThree = () => {
                     // data-group="art"
                     // onClick={() => setFilter('art')}
                   >
-                    <i className="uil uil-home-alt"></i> Art
+                    <i className="uil uil-home-alt"></i> Mortgage
                   </li>
                   <li
                     className={`list-inline-item categories position-relative text-dark ${type === 'music' ? 'active' : ''
