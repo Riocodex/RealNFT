@@ -37,7 +37,7 @@ const Footer = () => {
                     className="list-inline-item lh-1"
                     style={{ paddingRight: 3 }}
                   >
-                    <a href="" className="rounded">
+                    <a href="https://www.facebook.com/rethestate" className="rounded">
                       <i className="uil uil-facebook-f"></i>
                     </a>
                   </li>
@@ -45,7 +45,7 @@ const Footer = () => {
                     className="list-inline-item lh-1"
                     style={{ paddingRight: 3 }}
                   >
-                    <a href="" className="rounded">
+                    <a href="https://www.instagram.com/rethestate/" className="rounded">
                       <i className="uil uil-instagram"></i>
                     </a>
                   </li>
@@ -53,7 +53,7 @@ const Footer = () => {
                     className="list-inline-item lh-1"
                     style={{ paddingRight: 3 }}
                   >
-                    <a href="" className="rounded">
+                    <a href="https://www.linkedin.com/company/rethestate/" className="rounded">
                       <i className="uil uil-linkedin"></i>
                     </a>
                   </li>
@@ -69,7 +69,7 @@ const Footer = () => {
                     className="list-inline-item lh-1"
                     style={{ paddingRight: 3 }}
                   >
-                    <a href="" className="rounded">
+                    <a href="https://twitter.com/rethestate" className="rounded">
                       <i className="uil uil-twitter"></i>
                     </a>
                   </li>
@@ -85,7 +85,7 @@ const Footer = () => {
                     className="list-inline-item lh-1"
                     style={{ paddingRight: 3 }}
                   >
-                    <a href="" className="rounded">
+                    <a href="https://t.me/rethestate" className="rounded">
                       <i className="uil uil-telegram"></i>
                     </a>
                   </li>
