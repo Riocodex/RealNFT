@@ -286,74 +286,7 @@ const DarkVersionThree = () => {
 
       {/* Start */}
       <section className="section">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-3 col-md-6 col-12">
-              <div className="card border-0 text-center features feature-primary feature-clean">
-                <div className="icons text-center mx-auto">
-                  <i className="uil uil-card-atm d-block rounded-md h3 mb-0"></i>
-                </div>
-
-                <div className="content mt-4 pt-2">
-                  <h5 className="mb-3">Set up your wallet</h5>
-                  <p className="text-muted mb-0">
-                    Start working with Superex NFTs that can provide everything
-                  </p>
-                </div>
-              </div>
-            </div>
-            {/*end col*/}
-
-            <div className="col-lg-3 col-md-6 col-12 mt-5 mt-sm-0">
-              <div className="card border-0 text-center features feature-primary feature-clean">
-                <div className="icons text-center mx-auto">
-                  <i className="uil uil-bitcoin-circle d-block rounded-md h3 mb-0"></i>
-                </div>
-
-                <div className="content mt-4 pt-2">
-                  <h5 className="mb-3">Buy your collection</h5>
-                  <p className="text-muted mb-0">
-                    Start working with Superex NFTs that can provide everything
-                  </p>
-                </div>
-              </div>
-            </div>
-            {/*end col*/}
-
-            <div className="col-lg-3 col-md-6 col-12 mt-5 mt-lg-0">
-              <div className="card border-0 text-center features feature-primary feature-clean">
-                <div className="icons text-center mx-auto">
-                  <i className="uil uil-wallet d-block rounded-md h3 mb-0"></i>
-                </div>
-
-                <div className="content mt-4 pt-2">
-                  <h5 className="mb-3">Add your NFT's</h5>
-                  <p className="text-muted mb-0">
-                    Start working with Superex NFTs that can provide everything
-                  </p>
-                </div>
-              </div>
-            </div>
-            {/*end col*/}
-
-            <div className="col-lg-3 col-md-6 col-12 mt-5 mt-lg-0">
-              <div className="card border-0 text-center features feature-primary feature-clean">
-                <div className="icons text-center mx-auto">
-                  <i className="uil uil-layers d-block rounded-md h3 mb-0"></i>
-                </div>
-
-                <div className="content mt-4 pt-2">
-                  <h5 className="mb-3">Sell Your NFT's</h5>
-                  <p className="text-muted mb-0">
-                    Start working with Superex NFTs that can provide everything
-                  </p>
-                </div>
-              </div>
-            </div>
-            {/*end col*/}
-          </div>
-          {/*end row*/}
-        </div>
+       
         {/*end container*/}
 
         <div className="container mt-100 mt-60">
@@ -362,9 +295,7 @@ const DarkVersionThree = () => {
               <div className="section-title text-center mb-5 pb-3">
                 <h4 className="title mb-4">Popular Creators</h4>
                 <p className="text-muted para-desc mb-0 mx-auto">
-                  We are a huge marketplace dedicated to connecting great
-                  artists of all Superex with their fans and unique token
-                  collectors!
+                Our mission and main focus at RETHESTATE is to simplify what can often be a tedious and time-consuming process for homeowners, prospective buyers, and tenants.
                 </p>
               </div>
             </div>
