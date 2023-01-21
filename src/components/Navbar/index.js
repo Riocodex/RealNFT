@@ -377,10 +377,10 @@ const Navbar = () => {
                   <div className="mt-2">
                     <a
                       className="dropdown-item small fw-semibold text-dark d-flex align-items-center"
-                      href="/creator-profile"
+                      href=""
                       onClick={e => {
                         e.preventDefault()
-                        navigate('/creator-profile')
+                        // navigate('/creator-profile')
                       }}
                     >
                       <span className="mb-0 d-inline-block me-1">
@@ -390,14 +390,14 @@ const Navbar = () => {
                     </a>
                     <a
                       className="dropdown-item small fw-semibold text-dark d-flex align-items-center"
-                      href="/creator-profile-edit"
+                      href=""
                       onClick={e => {
                         e.preventDefault()
                         setTimeout(() => {
                           activateMenu()
                           toggleSwitcher(false)
                         }, 1000)
-                        navigate('/creator-profile-edit')
+                        // navigate('/creator-profile-edit')
                       }}
                     >
                       <span className="mb-0 d-inline-block me-1">
@@ -408,14 +408,14 @@ const Navbar = () => {
                     <div className="dropdown-divider border-top"></div>
                     <a
                       className="dropdown-item small fw-semibold text-dark d-flex align-items-center"
-                      href="/lock-screen"
+                      href=""
                       onClick={e => {
                         e.preventDefault()
                         setTimeout(() => {
                           activateMenu()
                           toggleSwitcher(false)
                         }, 1000)
-                        navigate('/lock-screen')
+                        // navigate('/lock-screen')
                       }}
                     >
                       <span className="mb-0 d-inline-block me-1">

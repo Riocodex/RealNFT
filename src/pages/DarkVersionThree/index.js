@@ -255,20 +255,18 @@ const DarkVersionThree = () => {
             <div className="col-12">
               <div className="title-heading text-center">
                 <h4 className="heading text-white mb-4 title-dark fw-bold">
-                  The Biggest <br /> Collections of NFTs
+                  The Biggest <br /> Collections of Digital Assets
                 </h4>
                 <p className="text-white title-dark mb-0 para-desc mx-auto">
-                  We are a huge marketplace dedicated to connecting great
-                  artists of all Superex with their fans and unique token
-                  collectors!
+                Welcome to RETHESTATE, a real estate-based blockchain project that aims to revolutionize the way we buy, sell, and manage real estate assets.
                 </p>
 
                 <div className="mt-4 pt-2">
                   <a
-                    href="/aboutus"
+                    href=""
                     onClick={e => {
                       e.preventDefault()
-                      navigate('/aboutus')
+                      // navigate('/aboutus')
                     }}
                     className="btn btn-primary rounded-md"
                   >
