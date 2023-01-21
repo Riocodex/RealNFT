@@ -575,7 +575,7 @@ const DarkVersionThree = () => {
               <div className="section-title text-center mb-5 pb-3">
                 <h4 className="title mb-4">Latest Blogs</h4>
                 <p className="text-muted para-desc mb-0 mx-auto">
-                  Check out news about nfts
+                  Check out news about nfts, realestate and crypto
                 </p>
               </div>
             </div>
@@ -611,7 +611,7 @@ const DarkVersionThree = () => {
                         href=""
                         className="badge tag gradient rounded-md fw-bold"
                       >
-                        {data?.type}
+                       
                       </a>
 
                       <ul className="list-unstyled mt-2">
@@ -625,10 +625,10 @@ const DarkVersionThree = () => {
                         </li>
                       </ul>
                       <a
-                        href="/blog-detail"
+                        href=""
                         onClick={e => {
                           e.preventDefault()
-                          navigate('/blog-detail')
+                          // navigate('/blog-detail')
                         }}
                         className="text-dark title h5 mt-3"
                       >
@@ -637,10 +637,10 @@ const DarkVersionThree = () => {
 
                       <div className="mt-3 d-flex justify-content-between align-items-center">
                         <a
-                          href="/blog-detail"
+                          href=""
                           onClick={e => {
                             e.preventDefault()
-                            navigate('/blog-detail')
+                            // navigate('/blog-detail')
                           }}
                           className="btn btn-link text-muted"
                         >
@@ -649,10 +649,10 @@ const DarkVersionThree = () => {
                         <span className="text-muted fs-6">
                           by{' '}
                           <a
-                            href="/creator-profile"
+                            href=""
                             onClick={e => {
                               e.preventDefault()
-                              navigate('/creator-profile')
+                              // navigate('/creator-profile')
                             }}
                             className="link"
                           >

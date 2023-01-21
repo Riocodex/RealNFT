@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="row">
               <div className="col-xl-8 col-lg-7 col-md-6">
                 <h5 className="text-light fw-normal title-dark">
-                  Download the Superex app to explore any NFTs
+                  Download the Rethestate app to get the best experience
                 </h5>
 
                 <div className="mt-4">
@@ -29,7 +29,7 @@ const Footer = () => {
 
               <div className="col-xl-4 col-lg-5 col-md-6 mt-4 mt-sm-0">
                 <h5 className="text-light fw-normal title-dark">
-                  Join Superex community
+                  Join Rethestate community
                 </h5>
 
                 <ul className="list-unstyled social-icon foot-social-icon mb-0 mt-4 text-lg-end">
@@ -57,14 +57,14 @@ const Footer = () => {
                       <i className="uil uil-linkedin"></i>
                     </a>
                   </li>
-                  <li
+                  {/* <li
                     className="list-inline-item lh-1"
                     style={{ paddingRight: 3 }}
                   >
                     <a href="" className="rounded">
                       <i className="uil uil-dribbble"></i>
                     </a>
-                  </li>
+                  </li> */}
                   <li
                     className="list-inline-item lh-1"
                     style={{ paddingRight: 3 }}
@@ -73,14 +73,14 @@ const Footer = () => {
                       <i className="uil uil-twitter"></i>
                     </a>
                   </li>
-                  <li
+                  {/* <li
                     className="list-inline-item lh-1"
                     style={{ paddingRight: 3 }}
                   >
                     <a href="" className="rounded">
                       <i className="uil uil-skype"></i>
                     </a>
-                  </li>
+                  </li> */}
                   <li
                     className="list-inline-item lh-1"
                     style={{ paddingRight: 3 }}
@@ -89,30 +89,30 @@ const Footer = () => {
                       <i className="uil uil-telegram"></i>
                     </a>
                   </li>
-                  <li
+                  {/* <li
                     className="list-inline-item lh-1"
                     style={{ paddingRight: 3 }}
                   >
                     <a href="" className="rounded">
                       <i className="uil uil-slack"></i>
                     </a>
-                  </li>
-                  <li
+                  </li> */}
+                  {/* <li
                     className="list-inline-item lh-1"
                     style={{ paddingRight: 3 }}
                   >
                     <a href="" className="rounded">
                       <i className="uil uil-tumblr"></i>
                     </a>
-                  </li>
-                  <li
+                  </li> */}
+                  {/* <li
                     className="list-inline-item lh-1"
                     style={{ paddingRight: 3 }}
                   >
                     <a href="" className="rounded">
                       <i className="uil uil-whatsapp"></i>
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               {/*end col*/}
