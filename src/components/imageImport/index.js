@@ -150,6 +150,7 @@ import home7 from "../../assets/images/rethestate/home7.png"
 import home8 from "../../assets/images/rethestate/home8.png"
 import home9 from "../../assets/images/rethestate/home9.png"
 import home10 from "../../assets/images/rethestate/home10.png"
+import iconLogo2 from "../../assets/images/rethestate/12.png"
 
 export {
   bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9, bg10, bg11, bg12,
@@ -164,5 +165,5 @@ export {
   about, cta, creator, logo48, single, lightLogo, office, ofcDesk, prodToCard,
   MetaMask_Fox, aave, Airswap, Compound, DDEX, defiSaver, dYdX, IDEX, Kyber, Maker, NUO, PoolTogether, Sablier, set, Uniswap, Zerion, logoDark, whiteLogo,
   itemDetail, itemDetail1, ErrorImage, united, community,
-  playStore, app, iconLogo, character,home1, home2, home3, home4, home5, home6, home7, home8, home9, home10
+  playStore, app, iconLogo, character,home1, home2, home3, home4, home5, home6, home7, home8, home9, home10,iconLogo2
 }

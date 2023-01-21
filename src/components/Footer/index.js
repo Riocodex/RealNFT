@@ -2,10 +2,15 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { FiMail } from 'react-icons/fi'
 import BackToTop from '../BackToTop'
-import { MetaMask_Fox, playStore, app, iconLogo } from '../imageImport'
+import { MetaMask_Fox, playStore, app, iconLogo, iconLogo2 } from '../imageImport'
+// let copy = React.string({js|©|js});
 
 const Footer = () => {
+
+  let year = new Date().getFullYear(); 
+  
   const navigate = useNavigate()
+  
   return (
     <>
       <footer className="bg-footer">
@@ -130,24 +135,23 @@ const Footer = () => {
                 <div className="row">
                   <div className="col-lg-4 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
                     <a href="#" className="logo-footer">
-                      <img src={iconLogo} alt="" />
+                      <img src={iconLogo2} alt="" />
                     </a>
                     <p className="para-desc mb-0 mt-4">
-                      Buy, sell and discover exclusive digital assets by the top
-                      artists of NFTs world.
+                    RETHESTATE is a blockchain project that uses Ethereum technology to digitize real estate assets worldwide
                     </p>
                   </div>
                   {/*end col*/}
 
                   <div className="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                    <h5 className="footer-head">Superex</h5>
+                    <h5 className="footer-head">Rethestate</h5>
                     <ul className="list-unstyled footer-list mt-4">
                       <li>
                         <a
-                          href="/explore-two"
+                          href=""
                           onClick={e => {
                             e.preventDefault()
-                            navigate('/explore-two')
+                            // navigate('/explore-two')
                           }}
                           className="text-foot"
                         >
@@ -156,10 +160,10 @@ const Footer = () => {
                       </li>
                       <li>
                         <a
-                          href="/auction"
+                          href=""
                           onClick={e => {
                             e.preventDefault()
-                            navigate('/auction')
+                            // navigate('/auction')
                           }}
                           className="text-foot"
                         >
@@ -169,10 +173,10 @@ const Footer = () => {
                       </li>
                       <li>
                         <a
-                          href="/activity"
+                          href=""
                           onClick={e => {
                             e.preventDefault()
-                            navigate('/activity')
+                            // navigate('/activity')
                           }}
                           className="text-foot"
                         >
@@ -182,10 +186,10 @@ const Footer = () => {
                       </li>
                       <li>
                         <a
-                          href="/wallet"
+                          href=""
                           onClick={e => {
                             e.preventDefault()
-                            navigate('/wallet')
+                            // navigate('/wallet')
                           }}
                           className="text-foot"
                         >
@@ -194,10 +198,10 @@ const Footer = () => {
                       </li>
                       <li>
                         <a
-                          href="/creators"
+                          href=""
                           onClick={e => {
                             e.preventDefault()
-                            navigate('/creators')
+                            // navigate('/creators')
                           }}
                           className="text-foot"
                         >
@@ -214,10 +218,10 @@ const Footer = () => {
                     <ul className="list-unstyled footer-list mt-4">
                       <li>
                         <a
-                          href="/aboutus"
+                          href=""
                           onClick={e => {
                             e.preventDefault()
-                            navigate('/aboutus')
+                            // navigate('/aboutus')
                           }}
                           className="text-foot"
                         >
@@ -227,10 +231,10 @@ const Footer = () => {
                       </li>
                       <li>
                         <a
-                          href="/blogs"
+                          href=""
                           onClick={e => {
                             e.preventDefault()
-                            navigate('/blogs')
+                            // navigate('/blogs')
                           }}
                           className="text-foot"
                         >
@@ -239,10 +243,10 @@ const Footer = () => {
                       </li>
                       <li>
                         <a
-                          href="/terms"
+                          href=""
                           onClick={e => {
                             e.preventDefault()
-                            navigate('/terms')
+                            // navigate('/terms')
                           }}
                           className="text-foot"
                         >
@@ -252,10 +256,10 @@ const Footer = () => {
                       </li>
                       <li>
                         <a
-                          href="/privacy"
+                          href=""
                           onClick={e => {
                             e.preventDefault()
-                            navigate('/privacy')
+                            // navigate('/privacy')
                           }}
                           className="text-foot"
                         >
@@ -265,10 +269,10 @@ const Footer = () => {
                       </li>
                       <li>
                         <a
-                          href="/login"
+                          href=""
                           onClick={e => {
                             e.preventDefault()
-                            navigate('/login')
+                            // navigate('/login')
                           }}
                           className="text-foot"
                         >
@@ -286,10 +290,10 @@ const Footer = () => {
                       </li>
                       <li>
                         <a
-                          href="/contact"
+                          href=""
                           onClick={e => {
                             e.preventDefault()
-                            navigate('/contact')
+                            // navigate('/contact')
                           }}
                           className="text-foot"
                         >
@@ -358,17 +362,10 @@ const Footer = () => {
               <div className="col-sm-6">
                 <div className="text-sm-start">
                   <p className="mb-0">
-                    © <script>document.write(new Date().getFullYear())</script>{' '}
-                    Superex. Design & Develop with{' '}
-                    <i className="mdi mdi-heart text-danger"></i> by{' '}
-                    <a
-                      href="https://shreethemes.in/"
-                      target="_blank"
-                      className="text-reset"
-                    >
-                      Shreethemes
-                    </a>
-                    .
+                  
+                    Copyright © {year} by Rethestate
+                   
+                    
                   </p>
                 </div>
               </div>
@@ -378,10 +375,10 @@ const Footer = () => {
                 <ul className="list-unstyled footer-list text-sm-end mb-0">
                   <li className="list-inline-item mb-0">
                     <a
-                      href="/privacy"
+                      href=""
                       onClick={e => {
                         e.preventDefault()
-                        navigate('/privacy')
+                        // navigate('/privacy')
                       }}
                       className="text-foot me-2"
                     >
@@ -390,10 +387,10 @@ const Footer = () => {
                   </li>
                   <li className="list-inline-item mb-0">
                     <a
-                      href="/terms"
+                      href=""
                       onClick={e => {
                         e.preventDefault()
-                        navigate('/terms')
+                        // navigate('/terms')
                       }}
                       className="text-foot me-2"
                     >
@@ -402,10 +399,10 @@ const Footer = () => {
                   </li>
                   <li className="list-inline-item mb-0">
                     <a
-                      href="/helpcenter-overview"
+                      href=""
                       onClick={e => {
                         e.preventDefault()
-                        navigate('/helpcenter-overview')
+                        // navigate('/helpcenter-overview')
                       }}
                       className="text-foot me-2"
                     >
@@ -414,10 +411,10 @@ const Footer = () => {
                   </li>
                   <li className="list-inline-item mb-0">
                     <a
-                      href="/contact"
+                      href=""
                       onClick={e => {
                         e.preventDefault()
-                        navigate('/contact')
+                        // navigate('/contact')
                       }}
                       className="text-foot"
                     >
