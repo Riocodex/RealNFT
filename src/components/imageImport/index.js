@@ -139,7 +139,17 @@ import app from '../../assets/images/app.png'
 import iconLogo from '../../assets/images/icon-logo-64.png'
 import character from '../../assets/images/character.png'
 
-//
+//homes
+import home1 from "../../assets/images/rethestate/home1.jpg"
+import home2 from "../../assets/images/rethestate/home2.jpg"
+import home3 from "../../assets/images/rethestate/home3.webp"
+import home4 from "../../assets/images/rethestate/home4.png"
+import home5 from "../../assets/images/rethestate/home5.png"
+import home6 from "../../assets/images/rethestate/home6.png"
+import home7 from "../../assets/images/rethestate/home7.png"
+import home8 from "../../assets/images/rethestate/home8.png"
+import home9 from "../../assets/images/rethestate/home9.png"
+import home10 from "../../assets/images/rethestate/home10.png"
 
 export {
   bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9, bg10, bg11, bg12,
@@ -154,5 +164,5 @@ export {
   about, cta, creator, logo48, single, lightLogo, office, ofcDesk, prodToCard,
   MetaMask_Fox, aave, Airswap, Compound, DDEX, defiSaver, dYdX, IDEX, Kyber, Maker, NUO, PoolTogether, Sablier, set, Uniswap, Zerion, logoDark, whiteLogo,
   itemDetail, itemDetail1, ErrorImage, united, community,
-  playStore, app, iconLogo, character,
+  playStore, app, iconLogo, character,home1, home2, home3, home4, home5, home6, home7, home8, home9, home10
 }
