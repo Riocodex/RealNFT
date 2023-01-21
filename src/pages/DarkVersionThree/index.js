@@ -357,9 +357,9 @@ const DarkVersionThree = () => {
           <div className="row align-items-end mb-5 pb-3">
             <div className="col-lg-4">
               <div className="section-title mb-4 mb-lg-0">
-                <h4 className="title mb-2">Newest Items</h4>
+                <h4 className="title mb-2">Home Recommendations</h4>
                 <p className="text-muted mb-0">
-                  Best sellers of the week's NFTs
+                  Best Home Recommendations
                 </p>
               </div>
             </div>
@@ -380,42 +380,28 @@ const DarkVersionThree = () => {
                     className={`list-inline-item categories position-relative text-dark ${type === 'games' ? 'active' : ''
                       }`}
                     // data-group="games"
-                    onClick={() => setFilter('games')}
+                    // onClick={() => setFilter('games')}
                   >
-                    <i className="uil uil-volleyball"></i> Games
+                    <i className="uil uil-house"></i> Rental
                   </li>
                   <li
                     className={`list-inline-item categories position-relative text-dark ${type === 'art' ? 'active' : ''
                       }`}
                     // data-group="art"
-                    onClick={() => setFilter('art')}
+                    // onClick={() => setFilter('art')}
                   >
-                    <i className="uil uil-chart-pie-alt"></i> Art
+                    <i className="uil uil-home-alt"></i> Art
                   </li>
                   <li
                     className={`list-inline-item categories position-relative text-dark ${type === 'music' ? 'active' : ''
                       }`}
                     // data-group="music"
-                    onClick={() => setFilter('music')}
+                    // onClick={() => setFilter('music')}
                   >
-                    <i className="uil uil-music"></i> Music
+                    <i className="uil uil-house"></i> Homes
                   </li>
-                  <li
-                    className={`list-inline-item categories position-relative text-dark ${type === 'video' ? 'active' : ''
-                      }`}
-                    // data-group="video"
-                    onClick={() => setFilter('video')}
-                  >
-                    <i className="uil uil-camera-plus"></i> Video
-                  </li>
-                  <li
-                    className={`list-inline-item categories position-relative text-dark ${type === 'meme' ? 'active' : ''
-                      }`}
-                    // data-group="memes"
-                    onClick={() => setFilter('meme')}
-                  >
-                    <i className="uil uil-rocket"></i> Memes
-                  </li>
+                 
+                
                 </ul>
               </div>
             </div>
@@ -448,7 +434,7 @@ const DarkVersionThree = () => {
                           onClick={e => e.preventDefault()}
                           className="badge badge-link bg-primary"
                         >
-                          {data?.type}
+                          
                         </a>
                       </div>
                       <div className="position-absolute top-0 end-0 m-3">

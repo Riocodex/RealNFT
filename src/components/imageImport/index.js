@@ -139,6 +139,8 @@ import app from '../../assets/images/app.png'
 import iconLogo from '../../assets/images/icon-logo-64.png'
 import character from '../../assets/images/character.png'
 
+//
+
 export {
   bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9, bg10, bg11, bg12,
   client01, client02, client03, client04, client05, client06, client07, client08,
