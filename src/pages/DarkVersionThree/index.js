@@ -107,7 +107,7 @@ const DarkVersionThree = () => {
       image: home10,
       title: '8999 Franklin Trenton Rd, Franklin, OH 45005',
       type: 'Rental',
-      filter: ['all', 'homes'],
+      filter: ['all', 'rental'],
       payment: "$1,426/month"
     },
     {
@@ -121,7 +121,7 @@ const DarkVersionThree = () => {
       image: home3,
       title: '310 Donna Dr, Camden, OH 45311',
       type: 'Mortgage',
-      filter: ['all', 'homes', ],
+      filter: ['all', 'mortgage', ],
       payment: "$3,426/month"
     },
     {
@@ -135,28 +135,28 @@ const DarkVersionThree = () => {
       image: home5,
       title: '4820 Hollywreath Ct, Dayton, OH 45424',
       type: 'Rental',
-      filter: ['all', 'mortgage', 'homes'],
+      filter: ['all', 'rental'],
       payment: "$5,426/month"
     },
     {
       image: home6,
       title: '2276 Cobblestone Ct, Beavercreek, OH 45431',
       type: 'Homes',
-      filter: ['all', 'rental'],
+      filter: ['all', 'homes'],
       payment: "$6,426/month"
     },
     {
       image: home7,
       title: '4754 Fox Run, Fairborn, OH 45324',
       type: 'Rental',
-      filter: ['all', 'mortgage'],
+      filter: ['all', 'rental'],
       payment: "$10,426/month"
     },
     {
       image: home8,
       title: '9755 Olde Park Dr, Tipp City, OH 45371Contemporary Abstract',
       type: 'Rental',
-      filter: ['all', 'homes'],
+      filter: ['all', 'rental'],
       payment: "$11,426/month"
     },
   ]
@@ -379,32 +379,32 @@ const DarkVersionThree = () => {
                   <li
                     className={`list-inline-item categories position-relative text-dark ${type === 'all' ? 'active' : ''
                       }`}
-                    // data-group="all"
+                    data-group="all"
                     onClick={() => setFilter('all')}
                   >
                     <i className="uil uil-browser"></i> All
                   </li>
                   <li
-                    className={`list-inline-item categories position-relative text-dark ${type === 'games' ? 'active' : ''
+                    className={`list-inline-item categories position-relative text-dark ${type === 'rental' ? 'active' : ''
                       }`}
-                    // data-group="games"
-                    // onClick={() => setFilter('games')}
+                    data-group="rental"
+                    onClick={() => setFilter('rental')}
                   >
                     <i className="uil uil-house"></i> Rental
                   </li>
                   <li
-                    className={`list-inline-item categories position-relative text-dark ${type === 'art' ? 'active' : ''
+                    className={`list-inline-item categories position-relative text-dark ${type === 'mortgage' ? 'active' : ''
                       }`}
-                    // data-group="art"
-                    // onClick={() => setFilter('art')}
+                    data-group="mortgage"
+                    onClick={() => setFilter('mortgage')}
                   >
                     <i className="uil uil-home-alt"></i> Mortgage
                   </li>
                   <li
-                    className={`list-inline-item categories position-relative text-dark ${type === 'music' ? 'active' : ''
+                    className={`list-inline-item categories position-relative text-dark ${type === 'homes' ? 'active' : ''
                       }`}
-                    // data-group="music"
-                    // onClick={() => setFilter('music')}
+                    data-group="homes"
+                    onClick={() => setFilter('homes')}
                   >
                     <i className="uil uil-house"></i> Homes
                   </li>
@@ -442,7 +442,7 @@ const DarkVersionThree = () => {
                           onClick={e => e.preventDefault()}
                           className="badge badge-link bg-primary"
                         >
-                          
+                          {data?.type}
                         </a>
                       </div>
                       <div className="position-absolute top-0 end-0 m-3">
@@ -501,10 +501,10 @@ const DarkVersionThree = () => {
             <div className="col mt-4">
               <div className="text-center">
                 <a
-                  href="/explore-two"
+                  href=""
                   onClick={e => {
                     e.preventDefault()
-                    navigate('/explore-two')
+                    // navigate('/explore-two')
                   }}
                   className="btn btn-primary rounded-md"
                 >
@@ -526,7 +526,7 @@ const DarkVersionThree = () => {
                   <div className="col-md-8">
                     <div className="section-title text-md-start text-center">
                       <h6 className="text-white-50 mb-1">
-                        Join with Superex Community
+                        Join with Rethestate Community
                       </h6>
                       <h4 className="title text-white title-dark mb-4">
                         Become a Creator!
