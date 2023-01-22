@@ -1,13 +1,14 @@
 {
-  "name": "superx",
+  "name": "rethestate",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "choices.js": "^10.1.0",
+    "export": "^0.1.337",
     "jquery": "^3.6.0",
-    "react": "^17.0.2",
+    "react": "^16.13.0",
     "react-countdown": "^2.3.2",
-    "react-dom": "^17.0.2",
+    "react-dom": "^16.13.0",
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.0.0-beta.0",
     "react-scripts": "4.0.3",
