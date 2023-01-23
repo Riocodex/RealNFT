@@ -159,7 +159,8 @@ const ExploreTwo = () => {
                   Marketplace
                 </h5>
                 <p className="text-white-50 para-desc mx-auto mb-0">
-                  Explore the latest  digitized real estate assets worldwide
+                  Explore the latest  digitized real estate assets worldwide<br></br>
+                  Enter an address, neighborhood,city or ZIP code
                 </p>
               </div>
             </div>
@@ -206,7 +207,7 @@ const ExploreTwo = () => {
                                   type="text"
                                   id="search-keyword"
                                   className="form-control filter-input-box bg-light border-0"
-                                  placeholder="Search your keaywords"
+                                  placeholder="Enter an address, neighborhood,city or ZIP code"
                                 />
                               </div>
                             </div>
