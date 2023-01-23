@@ -36,7 +36,8 @@ import {
   home7, 
   home8, 
   home9, 
-  home10
+  home10,
+  iconLogo2
 } from '../../components/imageImport'
 
 import Choices from 'choices.js'
@@ -421,7 +422,7 @@ const ExploreTwo = () => {
               <div className="row">
                 <div className="col-lg-4 col-md-6">
                   <div className="app-subscribe text-center text-md-start">
-                    <img src={cta} className="img-fluid" height="120" alt="" />
+                    <img src={ iconLogo2} className="img-fluid" height="120" alt="" />
                   </div>
                 </div>
                 {/*end col*/}
@@ -431,10 +432,10 @@ const ExploreTwo = () => {
                     <h4 className="display-6 fw-bold text-white title-dark mb-0">
                       Get{' '}
                       <span className="text-gradient-primary fw-bold">
-                        Free collections{' '}
+                        Free Token Collections{' '}
                       </span>{' '}
                       <br />
-                      with your subscription
+                      with your first nft
                     </h4>
 
                     <div className="mt-4">
@@ -443,8 +444,40 @@ const ExploreTwo = () => {
                         onClick={e => e.preventDefault()}
                         className="btn btn-link primary text-white title-dark"
                       >
-                        Subscribe Now <i className="uil uil-arrow-right"></i>
+                        Get Started <i className="uil uil-arrow-right"></i>
                       </a>
+                    </div>
+                    <div className='d-flex mt-2'>
+                    <div className="col-lg-3 col-md-6 mt-3 mx-2 mt-lg-0">
+                              <input
+                                type="submit"
+                                id="search"
+                                name="search"
+                                style={{ height: 60 }}
+                                className="btn btn-primary rounded-md searchbtn submit-btn w-100"
+                                value="Buy a Home"
+                              />
+                            </div>
+                            <div className="col-lg-3 col-md-6 mx-2 mt-3 mt-lg-0">
+                              <input
+                                type="submit"
+                                id="search"
+                                name="search"
+                                style={{ height: 60 }}
+                                className="btn btn-primary rounded-md searchbtn submit-btn w-100"
+                                value="Sell a Home"
+                              />
+                            </div>
+                            <div className="col-lg-3 col-md-6 mx-2 mt-3 mt-lg-0">
+                              <input
+                                type="submit"
+                                id="search"
+                                name="search"
+                                style={{ height: 60 }}
+                                className="btn btn-primary rounded-md searchbtn submit-btn w-100"
+                                value="Rent a Home"
+                              />
+                            </div>
                     </div>
                   </div>
                 </div>
