@@ -28,7 +28,15 @@ import {
   client08,
   exploreidea,
   exploreidea2,
-  exploreidea3
+  exploreidea3,
+  home3, 
+  home4, 
+  home5, 
+  home6, 
+  home7, 
+  home8, 
+  home9, 
+  home10
 } from '../../components/imageImport'
 
 import Choices from 'choices.js'
@@ -244,7 +252,7 @@ const ExploreTwo = () => {
                                   aria-label="Default select example"
                                   defaultValue="Location"
                                 >
-                                  <option value="1">Current Location</option>
+                                  <option value="1">CurrentLocation</option>
                                   <option value="2">France</option>
                                   <option value="3">USA</option>
                                   <option value="4">United Kingdom</option>
@@ -305,34 +313,8 @@ const ExploreTwo = () => {
                             className="avatar avatar-sm-sm img-thumbnail border-0 shadow-sm rounded-circle"
                           />
                         </a>
-                        <a
-                          href="/creator-profile"
-                          onClick={e => {
-                            e.preventDefault()
-                            navigate('/creator-profile')
-                          }}
-                          className="user-avatar ms-n3"
-                        >
-                          <img
-                            src={client05}
-                            alt="user"
-                            className="avatar avatar-sm-sm img-thumbnail border-0 shadow-sm rounded-circle"
-                          />
-                        </a>
-                        <a
-                          href="/creator-profile"
-                          onClick={e => {
-                            e.preventDefault()
-                            navigate('/creator-profile')
-                          }}
-                          className="user-avatar ms-n3"
-                        >
-                          <img
-                            src={client06}
-                            alt="user"
-                            className="avatar avatar-sm-sm img-thumbnail border-0 shadow-sm rounded-circle"
-                          />
-                        </a>
+                     
+                  
                       </div>
 
                       <span className="like-icon shadow-sm">
