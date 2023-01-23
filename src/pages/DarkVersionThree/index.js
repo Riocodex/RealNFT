@@ -475,7 +475,7 @@ const DarkVersionThree = () => {
                           <small className="mb-0 d-block fw-semibold">
                             Current Bid:
                           </small>
-                          <small className="rate fw-bold">20.5 ETH</small>
+                          <small className="rate fw-bold">200 USDC</small>
                         </div>
                         <a
                           href="/item-detail-one"
