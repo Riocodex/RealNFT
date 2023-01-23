@@ -26,6 +26,9 @@ import {
   client05,
   client06,
   client08,
+  exploreidea,
+  exploreidea2,
+  exploreidea3
 } from '../../components/imageImport'
 
 import Choices from 'choices.js'
@@ -145,7 +148,7 @@ const ExploreTwo = () => {
       {/* Start Home */}
       <section
         className="bg-half-170 d-table w-100"
-        style={{ background: `url(${bg01}) bottom` }}
+        style={{ background: `url(${exploreidea3}) bottom` }}
       >
         <div className="bg-overlay bg-gradient-overlay-2"></div>
         <div className="container">
@@ -156,7 +159,7 @@ const ExploreTwo = () => {
                   Marketplace
                 </h5>
                 <p className="text-white-50 para-desc mx-auto mb-0">
-                  Explore the latest NFTs digital product
+                  Explore the latest  digitized real estate assets worldwide
                 </p>
               </div>
             </div>
