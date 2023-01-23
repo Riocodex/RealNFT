@@ -37,7 +37,9 @@ import {
   home8, 
   home9, 
   home10,
-  iconLogo2
+  iconLogo2,
+  tokenLogo,
+  tokenLogo2
 } from '../../components/imageImport'
 
 import Choices from 'choices.js'
@@ -422,7 +424,7 @@ const ExploreTwo = () => {
               <div className="row">
                 <div className="col-lg-4 col-md-6">
                   <div className="app-subscribe text-center text-md-start">
-                    <img src={ iconLogo2} className="img-fluid" height="120" alt="" />
+                    <img src={tokenLogo2} className="img-fluid" height="120" alt="" />
                   </div>
                 </div>
                 {/*end col*/}
@@ -449,7 +451,14 @@ const ExploreTwo = () => {
                     </div>
                     <div className='d-flex mt-2'>
                     <div className="col-lg-3 col-md-6 mt-3 mx-2 mt-lg-0">
-                              
+                    <input
+                                type="submit"
+                                id="search"
+                                name="search"
+                                style={{ height: 60 }}
+                                className="btn btn-primary rounded-md searchbtn submit-btn w-100"
+                                value="Buy a Home"
+                              />
                             </div>
                             <div className="col-lg-3 col-md-6 mx-2 mt-3 mt-lg-0">
                               <input
