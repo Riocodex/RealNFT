@@ -44,30 +44,30 @@ import Choices from 'choices.js'
 const ExploreTwo = () => {
   const navigate = useNavigate()
 
-  const AuctionData = [
+  const exploreData = [
     {
-      image: gif1,
-      title: 'Deep Sea Phantasy',
-      id: 'May 29, 2022 6:0:0',
-      type: 'GIFs',
+      image: home3,
+      title: 'Buildable plan: Interior Unit, Villas at Chaparral, Allen, TX 75002',
+      // id: 'May 29, 2022 6:0:0',
+      type: 'Rental',
     },
     {
-      image: item1,
-      title: 'CyberPrimal 042 LAN',
+      image: home4,
+      title: '310 Donna Dr, Camden, OH 45311',
       id: '',
-      type: 'Arts',
+      type: 'Mortgage',
     },
     {
       image: gif2,
       title: 'Crypto Egg Stamp #5',
       id: '',
-      type: 'Games',
+      type: 'Rental',
     },
     {
       image: item2,
       title: 'Colorful Abstract Painting',
       id: 'June 03, 2022 5:3:1',
-      type: '',
+      type: 'Real Estate',
     },
     {
       image: item3,
@@ -293,7 +293,7 @@ const ExploreTwo = () => {
 
         <div className="container">
           <div className="row row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 row-cols-1">
-            {AuctionData?.map(data => {
+            {exploreData?.map(data => {
               return (
                 <div className="col mt-4 pt-2" key={data?.title}>
                   <div className="card nft-items nft-primary rounded-md shadow overflow-hidden mb-1 p-3">
