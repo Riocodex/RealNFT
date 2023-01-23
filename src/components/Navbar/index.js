@@ -438,17 +438,34 @@ const Navbar = () => {
             >
               <li className="has-submenu parent-parent-menu-item">
                 <a 
-                 href="/index-three"
+                 href="/"
                  onClick={e => {
                   e.preventDefault()
                   setTimeout(() => {
                     activateMenu()
                     toggleSwitcher(false)
                   }, 1000)
-                  navigate('/index-three')
+                  navigate('/')
                 }}
                 >
                   Home 
+                </a>
+              
+           
+              </li>
+              <li className="has-submenu parent-parent-menu-item">
+                <a 
+                 href="/explore-two"
+                 onClick={e => {
+                  e.preventDefault()
+                  setTimeout(() => {
+                    activateMenu()
+                    toggleSwitcher(false)
+                  }, 1000)
+                  navigate('/explore-two')
+                }}
+                >
+                  Explore
                 </a>
               
            
