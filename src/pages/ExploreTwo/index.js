@@ -222,11 +222,12 @@ const ExploreTwo = () => {
                                   name="choices-criteria"
                                   id="choices-criteria"
                                   aria-label="Default select example"
-                                  defaultValue="Auction Product"
+                                  defaultValue="Type"
                                 >
                                   <option value="1">Rental</option>
                                   <option value="2">Mortgage</option>
                                   <option value="3">Homes</option>
+                                  <option value="4">Real Estate</option>
                                 </select>
                               </div>
                             </div>
@@ -241,7 +242,7 @@ const ExploreTwo = () => {
                                   name="choices-type"
                                   id="choices-type"
                                   aria-label="Default select example"
-                                  defaultValue="Art"
+                                  defaultValue="Location"
                                 >
                                   <option value="1">Current Location</option>
                                   <option value="2">France</option>
