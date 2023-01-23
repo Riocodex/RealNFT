@@ -206,7 +206,7 @@ const Footer = () => {
                           className="text-foot"
                         >
                           <i className="uil uil-angle-right-b me-1"></i>{' '}
-                          Creators
+                          Realtors
                         </a>
                       </li>
                     </ul>

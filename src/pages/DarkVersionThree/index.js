@@ -529,7 +529,7 @@ const DarkVersionThree = () => {
                         Join with Rethestate Community
                       </h6>
                       <h4 className="title text-white title-dark mb-4">
-                        Become a Creator!
+                        Become a Realtor!
                       </h4>
 
                       <p className="text-white-50 para-desc mb-0">
