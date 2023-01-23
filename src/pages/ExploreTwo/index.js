@@ -224,9 +224,9 @@ const ExploreTwo = () => {
                                   aria-label="Default select example"
                                   defaultValue="Auction Product"
                                 >
-                                  <option value="1">Auction Product</option>
-                                  <option value="2">On Sale</option>
-                                  <option value="3">Offers</option>
+                                  <option value="1">Rental</option>
+                                  <option value="2">Mortgage</option>
+                                  <option value="3">Homes</option>
                                 </select>
                               </div>
                             </div>
@@ -243,11 +243,11 @@ const ExploreTwo = () => {
                                   aria-label="Default select example"
                                   defaultValue="Art"
                                 >
-                                  <option value="1">Art</option>
-                                  <option value="2">Games</option>
-                                  <option value="3">Music</option>
-                                  <option value="4">Videos</option>
-                                  <option value="5">Memes</option>
+                                  <option value="1">Current Location</option>
+                                  <option value="2">France</option>
+                                  <option value="3">USA</option>
+                                  <option value="4">United Kingdom</option>
+                                  <option value="5">Canada</option>
                                 </select>
                               </div>
                             </div>
