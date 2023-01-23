@@ -152,6 +152,12 @@ import home9 from "../../assets/images/rethestate/home9.png"
 import home10 from "../../assets/images/rethestate/home10.png"
 import iconLogo2 from "../../assets/images/rethestate/12.png"
 
+
+//explore
+import exploreBg from "../../assets/images/rethestate/exploreidea!.jpg"
+import exploreBg2 from "../../assets/images/rethestate/exploreidea2.jpg"
+import exploreBg3 from "../../assets/images/rethestate/exploreidea3.jpg"
+
 export {
   bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9, bg10, bg11, bg12,
   client01, client02, client03, client04, client05, client06, client07, client08,
