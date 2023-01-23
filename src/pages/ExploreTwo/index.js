@@ -449,14 +449,7 @@ const ExploreTwo = () => {
                     </div>
                     <div className='d-flex mt-2'>
                     <div className="col-lg-3 col-md-6 mt-3 mx-2 mt-lg-0">
-                              <input
-                                type="submit"
-                                id="search"
-                                name="search"
-                                style={{ height: 60 }}
-                                className="btn btn-primary rounded-md searchbtn submit-btn w-100"
-                                value="Buy a Home"
-                              />
+                              
                             </div>
                             <div className="col-lg-3 col-md-6 mx-2 mt-3 mt-lg-0">
                               <input
