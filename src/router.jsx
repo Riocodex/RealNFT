@@ -85,7 +85,7 @@ export default function Router() {
         <Route exact path="/auction" element={<Auction />} />
         <Route exact path="/explore-four" element={<ExploreFour />} />
         <Route exact path="/explore-three" element={<ExploreThree />} />
-        <Route exact path="/explore-two" element={<ExploreTwo />} />
+        <Route exact path="/explore" element={<ExploreTwo />} />
         <Route exact path="/explore-one" element={<ExploreOne />} />
 
         <Route exact path="/index-dark" element={<DarkVersionOne />} />

@@ -48,7 +48,7 @@ const ExploreTwo = () => {
     {
       image: home3,
       title: 'Buildable plan: Interior Unit, Villas at Chaparral, Allen, TX 75002',
-      // id: 'May 29, 2022 6:0:0',
+      id: 'May 29, 2022 6:0:0',
       type: 'Rental',
     },
     {
@@ -58,89 +58,90 @@ const ExploreTwo = () => {
       type: 'Mortgage',
     },
     {
-      image: gif2,
-      title: 'Crypto Egg Stamp #5',
+      image: home5,
+      title: '4820 Hollywreath Ct, Dayton, OH 45424',
       id: '',
       type: 'Rental',
     },
     {
-      image: item2,
-      title: 'Colorful Abstract Painting',
+      image: home6,
+      title: '2276 Cobblestone Ct, Beavercreek, OH 45431',
       id: 'June 03, 2022 5:3:1',
       type: 'Real Estate',
     },
     {
-      image: item3,
-      title: 'Liquid Forest Princess',
+      image: home7,
+      title: '4754 Fox Run, Fairborn, OH 45324',
       id: '',
-      type: '',
+      type: 'Home',
     },
     {
-      image: gif3,
-      title: 'Spider Eyes Modern Art',
+      image:home8,
+      title: '9755 Olde Park Dr, Tipp City, OH 45371Contemporary Abstract',
       id: 'June 10, 2022 1:0:1',
-      type: 'GIFs',
+      type: 'Home',
     },
     {
-      image: item4,
-      title: 'Synthwave Painting',
+      image: home9,
+      title: '203 Tortugas Dr, Allen, TX 75002',
       id: '',
       type: '',
     },
     {
-      image: gif4,
-      title: 'Contemporary Abstract',
+      image:home10,
+      title: '23 Heritage Way, Allen, TX 75002',
       id: '',
-      type: 'GIFs',
+      type: 'Real Estate',
     },
     {
-      image: item5,
-      title: 'Valkyrie Abstract Art',
-      id: '',
-      type: '',
+      image: home3,
+      title: 'Buildable plan: Interior Unit, Villas at Chaparral, Allen, TX 75002',
+      id: 'May 29, 2022 6:0:0',
+      type: 'Rental',
     },
     {
-      image: gif5,
-      title: 'The girl with the firefly',
+      image: home4,
+      title: '310 Donna Dr, Camden, OH 45311',
       id: '',
-      type: '',
+      type: 'Mortgage',
     },
     {
-      image: item6,
-      title: 'Dodo hide the seek',
+      image: home5,
+      title: '4820 Hollywreath Ct, Dayton, OH 45424',
       id: '',
-      type: '',
+      type: 'Rental',
     },
     {
-      image: gif6,
-      title: 'Pinky Ocean',
+      image: home6,
+      title: '2276 Cobblestone Ct, Beavercreek, OH 45431',
+      id: 'June 03, 2022 5:3:1',
+      type: 'Real Estate',
+    },
+    {
+      image: home7,
+      title: '4754 Fox Run, Fairborn, OH 45324',
+      id: '',
+      type: 'Home',
+    },
+    {
+      image:home8,
+      title: '9755 Olde Park Dr, Tipp City, OH 45371Contemporary Abstract',
       id: 'June 10, 2022 1:0:1',
-      type: '',
+      type: 'Home',
     },
     {
-      image: item7,
-      title: 'Rainbow Style',
-      id: 'June 18, 2022 1:2:1',
-      type: 'Music',
-    },
-    {
-      image: item8,
-      title: 'Running Puppets',
+      image: home9,
+      title: '203 Tortugas Dr, Allen, TX 75002',
       id: '',
-      type: 'Gallery',
-    },
-    {
-      image: item9,
-      title: 'Loop Donut',
-      id: 'July 01, 2022 1:6:6',
-      type: 'Video',
-    },
-    {
-      image: item10,
-      title: 'This is Our Story',
-      id: 'July 15, 2022 2:5:5',
       type: '',
     },
+    {
+      image:home10,
+      title: '23 Heritage Way, Allen, TX 75002',
+      id: '',
+      type: 'Real Estate',
+    },
+    
   ]
   useEffect(() => {
     new Choices('#choices-criteria')
@@ -300,10 +301,10 @@ const ExploreTwo = () => {
                     <div className="d-flex justify-content-between">
                       <div className="img-group">
                         <a
-                          href="/creator-profile"
+                          href=""
                           onClick={e => {
                             e.preventDefault()
-                            navigate('/creator-profile')
+                            // navigate('/creator-profile')
                           }}
                           className="user-avatar"
                         >
@@ -330,10 +331,10 @@ const ExploreTwo = () => {
 
                     <div className="nft-image rounded-md mt-3 position-relative overflow-hidden">
                       <a
-                        href="/item-detail-one"
+                        href=""
                         onClick={e => {
                           e.preventDefault()
-                          navigate('/item-detail-one')
+                          // navigate('/item-detail-one')
                         }}
                       >
                         <img src={data?.image} className="img-fluid" alt="" />
@@ -368,10 +369,10 @@ const ExploreTwo = () => {
 
                     <div className="card-body content position-relative p-0 mt-3">
                       <a
-                        href="/item-detail-one"
+                        href=""
                         onClick={e => {
                           e.preventDefault()
-                          navigate('/item-detail-one')
+                          // navigate('/item-detail-one')
                         }}
                         className="title text-dark h6"
                       >
@@ -379,7 +380,7 @@ const ExploreTwo = () => {
                       </a>
 
                       <div className="d-flex justify-content-between mt-2">
-                        <small className="rate fw-bold">20.5 ETH</small>
+                        <small className="rate fw-bold">200,000 USDC</small>
                         <small className="text-dark fw-bold">1 out of 10</small>
                       </div>
                     </div>
