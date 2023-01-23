@@ -301,7 +301,7 @@ const DarkVersionThree = () => {
           <div className="row justify-content-center">
             <div className="col">
               <div className="section-title text-center mb-5 pb-3">
-                <h4 className="title mb-4">Popular Creators</h4>
+                <h4 className="title mb-4">Popular Realtors</h4>
                 <p className="text-muted para-desc mb-0 mx-auto">
                 Our mission and main focus at RETHESTATE is to simplify what can often be a tedious and time-consuming process for homeowners, prospective buyers, and tenants.
                 </p>
