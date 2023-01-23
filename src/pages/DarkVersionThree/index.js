@@ -348,7 +348,7 @@ const DarkVersionThree = () => {
                             {data?.name}
                           </a>
                         </h6>
-                        <small className="text-muted">2000 USDT</small>
+                        <small className="text-muted">2000 USDC</small>
                       </div>
                     </div>
                   </div>
