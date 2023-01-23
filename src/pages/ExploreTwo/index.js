@@ -470,16 +470,7 @@ const ExploreTwo = () => {
                                 value="Sell a Home"
                               />
                             </div>
-                            <div className="col-lg-3 col-md-6 mx-2 mt-3 mt-lg-0">
-                              <input
-                                type="submit"
-                                id="search"
-                                name="search"
-                                style={{ height: 60 }}
-                                className="btn btn-primary rounded-md searchbtn submit-btn w-100"
-                                value="Rent a Home"
-                              />
-                            </div>
+                           
                     </div>
                   </div>
                 </div>
