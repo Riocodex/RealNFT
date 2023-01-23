@@ -32,7 +32,7 @@ const DarkVersionThree = () => {
       profileIcon: true,
       image: client01,
       name: 'StreetBoy',
-      eth: '20.5 ETH',
+      usdt: '20.5 ETH',
     },
     {
       profileIcon: false,
@@ -348,7 +348,7 @@ const DarkVersionThree = () => {
                             {data?.name}
                           </a>
                         </h6>
-                        <small className="text-muted">{data?.eth}</small>
+                        <small className="text-muted">2000 USDT</small>
                       </div>
                     </div>
                   </div>
