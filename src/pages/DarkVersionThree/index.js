@@ -297,68 +297,7 @@ const DarkVersionThree = () => {
        
         {/*end container*/}
 
-        <div className="container mt-100 mt-60">
-          <div className="row justify-content-center">
-            <div className="col">
-              <div className="section-title text-center mb-5 pb-3">
-                <h4 className="title mb-4">Popular Realtors</h4>
-                <p className="text-muted para-desc mb-0 mx-auto">
-                Our mission and main focus at RETHESTATE is to simplify what can often be a tedious and time-consuming process for homeowners, prospective buyers, and tenants.
-                </p>
-              </div>
-            </div>
-            {/*end col*/}
-          </div>
-          {/*end row*/}
-
-          <div className="row g-4">
-            {bestCreator?.map(data => {
-              return (
-                <div className="col-lg-3 col-md-4" key={data?.name}>
-                  <div className="creators creator-primary creators-two bg-white d-flex align-items-center p-3 rounded-md shadow">
-                    <div className="d-flex align-items-center">
-                      <div className="position-relative d-inline-flex">
-                        <img
-                          src={data?.image}
-                          className="avatar avatar-md-sm shadow-md rounded-pill"
-                          alt=""
-                        />
-                        {data?.profileIcon && (
-                          <>
-                            <span className="verified text-primary">
-                              <i className="mdi mdi-check-decagram"></i>
-                            </span>
-                            <span className="online text-success">
-                              <i className="mdi mdi-circle"></i>
-                            </span>
-                          </>
-                        )}
-                      </div>
-
-                      <div className="ms-3">
-                        <h6 className="mb-0">
-                          <a
-                            href="/creators"
-                            onClick={e => {
-                              e.preventDefault()
-                              navigate('/creators')
-                            }}
-                            className="text-dark name"
-                          >
-                            {data?.name}
-                          </a>
-                        </h6>
-                        <small className="text-muted">2000 USDC</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )
-            })}
-            {/*end col*/}
-          </div>
-          {/*end row*/}
-        </div>
+   
         {/*end container*/}
 
         <div className="container mt-100 mt-60">
@@ -512,6 +451,69 @@ const DarkVersionThree = () => {
                 </a>
               </div>
             </div>
+            {/*end col*/}
+          </div>
+          {/*end row*/}
+        </div>
+        {/*end container*/}
+        <div className="container mt-100 mt-60">
+          <div className="row justify-content-center">
+            <div className="col">
+              <div className="section-title text-center mb-5 pb-3">
+                <h4 className="title mb-4">Popular Realtors</h4>
+                <p className="text-muted para-desc mb-0 mx-auto">
+                Our mission and main focus at RETHESTATE is to simplify what can often be a tedious and time-consuming process for homeowners, prospective buyers, and tenants.
+                </p>
+              </div>
+            </div>
+            {/*end col*/}
+          </div>
+          {/*end row*/}
+
+          <div className="row g-4">
+            {bestCreator?.map(data => {
+              return (
+                <div className="col-lg-3 col-md-4" key={data?.name}>
+                  <div className="creators creator-primary creators-two bg-white d-flex align-items-center p-3 rounded-md shadow">
+                    <div className="d-flex align-items-center">
+                      <div className="position-relative d-inline-flex">
+                        <img
+                          src={data?.image}
+                          className="avatar avatar-md-sm shadow-md rounded-pill"
+                          alt=""
+                        />
+                        {data?.profileIcon && (
+                          <>
+                            <span className="verified text-primary">
+                              <i className="mdi mdi-check-decagram"></i>
+                            </span>
+                            <span className="online text-success">
+                              <i className="mdi mdi-circle"></i>
+                            </span>
+                          </>
+                        )}
+                      </div>
+
+                      <div className="ms-3">
+                        <h6 className="mb-0">
+                          <a
+                            href="/creators"
+                            onClick={e => {
+                              e.preventDefault()
+                              navigate('/creators')
+                            }}
+                            className="text-dark name"
+                          >
+                            {data?.name}
+                          </a>
+                        </h6>
+                        <small className="text-muted">2000 USDC</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
             {/*end col*/}
           </div>
           {/*end row*/}
