@@ -271,10 +271,10 @@ const DarkVersionThree = () => {
 
                 <div className="mt-4 pt-2">
                   <a
-                    href=""
+                    href="/aboutus"
                     onClick={e => {
                       e.preventDefault()
-                      // navigate('/aboutus')
+                      navigate('/aboutus')
                     }}
                     className="btn btn-primary rounded-md"
                   >

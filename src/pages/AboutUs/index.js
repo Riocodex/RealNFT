@@ -8,7 +8,7 @@ import {
   bg1, bg2, bg3,
   client01, client02, client03, client04, client05, client06, client07, client08,
   bg01,
-  about,
+  about, aboutUs1, aboutUs2, aboutUs3, aboutUs4
 } from "../../components/imageImport";
 
 import StyleSwitcher from '../../components/StyleSwitcher'
@@ -85,7 +85,7 @@ const AboutUs = () => {
       {/* Start Home */}
       <section
         className="bg-half-170 d-table w-100"
-        style={{ background: `url(${bg01}) bottom` }}
+        style={{ background: `url(${aboutUs3}) bottom` }}
       >
         <div className="bg-overlay bg-gradient-overlay-2"></div>
         <div className="container">
@@ -93,10 +93,10 @@ const AboutUs = () => {
             <div className="col-12">
               <div className="title-heading text-center">
                 <h5 className="heading fw-semibold sub-heading text-white title-dark">
-                  Meet Superex
+                  Meet Rethestate
                 </h5>
                 <p className="text-white-50 para-desc mx-auto mb-0">
-                  NFT marketplace where anything is possible and all are welcome
+                Welcome to RETHESTATE, a real estate-based blockchain project that aims to revolutionize the way we buy, sell, and manage real estate assets.
                 </p>
               </div>
             </div>
@@ -112,13 +112,13 @@ const AboutUs = () => {
               >
                 <li className="breadcrumb-item">
                   <a
-                    href="/index"
+                    href="/"
                     onClick={e => {
                       e.preventDefault()
-                      navigate('/index')
+                      navigate('/')
                     }}
                   >
-                    Superex
+                    Rethestate
                   </a>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">

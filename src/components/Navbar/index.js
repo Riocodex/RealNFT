@@ -483,7 +483,7 @@ const Navbar = () => {
                   navigate('/aboutus')
                 }}
                 >
-                  Explore
+                  About Us
                 </a>
               
            
