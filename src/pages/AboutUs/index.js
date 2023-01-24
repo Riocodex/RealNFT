@@ -36,26 +36,6 @@ const AboutUs = () => {
       name: 'Sofia Razaq',
       position: 'Designer',
     },
-    {
-      image: client04,
-      name: 'Jack John',
-      position: 'Designer',
-    },
-    {
-      image: client05,
-      name: 'Krista John',
-      position: 'Designer',
-    },
-    {
-      image: client06,
-      name: 'Roger Jackson',
-      position: 'Designer',
-    },
-    {
-      image: client07,
-      name: 'Johnny English',
-      position: 'Designer',
-    },
   ]
 
   const blogRecord = [
@@ -334,7 +314,7 @@ const AboutUs = () => {
                 <h4 className="title mb-4">Latest Blog or News</h4>
                 <p className="text-muted para-desc mb-0 mx-auto">
                   We are a huge marketplace dedicated to connecting great
-                  artists of all Superex with their fans and unique token
+                  artists of all Rethestate with their fans and unique token
                   collectors!
                 </p>
               </div>
