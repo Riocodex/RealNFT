@@ -8,7 +8,7 @@ import {
   bg1, bg2, bg3,
   client01, client02, client03, client04, client05, client06, client07, client08,
   bg01,
-  about, aboutUs1, aboutUs2, aboutUs3, aboutUs4
+  about, aboutUs1, aboutUs2, aboutUs3, aboutUs4, tokenLogo2,iconLogo2
 } from "../../components/imageImport";
 
 import StyleSwitcher from '../../components/StyleSwitcher'
@@ -153,7 +153,7 @@ const AboutUs = () => {
           <div className="row align-items-center">
             <div className="col-lg-5 col-md-6">
               <div className="about-image position-relative">
-                <img src={about} className="img-fluid rounded shadow" alt="" />
+                <img src={iconLogo2} className="img-fluid rounded shadow" alt="" />
               </div>
             </div>
             {/*end col*/}
@@ -167,9 +167,7 @@ const AboutUs = () => {
                   We develop & create <br /> digital art.
                 </h4>
                 <p className="text-muted">
-                  Launch your campaign and benefit from our expertise on
-                  designing and managing conversion centered bootstrap html
-                  page.
+                Our goal is to create a more efficient, transparent, and secure real estate market that is accessible to everyone, regardless of location or background. We do this by using smart contracts on the Ethereum network to digitize real estate assets and automate many of the manual processes that are still done today.
                 </p>
                 <p className="text-muted mb-0">
                   It seems that only fragments of the original text remain in
