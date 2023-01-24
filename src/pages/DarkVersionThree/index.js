@@ -524,10 +524,10 @@ const DarkVersionThree = () => {
                   <div className="card bg-white nft-items nft-primary rounded-md shadow overflow-hidden mb-1">
                     <div className="nft-image position-relative overflow-hidden">
                       <a
-                        href="/item-detail-one"
+                        href=""
                         onClick={e => {
                           e.preventDefault()
-                          navigate('/item-detail-one')
+                          // navigate('/item-detail-one')
                         }}
                       >
                         <img src={data?.image} className="img-fluid" alt="" />
@@ -556,10 +556,10 @@ const DarkVersionThree = () => {
 
                     <div className="card-body content position-relative">
                       <a
-                        href="/item-detail-one"
+                        href=""
                         onClick={e => {
                           e.preventDefault()
-                          navigate('/item-detail-one')
+                          // navigate('/item-detail-one')
                         }}
                         className="title text-dark h6"
                       >
@@ -725,6 +725,124 @@ const DarkVersionThree = () => {
         </div>
         {/*end container*/}
 
+        <div className="container mt-100 mt-60">
+          <div className="row justify-content-center">
+            <div className="col">
+              <div className="section-title text-center mb-5 pb-3">
+                <h4 className="title mb-4">Live Auctions</h4>
+                <p className="text-muted para-desc mb-0 mx-auto">
+                  We are a huge marketplace dedicated to connecting great
+                  artists of all Superex with their fans and unique token
+                  collectors!
+                </p>
+              </div>
+            </div>
+            {/*end col*/}
+          </div>
+          {/*end row*/}
+
+          <div className="row row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 row-cols-1 g-4">
+            {liveAuctions?.map((data, index) => {
+              return (
+                <div className="col" key={index}>
+                  <div className="card nft-items nft-primary rounded-md shadow overflow-hidden mb-1 p-3">
+                    <div className="d-flex align-items-center justify-content-between">
+                      <div className="d-flex align-items-center">
+                        <img
+                          src={data?.client}
+                          alt="user"
+                          className="avatar avatar-sm-sm img-thumbnail border-0 shadow-sm rounded-circle"
+                        />
+                        <a
+                          href=""
+                          onClick={e => e.preventDefault()}
+                          className="text-dark small creator-name h6 mb-0 ms-2"
+                        >
+                          @{data?.author}
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="nft-image rounded-md mt-3 position-relative overflow-hidden">
+                      <a
+                        href="/item-detail-one"
+                        onClick={e => {
+                          e.preventDefault()
+                          navigate('/item-detail-one')
+                        }}
+                      >
+                        <img src={data?.image} className="img-fluid" alt="" />
+                      </a>
+                      <div className="position-absolute top-0 start-0 m-2">
+                        <span className="badge badge-link bg-primary">
+                          {data?.type}
+                        </span>
+                      </div>
+                      <div className="position-absolute top-0 end-0 m-2">
+                        <span className="like-icon shadow-sm">
+                          <a
+                            href=""
+                            onClick={e => e.preventDefault()}
+                            className="text-muted icon"
+                          >
+                            <i className="mdi mdi-18px mdi-heart mb-0"></i>
+                          </a>
+                        </span>
+                      </div>
+
+                      <div className="position-absolute bottom-0 start-0 m-2 bg-gradient-primary text-white title-dark rounded-pill px-3">
+                        <i className="uil uil-clock"></i>{' '}
+                        <Countdown
+                          date={data?.id}
+                          renderer={({ days, hours, minutes, seconds }) => (
+                            <span>
+                              {days}:{hours}:{minutes}:{seconds}
+                            </span>
+                          )}
+                        />
+                      </div>
+                    </div>
+
+                    <div className="card-body content position-relative p-0 mt-3">
+                      <a
+                        href="/item-detail-one"
+                        onClick={e => {
+                          e.preventDefault()
+                          navigate('/item-detail-one')
+                        }}
+                        className="title text-dark h6"
+                      >
+                        {data?.title}
+                      </a>
+
+                      <div className="d-flex align-items-center justify-content-between mt-3">
+                        <div className="">
+                          <small className="mb-0 d-block fw-semibold">
+                            Current Bid:
+                          </small>
+                          <small className="rate fw-bold">20.5 ETH</small>
+                        </div>
+                        <a
+                          href="/item-detail-one"
+                          onClick={e => {
+                            e.preventDefault()
+                            navigate('/item-detail-one')
+                          }}
+                          className="btn btn-icon btn-pills btn-primary"
+                        >
+                          <i className="uil uil-shopping-bag"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+            {/*end col*/}
+          </div>
+          {/*end row*/}
+        </div>
+        {/*end container*/}
         
         {/*end container*/}
 
