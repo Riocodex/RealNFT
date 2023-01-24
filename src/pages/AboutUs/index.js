@@ -169,13 +169,19 @@ const AboutUs = () => {
                 <p className="text-muted">
                 Our goal is to create a more efficient, transparent, and secure real estate market that is accessible to everyone, regardless of location or background. We do this by using smart contracts on the Ethereum network to digitize real estate assets and automate many of the manual processes that are still done today.
                 </p>
-                <p className="text-muted mb-0">
-                  It seems that only fragments of the original text remain in
-                  the Lorem Ipsum texts used today. One may speculate that over
-                  the course of time certain letters were added or deleted at
-                  various positions within the text. This might also explain why
-                  one can now find slightly different versions.
+                <p className="text-muted mb-4">
+                The benefits of this system are numerous, including reduced costs and increased liquidity for what has traditionally been a relatively illiquid asset. By simplifying the process and eliminating waste, we believe that we can create a truly decentralized and barrier-free real estate marketplace that is accessible to all types of end users.
                 </p>
+                <p className="text-muted">
+                However, we know that this is a massive undertaking that requires the support and participation of property owners around the world. That’s why we have designed our platform to be governed by property owners, ensuring that their interests are always at the forefront of our decision-making.
+                </p>
+                <p className="text-muted mb-4">
+                We believe that the adoption of cryptographic blockchain technology by property owners worldwide is the key to unlocking the full potential of the real estate market and creating a more equitable and prosperous future for all.
+                </p>
+                <p className="text-muted mb-0">
+                We believe that the adoption of cryptographic blockchain technology by property owners worldwide is the key to unlocking the full potential of the real estate market and creating a more equitable and prosperous future for all.
+                </p>
+
 
                 <div className="mt-4 pt-2">
                   <a
