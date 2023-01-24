@@ -164,7 +164,7 @@ const AboutUs = () => {
                   Creative Vision & Mission
                 </h6>
                 <h4 className="title mb-4">
-                  We develop & create <br /> digital art.
+                  We  buy, sell, and manage <br />  real estate assets. 
                 </h4>
                 <p className="text-muted">
                 Our goal is to create a more efficient, transparent, and secure real estate market that is accessible to everyone, regardless of location or background. We do this by using smart contracts on the Ethereum network to digitize real estate assets and automate many of the manual processes that are still done today.
@@ -185,9 +185,13 @@ const AboutUs = () => {
 
                 <div className="mt-4 pt-2">
                   <a
-                    href=""
-                    onClick={e => e.preventDefault()}
+                    href="https://rethestate.com/"
+                    onClick={e => {
+                      e.preventDefault()
+                      
+                    }}
                     className="btn btn-primary rounded-md"
+                   
                   >
                     Read More <i className="uil uil-arrow-right"></i>
                   </a>
