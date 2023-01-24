@@ -456,6 +456,163 @@ const DarkVersionThree = () => {
           {/*end row*/}
         </div>
         {/*end container*/}
+        
+        <div className="container mt-100 mt-60">
+          <div className="row align-items-end mb-5 pb-3">
+            <div className="col-lg-4">
+              <div className="section-title mb-4 mb-lg-0">
+                <h4 className="title mb-2">NFT Rentals</h4>
+                <p className="text-muted mb-0">
+                  Best NFT Rentals
+                </p>
+              </div>
+            </div>
+            {/*end slide*/}
+
+            <div className="col-lg-8 filters-group-wrap">
+              <div className="filters-group">
+                <ul className="container-filter mb-0 categories-filter text-center list-unstyled">
+                  <li
+                    className={`list-inline-item categories position-relative text-dark ${type === 'all' ? 'active' : ''
+                      }`}
+                    data-group="all"
+                    onClick={() => setFilter('all')}
+                  >
+                    <i className="uil uil-browser"></i> All
+                  </li>
+                  <li
+                    className={`list-inline-item categories position-relative text-dark ${type === 'rental' ? 'active' : ''
+                      }`}
+                    data-group="rental"
+                    onClick={() => setFilter('rental')}
+                  >
+                    <i className="uil uil-house"></i> Rental
+                  </li>
+                  <li
+                    className={`list-inline-item categories position-relative text-dark ${type === 'mortgage' ? 'active' : ''
+                      }`}
+                    data-group="mortgage"
+                    onClick={() => setFilter('mortgage')}
+                  >
+                    <i className="uil uil-home-alt"></i> Mortgage
+                  </li>
+                  <li
+                    className={`list-inline-item categories position-relative text-dark ${type === 'homes' ? 'active' : ''
+                      }`}
+                    data-group="homes"
+                    onClick={() => setFilter('homes')}
+                  >
+                    <i className="uil uil-house"></i> Homes
+                  </li>
+                 
+                
+                </ul>
+              </div>
+            </div>
+            {/*end col*/}
+          </div>
+          {/*end row*/}
+
+          <div
+            className="row row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 row-cols-1 g-4"
+            id="grid"
+            style={{ justifyContent: "left" }}
+          >
+            {allData?.map(data => {
+              return (
+                <div className="col picture-item" key={data?.title}>
+                  <div className="card bg-white nft-items nft-primary rounded-md shadow overflow-hidden mb-1">
+                    <div className="nft-image position-relative overflow-hidden">
+                      <a
+                        href="/item-detail-one"
+                        onClick={e => {
+                          e.preventDefault()
+                          navigate('/item-detail-one')
+                        }}
+                      >
+                        <img src={data?.image} className="img-fluid" alt="" />
+                      </a>
+                      <div className="position-absolute top-0 start-0 m-3">
+                        <a
+                          href=""
+                          onClick={e => e.preventDefault()}
+                          className="badge badge-link bg-primary"
+                        >
+                          {data?.type}
+                        </a>
+                      </div>
+                      <div className="position-absolute top-0 end-0 m-3">
+                        <span className="like-icon shadow-sm">
+                          <a
+                            href=""
+                            onClick={e => e.preventDefault()}
+                            className="text-muted icon"
+                          >
+                            <i className="mdi mdi-18px mdi-heart mb-0"></i>
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="card-body content position-relative">
+                      <a
+                        href="/item-detail-one"
+                        onClick={e => {
+                          e.preventDefault()
+                          navigate('/item-detail-one')
+                        }}
+                        className="title text-dark h6"
+                      >
+                        {data?.title}
+                      </a>
+
+                      <div className="d-flex align-items-center justify-content-between mt-3">
+                        <div className="">
+                          <small className="mb-0 d-block fw-semibold">
+                            Current Bid:
+                          </small>
+                          <small className="rate fw-bold">200 USDC</small>
+                        </div>
+                        <a
+                          href="/item-detail-one"
+                          onClick={e => {
+                            e.preventDefault()
+                            navigate('/item-detail-one')
+                          }}
+                          className="btn btn-icon btn-pills btn-primary"
+                        >
+                          <i className="uil uil-shopping-bag"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+            {/*end col*/}
+          </div>
+          {/*end row*/}
+
+          <div className="row">
+            <div className="col mt-4">
+              <div className="text-center">
+                <a
+                  href=""
+                  onClick={e => {
+                    e.preventDefault()
+                    // navigate('/explore-two')
+                  }}
+                  className="btn btn-primary rounded-md"
+                >
+                  View More <i className="uil uil-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            {/*end col*/}
+          </div>
+          {/*end row*/}
+        </div>
+        {/* end container */}
         <div className="container mt-100 mt-60">
           <div className="row justify-content-center">
             <div className="col">
@@ -531,7 +688,7 @@ const DarkVersionThree = () => {
                         Join with Rethestate Community
                       </h6>
                       <h4 className="title text-white title-dark mb-4">
-                        Become a Realtor!
+                        Become a Real Estate Valuation Tool!
                       </h4>
 
                       <p className="text-white-50 para-desc mb-0">
