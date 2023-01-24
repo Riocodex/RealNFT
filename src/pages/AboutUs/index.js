@@ -365,10 +365,10 @@ const AboutUs = () => {
                       </li>
                     </ul>
                     <a
-                      href="/blog-detail"
+                      href=""
                       onClick={e => {
                         e.preventDefault()
-                        navigate('/blog-detail')
+                        // navigate('/blog-detail')
                       }}
                       className="text-dark title h5 mt-3"
                     >
@@ -377,10 +377,10 @@ const AboutUs = () => {
 
                     <div className="mt-3 d-flex justify-content-between align-items-center">
                       <a
-                        href="/blog-detail"
+                        href=""
                         onClick={e => {
                           e.preventDefault()
-                          navigate('/blog-detail')
+                          // navigate('/blog-detail')
                         }}
                         className="btn btn-link text-muted"
                       >
@@ -389,10 +389,10 @@ const AboutUs = () => {
                       <span className="text-muted fs-6">
                         by{' '}
                         <a
-                          href="/creator-profile"
+                          href=""
                           onClick={e => {
                             e.preventDefault()
-                            navigate('/creator-profile')
+                            // navigate('/creator-profile')
                           }}
                           className="link"
                         >
