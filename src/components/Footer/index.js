@@ -158,32 +158,8 @@ const Footer = () => {
                           <i className="uil uil-angle-right-b me-1"></i> Explore
                         </a>
                       </li>
-                      <li>
-                        <a
-                          href=""
-                          onClick={e => {
-                            e.preventDefault()
-                            // navigate('/auction')
-                          }}
-                          className="text-foot"
-                        >
-                          <i className="uil uil-angle-right-b me-1"></i> Live
-                          Auction
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href=""
-                          onClick={e => {
-                            e.preventDefault()
-                            // navigate('/activity')
-                          }}
-                          className="text-foot"
-                        >
-                          <i className="uil uil-angle-right-b me-1"></i>{' '}
-                          Activities
-                        </a>
-                      </li>
+                    
+                   
                       <li>
                         <a
                           href=""
