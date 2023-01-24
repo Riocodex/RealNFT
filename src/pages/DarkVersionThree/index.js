@@ -367,10 +367,10 @@ const DarkVersionThree = () => {
                   <div className="card bg-white nft-items nft-primary rounded-md shadow overflow-hidden mb-1">
                     <div className="nft-image position-relative overflow-hidden">
                       <a
-                        href="/item-detail-one"
+                        href=""
                         onClick={e => {
                           e.preventDefault()
-                          navigate('/item-detail-one')
+                          // navigate('/item-detail-one')
                         }}
                       >
                         <img src={data?.image} className="img-fluid" alt="" />
@@ -399,10 +399,10 @@ const DarkVersionThree = () => {
 
                     <div className="card-body content position-relative">
                       <a
-                        href="/item-detail-one"
+                        href=""
                         onClick={e => {
                           e.preventDefault()
-                          navigate('/item-detail-one')
+                          // navigate('/item-detail-one')
                         }}
                         className="title text-dark h6"
                       >
@@ -417,10 +417,10 @@ const DarkVersionThree = () => {
                           <small className="rate fw-bold">200 USDC</small>
                         </div>
                         <a
-                          href="/item-detail-one"
+                          href=""
                           onClick={e => {
                             e.preventDefault()
-                            navigate('/item-detail-one')
+                            // navigate('/item-detail-one')
                           }}
                           className="btn btn-icon btn-pills btn-primary"
                         >
@@ -440,10 +440,10 @@ const DarkVersionThree = () => {
             <div className="col mt-4">
               <div className="text-center">
                 <a
-                  href=""
+                  href="/explore"
                   onClick={e => {
                     e.preventDefault()
-                    // navigate('/explore-two')
+                    navigate('/explore')
                   }}
                   className="btn btn-primary rounded-md"
                 >
@@ -574,10 +574,10 @@ const DarkVersionThree = () => {
                           <small className="rate fw-bold">200 USDC</small>
                         </div>
                         <a
-                          href="/item-detail-one"
+                          href=""
                           onClick={e => {
                             e.preventDefault()
-                            navigate('/item-detail-one')
+                            // navigate('/item-detail-one')
                           }}
                           className="btn btn-icon btn-pills btn-primary"
                         >
@@ -597,10 +597,10 @@ const DarkVersionThree = () => {
             <div className="col mt-4">
               <div className="text-center">
                 <a
-                  href=""
+                  href="/explore"
                   onClick={e => {
                     e.preventDefault()
-                    // navigate('/explore-two')
+                    navigate('/explore')
                   }}
                   className="btn btn-primary rounded-md"
                 >
@@ -654,10 +654,10 @@ const DarkVersionThree = () => {
                       <div className="ms-3">
                         <h6 className="mb-0">
                           <a
-                            href="/creators"
+                            href=""
                             onClick={e => {
                               e.preventDefault()
-                              navigate('/creators')
+                              // navigate('/creators')
                             }}
                             className="text-dark name"
                           >
@@ -765,10 +765,10 @@ const DarkVersionThree = () => {
 
                     <div className="nft-image rounded-md mt-3 position-relative overflow-hidden">
                       <a
-                        href="/item-detail-one"
+                        href=""
                         onClick={e => {
                           e.preventDefault()
-                          navigate('/item-detail-one')
+                          // navigate('/item-detail-one')
                         }}
                       >
                         <img src={data?.image} className="img-fluid" alt="" />
