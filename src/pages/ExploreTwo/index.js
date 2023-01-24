@@ -58,7 +58,7 @@ const ExploreTwo = () => {
       image: home4,
       title: '310 Donna Dr, Camden, OH 45311',
       id: '',
-      type: 'Mortgage',
+      type: 'Rental',
     },
     {
       image: home5,
@@ -106,7 +106,7 @@ const ExploreTwo = () => {
       image: home4,
       title: '310 Donna Dr, Camden, OH 45311',
       id: '',
-      type: 'Mortgage',
+      type: 'Home',
     },
     {
       image: home5,
@@ -237,9 +237,9 @@ const ExploreTwo = () => {
                                   defaultValue="Type"
                                 >
                                   <option value="1">Rental</option>
-                                  <option value="2">Mortgage</option>
-                                  <option value="3">Homes</option>
-                                  <option value="4">Real Estate</option>
+                                  <option value="2">Homes</option>
+                                  <option value="3">Real Estate</option>
+                                
                                 </select>
                               </div>
                             </div>
