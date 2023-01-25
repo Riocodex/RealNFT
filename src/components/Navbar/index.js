@@ -377,10 +377,10 @@ const Navbar = () => {
                   <div className="mt-2">
                     <a
                       className="dropdown-item small fw-semibold text-dark d-flex align-items-center"
-                      href=""
+                      href="/creator-profile"
                       onClick={e => {
                         e.preventDefault()
-                        // navigate('/creator-profile')
+                        navigate('/creator-profile')
                       }}
                     >
                       <span className="mb-0 d-inline-block me-1">
@@ -484,6 +484,24 @@ const Navbar = () => {
                 }}
                 >
                   About Us
+                </a>
+              
+           
+              </li>
+
+              <li className="has-submenu parent-parent-menu-item">
+                <a 
+                 href="/upload-work"
+                 onClick={e => {
+                  e.preventDefault()
+                  setTimeout(() => {
+                    activateMenu()
+                    toggleSwitcher(false)
+                  }, 1000)
+                  navigate('/upload-work')
+                }}
+                >
+                  Upload Works
                 </a>
               
            

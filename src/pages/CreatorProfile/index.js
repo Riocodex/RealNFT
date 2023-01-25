@@ -270,7 +270,7 @@ const CreateProfile = () => {
                 <div className="content mt-3">
                   <h5 className="mb-3">streetboyyy</h5>
                   <small className="text-muted px-2 py-1 rounded-lg shadow">
-                    bhcedeh5sdijuj-husac4saiu{' '}
+                  0x218AB365ad9D108B3d091DE10570ac2656dae491{' '}
                     <a
                       href=""
                       onClick={e => e.preventDefault()}
@@ -281,7 +281,7 @@ const CreateProfile = () => {
                   </small>
 
                   <h6 className="mt-3 mb-0">
-                    Artist, UX / UI designer, and Entrepreneur
+                   Real Estate Manager, NFT Enthusiast and Entrepreneur
                   </h6>
 
                   <div className="mt-4">
