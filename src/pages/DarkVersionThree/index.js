@@ -113,14 +113,14 @@ const DarkVersionThree = () => {
     {
       image: home9,
       title: '112 Cottage St, Camden, OH 45311',
-      type: 'Mortgage',
+      
       filter: ['all', 'mortgage'],
       payment: "$2,426/month"
     },
     {
       image: home3,
       title: '310 Donna Dr, Camden, OH 45311',
-      type: 'Mortgage',
+   
       filter: ['all', 'mortgage', ],
       payment: "$3,426/month"
     },
@@ -331,14 +331,7 @@ const DarkVersionThree = () => {
                   >
                     <i className="uil uil-house"></i> Rental
                   </li>
-                  <li
-                    className={`list-inline-item categories position-relative text-dark ${type === 'mortgage' ? 'active' : ''
-                      }`}
-                    data-group="mortgage"
-                    onClick={() => setFilter('mortgage')}
-                  >
-                    <i className="uil uil-home-alt"></i> Mortgage
-                  </li>
+              
                   <li
                     className={`list-inline-item categories position-relative text-dark ${type === 'homes' ? 'active' : ''
                       }`}
@@ -488,22 +481,7 @@ const DarkVersionThree = () => {
                   >
                     <i className="uil uil-house"></i> Rental
                   </li>
-                  <li
-                    className={`list-inline-item categories position-relative text-dark ${type === 'mortgage' ? 'active' : ''
-                      }`}
-                    data-group="mortgage"
-                    onClick={() => setFilter('mortgage')}
-                  >
-                    <i className="uil uil-home-alt"></i> Mortgage
-                  </li>
-                  <li
-                    className={`list-inline-item categories position-relative text-dark ${type === 'homes' ? 'active' : ''
-                      }`}
-                    data-group="homes"
-                    onClick={() => setFilter('homes')}
-                  >
-                    <i className="uil uil-house"></i> Homes
-                  </li>
+              
                  
                 
                 </ul>
