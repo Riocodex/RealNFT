@@ -4,7 +4,7 @@ import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
 import Countdown from 'react-countdown'
 import StyleSwitcher from '../../components/StyleSwitcher'
-import { client01, client02, client03, client08, client09, item1, item2, gif1, gif2, itemDetail } from '../../components/imageImport'
+import { client01, client02, client03, client08, client09, item1, item2, gif1, gif2, itemDetail,home9 } from '../../components/imageImport'
 
 const ItemDetailTwo = () => {
   const navigate = useNavigate()
@@ -75,20 +75,13 @@ const ItemDetailTwo = () => {
       {/* Start Home */}
       <section
         className="bg-half-260 d-table w-100"
-        style={{ background: `url(${itemDetail}) center` }}
+        style={{ background: `url(${home9}) center` }}
       >
         <div className="container">
           <div className="row mt-5">
             <div className="col py-5 py-sm-0 my-5 my-sm-0">
               <div className="play-icon">
-                <a
-                  href=""
-                  onClick={e => e.preventDefault()}
-                  // href="images/items/item-detail-1.jpg"
-                  className="play-btn lightbox"
-                >
-                  <i className="uil uil-camera text-primary rounded-circle bg-white shadow-lg"></i>
-                </a>
+             
               </div>
             </div>
             {/*end col*/}
@@ -110,13 +103,14 @@ const ItemDetailTwo = () => {
                   <div className="col">
                     <div className="title-heading text-center">
                       <h4 className="h3 fw-bold mb-0">
-                        Wolf with Skull{' '}
-                        <span className="text-gradient-primary">Orange</span>{' '}
+                         
+                      1649 Jude Dr{' '}
+                        <span className="text-gradient-primary">Allen,</span>{' '}
                         <br />{' '}
                         <span className="text-gradient-primary">
-                          Illustration
+                        TX
                         </span>{' '}
-                        T-shirt Tattoo
+                        75002
                       </h4>
                     </div>
 
@@ -124,8 +118,8 @@ const ItemDetailTwo = () => {
                       <div className="col-md-6 mt-4 pt-2">
                         <div className="text-center">
                           <h6>Current Bid</h6>
-                          <h4 className="mb-0">4.85 ETH</h4>
-                          <small className="mb-0 text-muted">$450.48USD</small>
+                          <h4 className="mb-0">400,000 USDC</h4>
+                          {/* <small className="mb-0 text-muted">$450.48USD</small> */}
                         </div>
                       </div>
 
@@ -289,7 +283,7 @@ const ItemDetailTwo = () => {
 
                               <div className="ms-3">
                                 <h6 className="mb-0">
-                                  2 WETH <span className="text-muted">by</span>{' '}
+                                  2 USDC <span className="text-muted">by</span>{' '}
                                   <a
                                     href="/creator-profile"
                                     onClick={e => {
@@ -318,7 +312,7 @@ const ItemDetailTwo = () => {
 
                               <div className="ms-3">
                                 <h6 className="mb-0">
-                                  0.001 WETH{' '}
+                                  0.001 USDC{' '}
                                   <span className="text-muted">by</span>{' '}
                                   <a
                                     href="/creator-profile"
@@ -348,7 +342,7 @@ const ItemDetailTwo = () => {
 
                               <div className="ms-3">
                                 <h6 className="mb-0">
-                                  1.225 WETH{' '}
+                                  1.225 USDC{' '}
                                   <span className="text-muted">by</span>{' '}
                                   <a
                                     href="/creator-profile"
@@ -545,7 +539,7 @@ const ItemDetailTwo = () => {
                           <small className="mb-0 d-block fw-semibold">
                             Current Bid:
                           </small>
-                          <small className="rate fw-bold">20.5 ETH</small>
+                          <small className="rate fw-bold">20.5 USDC</small>
                         </div>
                         <a
                           href="/item-detail-one"
@@ -608,11 +602,11 @@ const ItemDetailTwo = () => {
                         id="name"
                         type="text"
                         className="form-control"
-                        placeholder="00.00 ETH"
+                        placeholder="00.00 USDC"
                       />
                       <small className="text-muted">
                         <span className="text-dark">Note:</span> Bid price at
-                        least 1 ETH
+                        least 1 USDC
                       </small>
                     </div>
                   </div>
@@ -641,15 +635,15 @@ const ItemDetailTwo = () => {
               <div className="pt-3 border-top">
                 <div className="d-flex justify-content-between">
                   <p className="fw-bold small"> You must bid at least:</p>
-                  <p className="text-primary"> 1.22 ETH </p>
+                  <p className="text-primary"> 1.22 USDC </p>
                 </div>
                 <div className="d-flex justify-content-between">
                   <p className="fw-bold small"> Service free:</p>
-                  <p className="text-primary"> 0.05 ETH </p>
+                  <p className="text-primary"> 0.05 USDC </p>
                 </div>
                 <div className="d-flex justify-content-between">
                   <p className="fw-bold small"> Total bid amount:</p>
-                  <p className="text-primary mb-0"> 1.27 ETH </p>
+                  <p className="text-primary mb-0"> 1.27 USDC </p>
                 </div>
               </div>
             </div>
@@ -688,7 +682,7 @@ const ItemDetailTwo = () => {
               </button>
             </div>
             <div className="modal-body p-4">
-              your bid (1.27ETH) has been listing to our database
+              your bid (1.27USDC) has been listing to our database
             </div>
             <div className="modal-footer">
               <a
@@ -744,7 +738,7 @@ const ItemDetailTwo = () => {
                         id="name"
                         type="text"
                         className="form-control"
-                        defaultValue="1.5ETH"
+                        defaultValue="1.5USDC"
                       />
                     </div>
                   </div>
@@ -755,15 +749,15 @@ const ItemDetailTwo = () => {
               <div className="py-3 border-top">
                 <div className="d-flex justify-content-between">
                   <p className="fw-bold small"> You must bid at least:</p>
-                  <p className="text-primary"> 1.22 ETH </p>
+                  <p className="text-primary"> 1.22 USDC </p>
                 </div>
                 <div className="d-flex justify-content-between">
                   <p className="fw-bold small"> Service free:</p>
-                  <p className="text-primary"> 0.05 ETH </p>
+                  <p className="text-primary"> 0.05 USDC </p>
                 </div>
                 <div className="d-flex justify-content-between">
                   <p className="fw-bold small"> Total bid amount:</p>
-                  <p className="text-primary mb-0"> 1.27 ETH </p>
+                  <p className="text-primary mb-0"> 1.27 USDC </p>
                 </div>
               </div>
 

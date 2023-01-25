@@ -81,7 +81,7 @@ export default function Router() {
         <Route exact path="/wallet" element={<Wallet />} />
         <Route exact path="/activity" element={<Activity />} />
         <Route exact path="/item-detail-one" element={<ItemDetailOne />} />
-        <Route exact path="/item-detail-two" element={<ItemDetailTwo />} />
+        <Route exact path="/item-detail" element={<ItemDetailTwo />} />
         <Route exact path="/auction" element={<Auction />} />
         <Route exact path="/explore-four" element={<ExploreFour />} />
         <Route exact path="/explore-three" element={<ExploreThree />} />

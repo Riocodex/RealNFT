@@ -319,10 +319,10 @@ const CreateProfile = () => {
 
                           <div className="nft-image rounded-md mt-3 position-relative overflow-hidden">
                             <a
-                              href="/item-detail-one"
+                              href="/item-detail"
                               onClick={e => {
                                 e.preventDefault()
-                                navigate('/item-detail-one')
+                                navigate('/item-detail')
                               }}
                             >
                               <img
