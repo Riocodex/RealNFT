@@ -183,32 +183,32 @@ const DarkVersionThree = () => {
   ]
   const liveAuctions = [
     {
-      image: item3,
-      title: 'Liquid Forest Princess',
+      image: home10,
+      title: '9755 Olde Park Dr, Tipp City, OH 45371Contemporary Abstract',
       id: 'July 01, 2022 1:6:6',
       type: 'Illustration',
       client: client11,
       author: 'Butterfly',
     },
     {
-      image: gif3,
-      title: 'Spider Eyes Modern Art',
+      image: home3,
+      title: '4754 Fox Run, Fairborn, OH 45324',
       id: 'July 15, 2022 2:5:5',
       type: 'GIFs',
       client: client04,
       author: 'BigBull',
     },
     {
-      image: item4,
-      title: 'Synthwave Painting',
+      image: home4,
+      title: '2276 Cobblestone Ct, Beavercreek, OH 45431',
       id: 'Aug 08, 2022 5:1:4',
       type: 'GIFs',
       client: client12,
       author: 'Princess',
     },
     {
-      image: gif4,
-      title: 'Contemporary Abstract',
+      image: home9,
+      title: '31 S Lafayette St, Camden, OH 45311',
       id: 'Aug 20, 2022 1:6:3',
       type: 'GIFs',
       client: client13,
@@ -731,9 +731,7 @@ const DarkVersionThree = () => {
               <div className="section-title text-center mb-5 pb-3">
                 <h4 className="title mb-4">Live Auctions</h4>
                 <p className="text-muted para-desc mb-0 mx-auto">
-                  We are a huge marketplace dedicated to connecting great
-                  artists of all Superex with their fans and unique token
-                  collectors!
+                  We are a huge marketplace a real estate-based blockchain project that aims to revolutionize the way we buy, sell, and manage real estate assets.
                 </p>
               </div>
             </div>
@@ -805,10 +803,10 @@ const DarkVersionThree = () => {
 
                     <div className="card-body content position-relative p-0 mt-3">
                       <a
-                        href="/item-detail-one"
+                        href=""
                         onClick={e => {
                           e.preventDefault()
-                          navigate('/item-detail-one')
+                          // navigate('/item-detail-one')
                         }}
                         className="title text-dark h6"
                       >
@@ -823,10 +821,10 @@ const DarkVersionThree = () => {
                           <small className="rate fw-bold">20.5 ETH</small>
                         </div>
                         <a
-                          href="/item-detail-one"
+                          href=""
                           onClick={e => {
                             e.preventDefault()
-                            navigate('/item-detail-one')
+                            // navigate('/item-detail-one')
                           }}
                           className="btn btn-icon btn-pills btn-primary"
                         >
