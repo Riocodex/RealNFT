@@ -301,48 +301,9 @@ const CreateProfile = () => {
                         <div className="card nft-items nft-primary rounded-md shadow overflow-hidden mb-1 p-3">
                           <div className="d-flex justify-content-between">
                             <div className="img-group">
-                              <a
-                                href="/creator-profile"
-                                onClick={e => {
-                                  e.preventDefault()
-                                  navigate('/creator-profile')
-                                }}
-                                className="user-avatar"
-                              >
-                                <img
-                                  src={client08}
-                                  alt="user"
-                                  className="avatar avatar-sm-sm img-thumbnail border-0 shadow-sm rounded-circle"
-                                />
-                              </a>
-                              <a
-                                href="/creator-profile"
-                                onClick={e => {
-                                  e.preventDefault()
-                                  navigate('/creator-profile')
-                                }}
-                                className="user-avatar ms-n3"
-                              >
-                                <img
-                                  src={client05}
-                                  alt="user"
-                                  className="avatar avatar-sm-sm img-thumbnail border-0 shadow-sm rounded-circle"
-                                />
-                              </a>
-                              <a
-                                href="/creator-profile"
-                                onClick={e => {
-                                  e.preventDefault()
-                                  navigate('/creator-profile')
-                                }}
-                                className="user-avatar ms-n3"
-                              >
-                                <img
-                                  src={client06}
-                                  alt="user"
-                                  className="avatar avatar-sm-sm img-thumbnail border-0 shadow-sm rounded-circle"
-                                />
-                              </a>
+                           
+                            
+                            
                             </div>
 
                             <span className="like-icon shadow-sm">
