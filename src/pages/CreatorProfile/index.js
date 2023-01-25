@@ -26,7 +26,7 @@ const CreateProfile = () => {
     {
       image: home2,
       title: '925 Sycamore Creek Rd, Allen, TX 75002',
-      type: 'Arts',
+      type: 'Homes',
       id: ''
     },
     {
@@ -68,20 +68,20 @@ const CreateProfile = () => {
   ]
   const onSaleData = [
     {
-      image: gif1,
-      title: 'Deep Sea Phantasy',
+      image: home9,
+      title: '1649 Jude Dr, Allen, TX 75002',
       type: 'Rentals',
       id: 'May 29, 2022 6:0:0'
     },
     {
-      image: item1,
-      title: 'CyberPrimal 042 LAN',
-      type: 'Arts',
+      image: home8,
+      title: '1649 Jessica Dr, Allen, TX 75002',
+      type: 'Homes',
       id: ''
     },
     {
-      image: gif2,
-      title: 'Crypto Egg Stamp #5',
+      image: home7,
+      title: 'Buildable plan: Queensland, Village Cooperative of Allen (Active Adults 62+), Allen, TX 75013',
       type: 'Homes',
       id: ''
     },
