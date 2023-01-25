@@ -666,7 +666,7 @@ const DarkVersionThree = () => {
                         Join with Rethestate Community
                       </h6>
                       <h4 className="title text-white title-dark mb-4">
-                        Become a Real Estate Valuation Tool!
+                       Real Estate Valuation Tool!
                       </h4>
 
                       <p className="text-white-50 para-desc mb-0">
