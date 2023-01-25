@@ -407,7 +407,7 @@ const CreateProfile = () => {
                             </a>
 
                             <div className="d-flex justify-content-between mt-2">
-                              <small className="rate fw-bold">20.5 ETH</small>
+                              <small className="rate fw-bold">200,000 USDC</small>
                               <small className="text-dark fw-bold">
                                 1 out of 10
                               </small>
@@ -524,7 +524,7 @@ const CreateProfile = () => {
                                 <small className="mb-0 d-block fw-semibold">
                                   Current Bid:
                                 </small>
-                                <small className="rate fw-bold">20.5 ETH</small>
+                                <small className="rate fw-bold">200,000 USDC</small>
                               </div>
                               <a
                                 href="/item-detail-one"
