@@ -211,108 +211,8 @@ const CreateProfile = () => {
 
       {/* Start Home */}
       <section className="bg-creator-profile">
+
         <div className="container">
-          <div className="profile-banner">
-            <input
-              id="pro-banner"
-              name="profile-banner"
-              type="file"
-              className="d-none"
-              onChange={e => loadFile(e)}
-            />
-            <div className="position-relative d-inline-block">
-              <img
-                src={single}
-                className="rounded-md shadow-sm img-fluid"
-                id="profile-banner"
-                alt=""
-              />
-              <label
-                className="icons position-absolute bottom-0 end-0"
-                htmlFor="pro-banner"
-              >
-                <span className="btn btn-icon btn-sm btn-pills btn-primary">
-                  <FiCamera className="icons" />
-                </span>
-              </label>
-            </div>
-          </div>
-
-          <div className="row justify-content-center">
-            <div className="col">
-              <div className="text-center mt-n80">
-                <div className="profile-pic">
-                  <input
-                    id="pro-img"
-                    name="profile-image"
-                    type="file"
-                    className="d-none"
-                    onChange={e => loadFile(e)}
-                  />
-                  <div className="position-relative d-inline-block">
-                    <img
-                      src={client01}
-                      className="avatar avatar-medium img-thumbnail rounded-pill shadow-sm"
-                      id="profile-image"
-                      alt=""
-                    />
-                    <label
-                      className="icons position-absolute bottom-0 end-0"
-                      htmlFor="pro-img"
-                    >
-                      <span className="btn btn-icon btn-sm btn-pills btn-primary">
-                        <FiCamera className="icons" />
-                      </span>
-                    </label>
-                  </div>
-                </div>
-
-                <div className="content mt-3">
-                  <h5 className="mb-3">streetboyyy</h5>
-                  <small className="text-muted px-2 py-1 rounded-lg shadow">
-                  0x218AB365ad9D108B3d091DE10570ac2656dae491{' '}
-                    <a
-                      href=""
-                      onClick={e => e.preventDefault()}
-                      className="text-primary h5 ms-1"
-                    >
-                      <i className="uil uil-copy"></i>
-                    </a>
-                  </small>
-
-                  <h6 className="mt-3 mb-0">
-                   Real Estate Manager, NFT Enthusiast and Entrepreneur
-                  </h6>
-
-                  <div className="mt-4">
-                    <a
-                      href="/creator-profile-edit"
-                      onClick={e => {
-                        e.preventDefault()
-                        navigate('/creator-profile-edit')
-                      }}
-                      className="btn btn-pills btn-outline-primary mx-1"
-                    >
-                      Edit Profile
-                    </a>
-                    <a
-                      href="/upload-work"
-                      onClick={e => {
-                        e.preventDefault()
-                        navigate('/upload-work')
-                      }}
-                      className="btn btn-pills btn-icon btn-outline-primary mx-1"
-                    >
-                      <i className="uil uil-folder-upload"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="container mt-100 mt-60">
           <div className="row">
             <div className="col-12">
               <ul
@@ -331,7 +231,7 @@ const CreateProfile = () => {
                     aria-controls="CreateItem"
                     aria-selected="true"
                   >
-                    Created
+                    Owned
                   </button>
                 </li>
 
@@ -365,7 +265,7 @@ const CreateProfile = () => {
                   </button>
                 </li>
 
-                <li className="nav-item" role="presentation">
+                {/* <li className="nav-item" role="presentation">
                   <button
                     className="nav-link"
                     id="Collection-tab"
@@ -378,52 +278,13 @@ const CreateProfile = () => {
                   >
                     Collection
                   </button>
-                </li>
+                </li> */}
 
-                <li className="nav-item" role="presentation">
-                  <button
-                    className="nav-link"
-                    id="Activites-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#Activites"
-                    type="button"
-                    role="tab"
-                    aria-controls="Activites"
-                    aria-selected="false"
-                  >
-                    Activites
-                  </button>
-                </li>
+             
 
-                <li className="nav-item" role="presentation">
-                  <button
-                    className="nav-link"
-                    id="Followers-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#Followers"
-                    type="button"
-                    role="tab"
-                    aria-controls="Followers"
-                    aria-selected="false"
-                  >
-                    Followers
-                  </button>
-                </li>
+               
 
-                <li className="nav-item" role="presentation">
-                  <button
-                    className="nav-link"
-                    id="About-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#About"
-                    type="button"
-                    role="tab"
-                    aria-controls="About"
-                    aria-selected="false"
-                  >
-                    About
-                  </button>
-                </li>
+                
               </ul>
 
               <div className="tab-content mt-4 pt-2" id="myTabContent">
