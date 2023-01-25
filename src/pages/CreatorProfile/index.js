@@ -10,7 +10,7 @@ import {
   client10, client12, client13,
   gif1, gif2, gif3, gif4, gif5, gif6,
   item1, item2, item3, item4, item5, item6, item7, item8, item9, item10,
-  single, ofcDesk, prodToCard,
+  single, ofcDesk, prodToCard,home1, home2, home3, home4, home5, home6, home7, home8, home9, home10
 } from '../../components/imageImport'
 
 const CreateProfile = () => {
@@ -18,51 +18,51 @@ const CreateProfile = () => {
 
   const createdData = [
     {
-      image: gif1,
-      title: 'Deep Sea Phantasy',
-      type: 'GIFs',
+      image: home1,
+      title: '633 Ridgemont Dr, Allen, TX 75002',
+      type: 'Rentals',
       id: 'May 29, 2022 6:0:0'
     },
     {
-      image: item1,
-      title: 'CyberPrimal 042 LAN',
+      image: home2,
+      title: '925 Sycamore Creek Rd, Allen, TX 75002',
       type: 'Arts',
       id: ''
     },
     {
-      image: gif2,
-      title: 'Crypto Egg Stamp #5',
-      type: 'Games',
+      image: home4,
+      title: '205 Willow Creek Cir, Allen, TX 75002',
+      type: 'Homes',
       id: ''
     },
     {
-      image: item2,
-      title: 'Colorful Abstract Painting',
+      image: home5,
+      title: '719 Pebblebrook Dr, Allen, TX 75002',
       type: '',
       id: 'June 03, 2022 5:3:1'
     },
     {
-      image: item3,
-      title: 'Liquid Forest Princess',
+      image: home6,
+      title: 'Buildable plan: Wexford, Village Cooperative of Allen (Active Adults 62+), Allen, TX 75013',
       type: '',
       id: ''
     },
     {
-      image: gif3,
-      title: 'Spider Eyes Modern Art',
-      type: 'GIFs',
+      image: home7,
+      title: 'Buildable plan: Queensland, Village Cooperative of Allen (Active Adults 62+), Allen, TX 75013',
+      type: 'Rentals',
       id: 'June 10, 2022 1:0:1'
     },
     {
-      image: item4,
-      title: 'Synthwave Painting',
+      image: home8,
+      title: '1649 Jessica Dr, Allen, TX 75002',
       type: '',
       id: ''
     },
     {
-      image: gif4,
-      title: 'Contemporary Abstract',
-      type: 'GIFs',
+      image: home9,
+      title: '1649 Jude Dr, Allen, TX 75002',
+      type: 'Rentals',
       id: ''
     },
   ]
@@ -70,7 +70,7 @@ const CreateProfile = () => {
     {
       image: gif1,
       title: 'Deep Sea Phantasy',
-      type: 'GIFs',
+      type: 'Rentals',
       id: 'May 29, 2022 6:0:0'
     },
     {
@@ -82,7 +82,7 @@ const CreateProfile = () => {
     {
       image: gif2,
       title: 'Crypto Egg Stamp #5',
-      type: 'Games',
+      type: 'Homes',
       id: ''
     },
   ]
@@ -377,7 +377,7 @@ const CreateProfile = () => {
                                   onClick={e => e.preventDefault()}
                                   className="badge badge-link bg-primary"
                                 >
-                                  GIFs
+                                  Rentals
                                 </a>
                               </div>
                             )}
