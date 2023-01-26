@@ -360,10 +360,10 @@ const DarkVersionThree = () => {
                   <div className="card bg-white nft-items nft-primary rounded-md shadow overflow-hidden mb-1">
                     <div className="nft-image position-relative overflow-hidden">
                       <a
-                        href=""
+                        href="/item-detail"
                         onClick={e => {
                           e.preventDefault()
-                          // navigate('/item-detail-one')
+                          navigate('/item-detail')
                         }}
                       >
                         <img src={data?.image} className="img-fluid" alt="" />
@@ -392,10 +392,10 @@ const DarkVersionThree = () => {
 
                     <div className="card-body content position-relative">
                       <a
-                        href=""
+                        href="/item-detail"
                         onClick={e => {
                           e.preventDefault()
-                          // navigate('/item-detail-one')
+                          navigate('/item-detail')
                         }}
                         className="title text-dark h6"
                       >
@@ -410,10 +410,10 @@ const DarkVersionThree = () => {
                           <small className="rate fw-bold">200 USDC</small>
                         </div>
                         <a
-                          href=""
+                          href="/item-detail"
                           onClick={e => {
                             e.preventDefault()
-                            // navigate('/item-detail-one')
+                            navigate('/item-detail')
                           }}
                           className="btn btn-icon btn-pills btn-primary"
                         >
@@ -502,10 +502,10 @@ const DarkVersionThree = () => {
                   <div className="card bg-white nft-items nft-primary rounded-md shadow overflow-hidden mb-1">
                     <div className="nft-image position-relative overflow-hidden">
                       <a
-                        href=""
+                        href="/item-detail"
                         onClick={e => {
                           e.preventDefault()
-                          // navigate('/item-detail-one')
+                          navigate('/item-detail')
                         }}
                       >
                         <img src={data?.image} className="img-fluid" alt="" />
@@ -534,10 +534,10 @@ const DarkVersionThree = () => {
 
                     <div className="card-body content position-relative">
                       <a
-                        href=""
+                        href="/item-detail"
                         onClick={e => {
                           e.preventDefault()
-                          // navigate('/item-detail-one')
+                          navigate('/item-detail')
                         }}
                         className="title text-dark h6"
                       >

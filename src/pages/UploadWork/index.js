@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
 import StyleSwitcher from '../../components/StyleSwitcher'
-import { work1, client01, bg01 } from '../../components/imageImport'
+import { work1, client01, bg01,getStarted1  } from '../../components/imageImport'
 
 const UploadWork = () => {
   const navigate = useNavigate()
@@ -34,7 +34,7 @@ const UploadWork = () => {
       {/* Start Home */}
       <section
         className="bg-half-170 d-table w-100"
-        style={{ background: `url(${bg01}) bottom` }}
+        style={{ background: `url(${getStarted1}) bottom` }}
       >
         <div className="bg-overlay bg-gradient-overlay-2"></div>
         <div className="container">
