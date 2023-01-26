@@ -118,7 +118,7 @@ const ItemDetailTwo = () => {
                       <div className="col-md-6 mt-4 pt-2">
                         <div className="text-center">
                           <h6>Current Bid</h6>
-                          <h4 className="mb-0">400,000 USDC</h4>
+                          <h4 className="mb-0">965,000 USDC</h4>
                           {/* <small className="mb-0 text-muted">$450.48USD</small> */}
                         </div>
                       </div>
@@ -209,13 +209,14 @@ const ItemDetailTwo = () => {
                             role="tabpanel"
                             aria-labelledby="detail-tab"
                           >
-                            <p className="">
+                            <p className="text-muted">
                             <p>
                             <strong>4</strong> bds |
                             <strong> 5</strong> ba  |
                             <strong> 3210</strong> sqft
                    </p>
                             </p>
+                            <p className='text-muted'><strong>Est.payment: </strong>6,675 USDC/mo</p>
                             <p className="text-muted">
                               What does it mean? Biomechanics is the study of
                               the structure, function and motion of the
