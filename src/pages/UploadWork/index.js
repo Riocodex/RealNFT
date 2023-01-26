@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
 import StyleSwitcher from '../../components/StyleSwitcher'
-import { work1, client01, bg01,getStarted1  } from '../../components/imageImport'
+import { work1, client01, bg01,getStarted1,getStarted2  } from '../../components/imageImport'
 
 const UploadWork = () => {
   const navigate = useNavigate()
@@ -34,7 +34,7 @@ const UploadWork = () => {
       {/* Start Home */}
       <section
         className="bg-half-170 d-table w-100"
-        style={{ background: `url(${getStarted1}) bottom` }}
+        style={{ background: `url(${getStarted2}) bottom` }}
       >
         <div className="bg-overlay bg-gradient-overlay-2"></div>
         <div className="container">
@@ -42,10 +42,10 @@ const UploadWork = () => {
             <div className="col-12">
               <div className="title-heading text-center">
                 <h5 className="heading fw-semibold sub-heading text-white title-dark">
-                  Upload Your Work
+                  Upload Your NFT
                 </h5>
                 <p className="text-white-50 para-desc mx-auto mb-0">
-                  Add your digital art and work
+                  Add your digital assets
                 </p>
               </div>
             </div>
