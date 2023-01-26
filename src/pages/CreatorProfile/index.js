@@ -357,10 +357,10 @@ const CreateProfile = () => {
 
                           <div className="card-body content position-relative p-0 mt-3">
                             <a
-                              href="/item-detail-one"
+                              href="/item-detail"
                               onClick={e => {
                                 e.preventDefault()
-                                navigate('/item-detail-one')
+                                navigate('/item-detail')
                               }}
                               className="title text-dark h6"
                             >

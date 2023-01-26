@@ -368,7 +368,7 @@ const Navbar = () => {
                         <small className="text-dark">
                           Balance:{' '}
                           <span className="text-primary fw-bold">
-                           100USDC
+                           2,700,000USDC
                           </span>
                         </small>
                       </div>

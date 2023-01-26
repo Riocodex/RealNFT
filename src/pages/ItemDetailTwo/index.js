@@ -674,7 +674,7 @@ const ItemDetailTwo = () => {
             <div className="modal-body p-4">
               your bid (1,270,900USDC) has been listing to our database
             </div>
-            <div className="modal-footer">
+            {/* <div className="modal-footer">
               <a
                 href="/activity"
                 onClick={e => {
@@ -686,7 +686,7 @@ const ItemDetailTwo = () => {
               >
                 <i className="mdi mdi-basket-plus fs-5 me-2"></i> View Your Bid
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
