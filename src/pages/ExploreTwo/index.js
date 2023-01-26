@@ -304,10 +304,10 @@ const ExploreTwo = () => {
                     <div className="d-flex justify-content-between">
                       <div className="img-group">
                         <a
-                          href=""
+                          href="/creator-profile"
                           onClick={e => {
                             e.preventDefault()
-                            // navigate('/creator-profile')
+                            navigate('/creator-profile')
                           }}
                           className="user-avatar"
                         >
@@ -334,10 +334,10 @@ const ExploreTwo = () => {
 
                     <div className="nft-image rounded-md mt-3 position-relative overflow-hidden">
                       <a
-                        href=""
+                        href="/item-detail"
                         onClick={e => {
                           e.preventDefault()
-                          // navigate('/item-detail-one')
+                          navigate('/item-detail')
                         }}
                       >
                         <img src={data?.image} className="img-fluid" alt="" />

@@ -217,14 +217,14 @@ const ItemDetailTwo = () => {
                    </p>
                             </p>
                             <p className='text-muted'><strong className='text-dark name'>Est.payment: </strong>6,675 USDC/mo</p>
-                            <p className="text-muted">
+                            {/* <p className="text-muted">
                               What does it mean? Biomechanics is the study of
                               the structure, function and motion of the
                               mechanical aspects of biological systems, at any
                               level from whole organisms to organs, cells and
                               cell organelles, using the methods of mechanics.
                               Biomechanics is a branch of biophysics.
-                            </p>
+                            </p> */}
                             <h6>Owner</h6>
 
                             <div className="creators creator-primary d-flex align-items-center">
