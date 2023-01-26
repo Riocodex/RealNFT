@@ -61,17 +61,17 @@ const UploadWork = () => {
               >
                 <li className="breadcrumb-item">
                   <a
-                    href="/index"
+                    href="/"
                     onClick={e => {
                       e.preventDefault()
-                      navigate('/index')
+                      navigate('/')
                     }}
                   >
-                    Superex
+                    Rethestate
                   </a>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
-                  FAQs
+                  Get Started
                 </li>
               </ul>
             </nav>
