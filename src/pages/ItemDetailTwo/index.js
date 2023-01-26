@@ -4,7 +4,7 @@ import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
 import Countdown from 'react-countdown'
 import StyleSwitcher from '../../components/StyleSwitcher'
-import { client01, client02, client03, client08, client09, item1, item2, gif1, gif2, itemDetail,home9 } from '../../components/imageImport'
+import { client01, client02, client03, client08, client09, item1, item2, gif1, gif2, itemDetail,home9,home1, home2, home3, home4, home5, home6, home7, home8 } from '../../components/imageImport'
 
 const ItemDetailTwo = () => {
   const navigate = useNavigate()
@@ -34,34 +34,34 @@ const ItemDetailTwo = () => {
   ]
   const createdData = [
     {
-      image: gif1,
-      title: 'Deep Sea Phantasy',
+      image: home1,
+      title: '7702 Nocona Dr, Parker, TX 75002',
       id: 'May 29, 2022 6:0:0',
-      type: 'GIFs',
+      type: 'Rentals',
       client: client01,
       author: 'StreetBoy',
     },
     {
-      image: item1,
-      title: 'CyberPrimal 042 LAN',
+      image: home2,
+      title: '205 Douglas Dr, Wylie, TX 75098',
       id: 'June 03, 2022 5:3:1',
-      type: 'Arts',
+      type: 'Homes',
       client: client09,
       author: 'PandaOne',
     },
     {
-      image: gif2,
-      title: 'Crypto Egg Stamp #5',
+      image: home4,
+      title: '104 Fairmount Dr, Wylie, TX 75098',
       id: 'June 10, 2022 1:0:1',
-      type: 'GIFs',
+      type: 'Rentals',
       client: client02,
       author: 'CutieGirl',
     },
     {
-      image: item2,
-      title: 'Colorful Abstract Painting',
+      image: home5,
+      title: 'Buildable plan: Mooreville, Inspiration, Wylie, TX 75098',
       id: 'June 18, 2022 1:2:1',
-      type: 'Memes',
+      type: 'Homes',
       client: client03,
       author: 'NorseQueen',
     },
@@ -211,12 +211,12 @@ const ItemDetailTwo = () => {
                           >
                             <p className="text-muted">
                             <p>
-                            <strong>4</strong> bds |
-                            <strong> 5</strong> ba  |
-                            <strong> 3210</strong> sqft
+                            <strong className='text-dark name'>4</strong> bds |
+                            <strong className='text-dark name'> 5</strong> ba  |
+                            <strong className='text-dark name'> 3210</strong> sqft
                    </p>
                             </p>
-                            <p className='text-muted'><strong>Est.payment: </strong>6,675 USDC/mo</p>
+                            <p className='text-muted'><strong className='text-dark name'>Est.payment: </strong>6,675 USDC/mo</p>
                             <p className="text-muted">
                               What does it mean? Biomechanics is the study of
                               the structure, function and motion of the
@@ -273,7 +273,7 @@ const ItemDetailTwo = () => {
 
                               <div className="ms-3">
                                 <h6 className="mb-0">
-                                  2 USDC <span className="text-muted">by</span>{' '}
+                                  900,000 USDC <span className="text-muted">by</span>{' '}
                                   <a
                                     href="/creator-profile"
                                     onClick={e => {
@@ -302,7 +302,7 @@ const ItemDetailTwo = () => {
 
                               <div className="ms-3">
                                 <h6 className="mb-0">
-                                  0.001 USDC{' '}
+                                  1,000,000 USDC{' '}
                                   <span className="text-muted">by</span>{' '}
                                   <a
                                     href="/creator-profile"
@@ -312,7 +312,7 @@ const ItemDetailTwo = () => {
                                     }}
                                     className="text-dark name"
                                   >
-                                    VOTwear
+                                    0xe849fa28a...ea14
                                   </a>
                                 </h6>
                                 <small className="text-muted">
@@ -332,7 +332,7 @@ const ItemDetailTwo = () => {
 
                               <div className="ms-3">
                                 <h6 className="mb-0">
-                                  1.225 USDC{' '}
+                                  1,225,000 USDC{' '}
                                   <span className="text-muted">by</span>{' '}
                                   <a
                                     href="/creator-profile"
@@ -434,12 +434,12 @@ const ItemDetailTwo = () => {
           <div className="row justify-content-center">
             <div className="col">
               <div className="section-title text-center mb-4 pb-2">
-                <h4 className="title mb-4">Related Auction Items</h4>
-                <p className="text-muted para-desc mb-0 mx-auto">
+                <h4 className="title mb-4">Homes For You</h4>
+                {/* <p className="text-muted para-desc mb-0 mx-auto">
                   We are a huge marketplace dedicated to connecting great
                   artists of all Superex with their fans and unique token
                   collectors!
-                </p>
+                </p> */}
               </div>
             </div>
             {/*end col*/}
@@ -470,10 +470,10 @@ const ItemDetailTwo = () => {
 
                     <div className="nft-image rounded-md mt-3 position-relative overflow-hidden">
                       <a
-                        href="/item-detail-one"
+                        href="/item-detail"
                         onClick={e => {
                           e.preventDefault()
-                          navigate('/item-detail-one')
+                          navigate('/item-detail')
                         }}
                       >
                         <img src={data?.image} className="img-fluid" alt="" />
@@ -514,10 +514,10 @@ const ItemDetailTwo = () => {
 
                     <div className="card-body content position-relative p-0 mt-3">
                       <a
-                        href="/item-detail-one"
+                        href="/item-detail"
                         onClick={e => {
                           e.preventDefault()
-                          navigate('/item-detail-one')
+                          navigate('/item-detail')
                         }}
                         className="title text-dark h6"
                       >
@@ -529,7 +529,7 @@ const ItemDetailTwo = () => {
                           <small className="mb-0 d-block fw-semibold">
                             Current Bid:
                           </small>
-                          <small className="rate fw-bold">20.5 USDC</small>
+                          <small className="rate fw-bold">657,000 USDC</small>
                         </div>
                         <a
                           href="/item-detail-one"
@@ -596,7 +596,7 @@ const ItemDetailTwo = () => {
                       />
                       <small className="text-muted">
                         <span className="text-dark">Note:</span> Bid price at
-                        least 1 USDC
+                        least 965,000 USDC
                       </small>
                     </div>
                   </div>
@@ -625,15 +625,15 @@ const ItemDetailTwo = () => {
               <div className="pt-3 border-top">
                 <div className="d-flex justify-content-between">
                   <p className="fw-bold small"> You must bid at least:</p>
-                  <p className="text-primary"> 1.22 USDC </p>
+                  <p className="text-primary"> 900,000 USDC </p>
                 </div>
                 <div className="d-flex justify-content-between">
                   <p className="fw-bold small"> Service free:</p>
-                  <p className="text-primary"> 0.05 USDC </p>
+                  <p className="text-primary"> 2000 USDC </p>
                 </div>
                 <div className="d-flex justify-content-between">
                   <p className="fw-bold small"> Total bid amount:</p>
-                  <p className="text-primary mb-0"> 1.27 USDC </p>
+                  <p className="text-primary mb-0"> 1,270,000 USDC </p>
                 </div>
               </div>
             </div>
@@ -672,7 +672,7 @@ const ItemDetailTwo = () => {
               </button>
             </div>
             <div className="modal-body p-4">
-              your bid (1.27USDC) has been listing to our database
+              your bid (1,270,900USDC) has been listing to our database
             </div>
             <div className="modal-footer">
               <a
@@ -739,15 +739,15 @@ const ItemDetailTwo = () => {
               <div className="py-3 border-top">
                 <div className="d-flex justify-content-between">
                   <p className="fw-bold small"> You must bid at least:</p>
-                  <p className="text-primary"> 1.22 USDC </p>
+                  <p className="text-primary"> 900,000 USDC </p>
                 </div>
                 <div className="d-flex justify-content-between">
                   <p className="fw-bold small"> Service free:</p>
-                  <p className="text-primary"> 0.05 USDC </p>
+                  <p className="text-primary"> 2000 USDC </p>
                 </div>
                 <div className="d-flex justify-content-between">
                   <p className="fw-bold small"> Total bid amount:</p>
-                  <p className="text-primary mb-0"> 1.27 USDC </p>
+                  <p className="text-primary mb-0"> 902,000 USDC </p>
                 </div>
               </div>
 
@@ -824,7 +824,7 @@ const ItemDetailTwo = () => {
                 <a href="" className="text-reset">
                   <u>XYZ nft</u>
                 </a>{' '}
-                from Superex
+                from Rethestate
               </h6>
 
               <ul className="rounded-md shadow p-4 border list-unstyled mt-4">
