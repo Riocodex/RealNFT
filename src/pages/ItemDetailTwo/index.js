@@ -179,6 +179,7 @@ const ItemDetailTwo = () => {
                               Details
                             </button>
                           </li>
+                          
 
                           <li className="nav-item" role="presentation">
                             <button
@@ -195,20 +196,7 @@ const ItemDetailTwo = () => {
                             </button>
                           </li>
 
-                          <li className="nav-item" role="presentation">
-                            <button
-                              className="nav-link"
-                              id="activity-tab"
-                              data-bs-toggle="tab"
-                              data-bs-target="#activity"
-                              type="button"
-                              role="tab"
-                              aria-controls="activity"
-                              aria-selected="false"
-                            >
-                              Activity
-                            </button>
-                          </li>
+                        
                         </ul>
 
                         <div
@@ -221,11 +209,12 @@ const ItemDetailTwo = () => {
                             role="tabpanel"
                             aria-labelledby="detail-tab"
                           >
-                            <p className="text-muted">
-                              Hey guys! New exploration about NFT Marketplace
-                              Web Design, this time I'm inspired by one of my
-                              favorite NFT website called Superex (with crypto
-                              payment)! What do you think?
+                            <p className="">
+                            <p>
+                            <strong>4</strong> bds |
+                            <strong> 5</strong> ba  |
+                            <strong> 3210</strong> sqft
+                   </p>
                             </p>
                             <p className="text-muted">
                               What does it mean? Biomechanics is the study of
@@ -252,10 +241,10 @@ const ItemDetailTwo = () => {
                               <div className="ms-3">
                                 <h6 className="mb-0">
                                   <a
-                                    href="/creators"
+                                    href="creator-profile'"
                                     onClick={e => {
                                       e.preventDefault()
-                                      navigate('/creators')
+                                      navigate('/creator-profile')
                                     }}
                                     className="text-dark name"
                                   >
