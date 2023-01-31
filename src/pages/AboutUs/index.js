@@ -292,7 +292,7 @@ const AboutUs = () => {
                   </div>
 
                   <div className="content mt-3">
-                    <a href="" className="textdark h6 mb-0 title d-block">
+                    <a href="" className="text-dark h6 mb-0 title d-block">
                       {client?.name}
                     </a>
                     <small className="text-muted mb-0 fw-normal">
