@@ -250,7 +250,7 @@ const AboutUs = () => {
               <div className="section-title text-center mb-4 pb-2">
                 <h4 className="title mb-4">Our Team</h4>
                 <p className="text-muted para-desc mb-0 mx-auto">
-                  We are a huge marketplace dedicated to connecting great
+                  We are a huge marketp qace dedicated to connecting great
                   artists of all Rethestate with their fans and unique token
                   collectors!
                 </p>
