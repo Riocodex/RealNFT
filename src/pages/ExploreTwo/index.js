@@ -206,7 +206,7 @@ const ExploreTwo = () => {
             <div className="col-12">
               <div className="features-absolute">
                 <div className="row justify-content-center" id="reserve-form">
-                  <div className="col-xl-10 mt-lg-5">
+                  <div className="col-xl-40 mt-lg-5">
                     <div className="card bg-white feature-top border-0 shadow rounded p-3">
                       <form action="#">
                         <div className="registration-form text-dark text-start">
@@ -265,6 +265,48 @@ const ExploreTwo = () => {
                               </div>
                             </div>
                             {/*end col*/}
+                            <div className="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                              <div className="filter-search-form position-relative filter-border">
+                                <i className="uil uil-window icons"></i>
+                                <select
+                                  className="form-select "
+                                  data-trigger
+                                  name="choices-type"
+                                  id="choices-type"
+                                  aria-label="Default select example"
+                                  defaultValue="Location"
+                                >
+                                  <option value="1">CurrentLocation</option>
+                                  <option value="2">France</option>
+                                  <option value="3">USA</option>
+                                  <option value="4">United Kingdom</option>
+                                  <option value="5">Canada</option>
+                                </select>
+                              </div>
+                            </div>
+                            {/*end col*/}
+
+                            <div className="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                              <div className="filter-search-form position-relative filter-border">
+                                <i className="uil uil-window icons"></i>
+                                <select
+                                  className="form-select "
+                                  data-trigger
+                                  name="choices-type"
+                                  id="choices-type"
+                                  aria-label="Default select example"
+                                  defaultValue="Location"
+                                >
+                                  <option value="1">CurrentLocation</option>
+                                  <option value="2">France</option>
+                                  <option value="3">USA</option>
+                                  <option value="4">United Kingdom</option>
+                                  <option value="5">Canada</option>
+                                </select>
+                              </div>
+                            </div>
+                            {/*end col*/}
+
 
                             <div className="col-lg-3 col-md-6 mt-3 mt-lg-0">
                               <input
