@@ -283,93 +283,6 @@ const ExploreTwo = () => {
                         {/*end container*/}
                       </form>
                     </div>
-
-                    
-                  </div>
-                  {/*ed col*/}
-                </div>
-                {/*end row*/}
-
-                 <div className="row justify-content-center" id="reserve-form">
-                  <div className="col-xl-10 mt-lg-5">
-                    <div className="card bg-white feature-top border-0 shadow rounded p-3">
-                      <form action="#">
-                        <div className="registration-form text-dark text-start">
-                          <div className="row g-lg-0">
-                            <div className="col-lg-3 col-md-6">
-                              <div className="filter-search-form position-relative filter-border">
-                                <i className="uil uil-search icons"></i>
-                                <input
-                                  name="name"
-                                  type="text"
-                                  id="search-keyword"
-                                  className="form-control filter-input-box bg-light border-0"
-                                  placeholder="Enter an address, neighborhood,city or ZIP code"
-                                />
-                              </div>
-                            </div>
-                            {/*end col*/}
-
-                            <div className="col-lg-3 col-md-6 mt-3 mt-md-0">
-                              <div className="filter-search-form position-relative filter-border">
-                                <i className="uil uil-usd-circle icons"></i>
-                                <select
-                                  className="form-select"
-                                  data-trigger
-                                  name="choices-criteria"
-                                  id="choices-criteria"
-                                  aria-label="Default select example"
-                                  defaultValue="Type"
-                                >
-                                  <option value="1">Rental</option>
-                                  <option value="2">Homes</option>
-                                  <option value="3">Real Estate</option>
-                                
-                                </select>
-                              </div>
-                            </div>
-                            {/*end col*/}
-
-                            <div className="col-lg-3 col-md-6 mt-3 mt-lg-0">
-                              <div className="filter-search-form position-relative filter-border">
-                                <i className="uil uil-window icons"></i>
-                                <select
-                                  className="form-select "
-                                  data-trigger
-                                  name="choices-type"
-                                  id="choices-type"
-                                  aria-label="Default select example"
-                                  defaultValue="Location"
-                                >
-                                  <option value="1">CurrentLocation</option>
-                                  <option value="2">France</option>
-                                  <option value="3">USA</option>
-                                  <option value="4">United Kingdom</option>
-                                  <option value="5">Canada</option>
-                                </select>
-                              </div>
-                            </div>
-                            {/*end col*/}
-
-                            <div className="col-lg-3 col-md-6 mt-3 mt-lg-0">
-                              <input
-                                type="submit"
-                                id="search"
-                                name="search"
-                                style={{ height: 60 }}
-                                className="btn btn-primary rounded-md searchbtn submit-btn w-100"
-                                value="Search"
-                              />
-                            </div>
-                            {/*end col*/}
-                          </div>
-                          {/*end row*/}
-                        </div>
-                        {/*end container*/}
-                      </form>
-                    </div>
-
-                    
                   </div>
                   {/*ed col*/}
                 </div>
@@ -381,8 +294,6 @@ const ExploreTwo = () => {
           {/*end row*/}
         </div>
         {/*end container*/}
-
-        
 
         <div className="container">
           <div className="row row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 row-cols-1">
@@ -520,7 +431,7 @@ const ExploreTwo = () => {
 
                 <div className="col-lg-8 col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0">
                   <div className="section-title text-center text-md-start ms-xl-5 ms-md-4">
-                    <h4 className="display-6 fw-bold text-  ite title-dark mb-0">
+                    <h4 className="display-6 fw-bold text-white title-dark mb-0">
                       Get{' '}
                       <span className="text-gradient-primary fw-bold">
                         Free Token Collections{' '}
