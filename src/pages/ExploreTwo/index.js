@@ -285,11 +285,12 @@ const ExploreTwo = () => {
                                   aria-label="Default select example"
                                   defaultValue="Location"
                                 >
-                                  <option value="1">CurrentLocation</option>
-                                  <option value="2">France</option>
-                                  <option value="3">USA</option>
-                                  <option value="4">United Kingdom</option>
-                                  <option value="5">Canada</option>
+                                  <option value="">Choose State</option>
+                                  <option value="1">Florida</option>
+                                  <option value="2">Alaska</option>
+                                  <option value="3">Ohio</option>
+                                  <option value="4">Hawaii</option>
+                                  <option value="5">Washington</option>
                                 </select>
                               </div>
                             </div>
