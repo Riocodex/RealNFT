@@ -264,10 +264,10 @@ const ExploreTwo = () => {
                                   aria-label="Default select example"
                                   defaultValue="Type"
                                 >
-                                  <option value="" selected disabled hidden>Choose City</option>
+                                  <option value=""selected="selected">Choose City</option>
                                   <option value="1">Miami</option>
-                                  <option value="2">Homes</option>
-                                  <option value="3">Real Estate</option>
+                                  <option value="2">New York</option>
+                                  <option value="3">New Jersey</option>
                                 
                                 </select>
                               </div>
