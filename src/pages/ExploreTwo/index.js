@@ -219,7 +219,21 @@ const ExploreTwo = () => {
                                   type="text"
                                   id="search-keyword"
                                   className="form-control filter-input-box bg-light border-0"
-                                  placeholder="Enter an address, neighborhood,city or ZIP code"
+                                  placeholder="Enter an address"
+                                />
+                              </div>
+                            </div>
+                            {/*end col*/}
+
+                            <div className="col-lg-3 col-md-6 mt-3 mt-md-0">
+                              <div className="filter-search-form position-relative filter-border">
+                                <i className="uil uil-search icons"></i>
+                                <input
+                                  name="name"
+                                  type="text"
+                                  id="search-keyword"
+                                  className="form-control filter-input-box bg-light border-0"
+                                  placeholder="Enter ZIP code"
                                 />
                               </div>
                             </div>
@@ -241,21 +255,7 @@ const ExploreTwo = () => {
 
                             <div className="col-lg-3 col-md-6 mt-3 mt-md-0">
                               <div className="filter-search-form position-relative filter-border">
-                                <i className="uil uil-search icons"></i>
-                                <input
-                                  name="name"
-                                  type="text"
-                                  id="search-keyword"
-                                  className="form-control filter-input-box bg-light border-0"
-                                  placeholder="Enter an address, neighborhood,city or ZIP code"
-                                />
-                              </div>
-                            </div>
-                            {/*end col*/}
-
-                            <div className="col-lg-3 col-md-6 mt-3 mt-md-0">
-                              <div className="filter-search-form position-relative filter-border">
-                                <i className="uil uil-usd-circle icons"></i>
+                                <i className="uil uil-window icons"></i>
                                 <select
                                   className="form-select"
                                   data-trigger
@@ -264,7 +264,8 @@ const ExploreTwo = () => {
                                   aria-label="Default select example"
                                   defaultValue="Type"
                                 >
-                                  <option value="1">Rental</option>
+                                  <option value="" selected disabled hidden>Choose City</option>
+                                  <option value="1">Miami</option>
                                   <option value="2">Homes</option>
                                   <option value="3">Real Estate</option>
                                 
