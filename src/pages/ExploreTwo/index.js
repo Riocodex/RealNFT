@@ -211,7 +211,7 @@ const ExploreTwo = () => {
                       <form action="#">
                         <div className="registration-form text-dark text-start">
                           <div className="row g-lg-0">
-                            <div className="col-lg-3 col-md-6">
+                            <div className="col-lg-3 col-md-6 mt-3 mt-md-0">
                               <div className="filter-search-form position-relative filter-border">
                                 <i className="uil uil-search icons"></i>
                                 <input
@@ -225,7 +225,7 @@ const ExploreTwo = () => {
                             </div>
                             {/*end col*/}
 
-                            <div className="col-lg-3 col-md-6">
+                            <div className="col-lg-3 col-md-6 mt-3 mt-md-0">
                               <div className="filter-search-form position-relative filter-border">
                                 <i className="uil uil-search icons"></i>
                                 <input
@@ -239,7 +239,7 @@ const ExploreTwo = () => {
                             </div>
                             {/*end col*/}
 
-                            <div className="col-lg-3 col-md-6">
+                            <div className="col-lg-3 col-md-6 mt-3 mt-md-0">
                               <div className="filter-search-form position-relative filter-border">
                                 <i className="uil uil-search icons"></i>
                                 <input
