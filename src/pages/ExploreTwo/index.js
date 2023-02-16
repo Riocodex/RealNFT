@@ -290,7 +290,7 @@ const ExploreTwo = () => {
                 </div>
                 {/*end row*/}
 
-                <div className="row justify-content-center" id="reserve-form">
+                 <div className="row justify-content-center" id="reserve-form">
                   <div className="col-xl-10 mt-lg-5">
                     <div className="card bg-white feature-top border-0 shadow rounded p-3">
                       <form action="#">
@@ -312,7 +312,7 @@ const ExploreTwo = () => {
 
                             <div className="col-lg-3 col-md-6 mt-3 mt-md-0">
                               <div className="filter-search-form position-relative filter-border">
-                                <i className="uil uil-usd-circle icons mr-"></i>
+                                <i className="uil uil-usd-circle icons"></i>
                                 <select
                                   className="form-select"
                                   data-trigger
