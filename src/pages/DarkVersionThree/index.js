@@ -230,6 +230,7 @@ const DarkVersionThree = () => {
       } else {
         document.getElementById('theme-opt').href = './css/style-dark.min.css'
       }
+      
       toggleSwitcher(false)
     }, 100)
   }, [location?.pathname])
