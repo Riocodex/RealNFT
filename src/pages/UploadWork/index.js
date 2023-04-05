@@ -67,7 +67,7 @@ const UploadWork = () => {
                       navigate('/')
                     }}
                   >
-                    Rethestate
+                    RealNFT
                   </a>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">

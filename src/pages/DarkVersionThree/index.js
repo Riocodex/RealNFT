@@ -230,7 +230,7 @@ const DarkVersionThree = () => {
       } else {
         document.getElementById('theme-opt').href = './css/style-dark.min.css'
       }
-      
+
       toggleSwitcher(false)
     }, 100)
   }, [location?.pathname])
@@ -267,7 +267,7 @@ const DarkVersionThree = () => {
                   The Biggest <br /> Collections of Digital Assets
                 </h4>
                 <p className="text-white title-dark mb-0 para-desc mx-auto">
-                Welcome to RETHESTATE, a real estate-based blockchain project that aims to revolutionize the way we buy, sell, and manage real estate assets.
+                Welcome to RealNFT, a real estate-based blockchain project that aims to revolutionize the way we buy, sell, and manage real estate assets.
                 </p>
 
                 <div className="mt-4 pt-2">
@@ -598,7 +598,7 @@ const DarkVersionThree = () => {
               <div className="section-title text-center mb-5 pb-3">
                 <h4 className="title mb-4">Popular Realtors</h4>
                 <p className="text-muted para-desc mb-0 mx-auto">
-                Our mission and main focus at RETHESTATE is to simplify what can often be a tedious and time-consuming process for homeowners, prospective buyers, and tenants.
+                Our mission and main focus at RealNFT is to simplify what can often be a tedious and time-consuming process for homeowners, prospective buyers, and tenants.
                 </p>
               </div>
             </div>
@@ -664,7 +664,7 @@ const DarkVersionThree = () => {
                   <div className="col-md-8">
                     <div className="section-title text-md-start text-center">
                       <h6 className="text-white-50 mb-1">
-                        Join with Rethestate Community
+                        Join with RealNFT Community
                       </h6>
                       <h4 className="title text-white title-dark mb-4">
                        Real Estate Valuation Tool!

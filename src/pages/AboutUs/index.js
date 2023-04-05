@@ -73,10 +73,10 @@ const AboutUs = () => {
             <div className="col-12">
               <div className="title-heading text-center">
                 <h5 className="heading fw-semibold sub-heading text-white title-dark">
-                  Meet Rethestate
+                  Meet RealNFT
                 </h5>
                 <p className="text-white-50 para-desc mx-auto mb-0">
-                Welcome to RETHESTATE, a real estate-based blockchain project that aims to revolutionize the way we buy, sell, and manage real estate assets.
+                Welcome to RealNFT, a real estate-based blockchain project that aims to revolutionize the way we buy, sell, and manage real estate assets.
                 </p>
               </div>
             </div>
@@ -98,7 +98,7 @@ const AboutUs = () => {
                       navigate('/')
                     }}
                   >
-                    Rethestate
+                    RealNFT
                   </a>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
@@ -163,19 +163,6 @@ const AboutUs = () => {
                 </p>
 
 
-                <div className="mt-4 pt-2">
-                  <a
-                    href="https://rethestate.com/"
-                    onClick={
-                      e => e.preventDefault()
-                      // navigate('https://rethestate.com/</div>')
-                    }
-                    className="btn btn-primary rounded-md"
-                   
-                  >
-                    Read More <i className="uil uil-arrow-right"></i>
-                  </a>
-                </div>
               </div>
             </div>
             {/*end col*/}
@@ -251,7 +238,7 @@ const AboutUs = () => {
                 <h4 className="title mb-4">Our Team</h4>
                 <p className="text-muted para-desc mb-0 mx-auto">
                   We are a huge marketplace dedicated to connecting great
-                  artists of all Rethestate with their fans and unique token
+                  artists of all RealNFT with their fans and unique token
                   collectors!
                 </p>
               </div>
