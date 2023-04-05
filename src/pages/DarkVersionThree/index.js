@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import { FiArrowRight } from 'react-icons/fi'
-import { ethers } from  "ethers"
 import Countdown from 'react-countdown'
 import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
@@ -15,28 +14,6 @@ import {
 } from '../../components/imageImport'
 
 const DarkVersionThree = () => {
-
-  const [ account, setAccount ] = useState(null)
-  const [nft, setNFT] = useState({})
-  const [marketplace, setMarketplace] = useState({})
-  //Metamask Login/Connect
-  const web3Handler = async() =>{
-    const accounts = await window.ethereum.request({method: "eth_requestAccounts"})
-    setAccount(accounts[0])
-    //Get provider from Metamask
-    const provider = new ethers.providers.Web3Provider(window.ethereum)
-    //set signer
-    const signer = provider.getSigner()
-    // loadContracts(signer)
-  }
-  // const loadContracts = async (signer) => {
-  //   //get deployed copies of contract
-  //   const marketplace = new ethers.Contract(MarketplaceAddress.address, MarketplaceAbi.abi, signer)
-  //   setMarketplace(marketplace)
-  //   const nft = new ethers.Contract(NFTAddress.address, NFTAbi.abi, signer)
-  //   setNFT(nft)
-  //   setLoading(false)
-  // }
   const navigate = useNavigate()
 
   const toggleSwitcher = () => {
@@ -242,8 +219,6 @@ const DarkVersionThree = () => {
   const [type, setType] = useState('all')
   const location = useLocation()
 
-
-
   useEffect(() => {
     setTimeout(() => {
       if (location?.pathname === '/index-three-dark-rtl') {
@@ -255,7 +230,6 @@ const DarkVersionThree = () => {
       } else {
         document.getElementById('theme-opt').href = './css/style-dark.min.css'
       }
-
       toggleSwitcher(false)
     }, 100)
   }, [location?.pathname])
@@ -268,7 +242,7 @@ const DarkVersionThree = () => {
   return (
     <>
       {/* Navbar */}
-      <Navbar web3Handler={web3Handler} account={account} />
+      <Navbar />
 
       {/* Start Home */}
       <section
@@ -292,7 +266,7 @@ const DarkVersionThree = () => {
                   The Biggest <br /> Collections of Digital Assets
                 </h4>
                 <p className="text-white title-dark mb-0 para-desc mx-auto">
-                Welcome to RealNFT, a real estate-based blockchain project that aims to revolutionize the way we buy, sell, and manage real estate assets.
+                Welcome to RETHESTATE, a real estate-based blockchain project that aims to revolutionize the way we buy, sell, and manage real estate assets.
                 </p>
 
                 <div className="mt-4 pt-2">
@@ -623,7 +597,7 @@ const DarkVersionThree = () => {
               <div className="section-title text-center mb-5 pb-3">
                 <h4 className="title mb-4">Popular Realtors</h4>
                 <p className="text-muted para-desc mb-0 mx-auto">
-                Our mission and main focus at RealNFT is to simplify what can often be a tedious and time-consuming process for homeowners, prospective buyers, and tenants.
+                Our mission and main focus at RETHESTATE is to simplify what can often be a tedious and time-consuming process for homeowners, prospective buyers, and tenants.
                 </p>
               </div>
             </div>
@@ -689,7 +663,7 @@ const DarkVersionThree = () => {
                   <div className="col-md-8">
                     <div className="section-title text-md-start text-center">
                       <h6 className="text-white-50 mb-1">
-                        Join with RealNFT Community
+                        Join with Rethestate Community
                       </h6>
                       <h4 className="title text-white title-dark mb-4">
                        Real Estate Valuation Tool!
