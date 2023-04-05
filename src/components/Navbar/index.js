@@ -373,7 +373,7 @@ const Navbar = ({ web3Handler, account }) => {
                 </div>
               </li>
           ):(
-            <li>Connect your wallet</li>
+            <li></li>
           )}
           </ul>
           {/*Login button End*/}
