@@ -26,6 +26,7 @@ const DarkVersionThree = () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     //set signer
     const signer = provider.getSigner()
+    console.log("clicked")
     // loadContracts(signer)
   }
   // const loadContracts = async (signer) => {

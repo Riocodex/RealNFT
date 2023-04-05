@@ -2,7 +2,7 @@ import React, { useState, useCallback, useEffect, useMemo } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { character, client01, lightLogo, logoDark } from '../imageImport'
 
-const Navbar = () => {
+const Navbar = ({ web3Handler, account }) => {
   const [myPublicAddress, setMyPublicAddress] = useState('qhut0...hfteh45')
   const location = useLocation()
   const navigate = useNavigate()
@@ -41,64 +41,8 @@ const Navbar = () => {
     }
   }
 
-  const closeModal = () => {
-    //   metamask modal
-    const modal = document.getElementById('modal-metamask')
 
-    modal.classList.remove('show')
-    modal.style.display = 'none'
-  }
 
-  const isMetaMaskInstalled = useCallback(() => {
-    //Have to check the ethereum binding on the window object to see if it's installed
-    const { ethereum } = window
-    return Boolean(ethereum && ethereum.isMetaMask)
-  }, [])
-
-  const checkWalletConnet = useCallback(async () => {
-    if (isMetaMaskInstalled()) {
-      const accounts = await window.ethereum.request({ method: 'eth_accounts' })
-      if (!!accounts[0]) {
-        const walletAddress =
-          accounts[0].split('').slice(0, 6).join('') +
-          '...' +
-          accounts[0]
-            .split('')
-            .slice(accounts[0].length - 7, accounts[0].length)
-            .join('')
-        setMyPublicAddress(walletAddress)
-      }
-    }
-  }, [isMetaMaskInstalled])
-
-  useEffect(() => {
-    checkWalletConnet()
-  }, [checkWalletConnet])
-
-  const _handleConnectWallet = useCallback(async () => {
-    const modal = document.getElementById('modal-metamask')
-
-    if (!isMetaMaskInstalled()) {
-      //meta mask not installed
-      modal.classList.add('show')
-      modal.style.display = 'block'
-      return
-    }
-    try {
-      await window.ethereum.request({ method: 'eth_requestAccounts' })
-      const accounts = await window.ethereum.request({ method: 'eth_accounts' })
-      const walletAddress =
-        accounts[0].split('').slice(0, 6).join('') +
-        '...' +
-        accounts[0]
-          .split('')
-          .slice(accounts[0].length - 7, accounts[0].length)
-          .join('')
-      setMyPublicAddress(walletAddress)
-    } catch (error) {
-      console.error(error)
-    }
-  }, [isMetaMaskInstalled])
 
 
   const getClosest = (elem, selector) => {
@@ -303,7 +247,7 @@ const Navbar = () => {
                   <i className="uil uil-wallet fs-6"></i>
                 </a>
               ) : (
-                <p id="connectWallet" onClick={_handleConnectWallet}>
+                <p id="connectWallet" onClick={web3Handler}>
                   <span className="btn-icon-dark">
                     <span className="btn btn-icon btn-pills btn-primary">
                       <i className="uil uil-wallet fs-6"></i>
@@ -318,115 +262,119 @@ const Navbar = () => {
               )}
             </li>
 
-            <li className="list-inline-item mb-0">
-              <div className="dropdown dropdown-primary">
-                <button
-                  type="button"
-                  className="btn btn-pills dropdown-toggle p-0"
-                  data-bs-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <img
-                    src={client01}
-                    className="rounded-pill avatar avatar-sm-sm"
-                    alt=""
-                  />
-                </button>
-                <div
-                  className="dropdown-menu dd-menu dropdown-menu-end bg-white shadow border-0 mt-3 pb-3 pt-0 overflow-hidden rounded"
-                  style={{ minWidth: 200 }}
-                >
-                  <div className="position-relative">
-                    <div className="pt-5 pb-3 bg-gradient-primary"></div>
-                    <div className="px-3">
-                      <div className="d-flex align-items-end mt-n4">
-                        <img
-                          src={client01}
-                          className="rounded-pill avatar avatar-md-sm img-thumbnail shadow-md"
-                          alt=""
-                        />
-                        <h6 className="text-dark fw-bold mb-0 ms-1">
-                          Calvin Carlo
-                        </h6>
-                      </div>
-                      <div className="mt-2">
-                        <small className="text-start text-dark d-block fw-bold">
-                          Wallet:
-                        </small>
-                        <div className="d-flex justify-content-between align-items-center">
-                          <small id="myPublicAddress" className="text-muted">
-                            {myPublicAddress}
+          {account ? (
+                <li className="list-inline-item mb-0">
+                <div className="dropdown dropdown-primary">
+                  <button
+                    type="button"
+                    className="btn btn-pills dropdown-toggle p-0"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <img
+                      src={client01}
+                      className="rounded-pill avatar avatar-sm-sm"
+                      alt=""
+                    />
+                  </button>
+                  <div
+                    className="dropdown-menu dd-menu dropdown-menu-end bg-white shadow border-0 mt-3 pb-3 pt-0 overflow-hidden rounded"
+                    style={{ minWidth: 200 }}
+                  >
+                    <div className="position-relative">
+                      <div className="pt-5 pb-3 bg-gradient-primary"></div>
+                      <div className="px-3">
+                        <div className="d-flex align-items-end mt-n4">
+                          <img
+                            src={client01}
+                            className="rounded-pill avatar avatar-md-sm img-thumbnail shadow-md"
+                            alt=""
+                          />
+                          <h6 className="text-dark fw-bold mb-0 ms-1">
+                            Calvin Carlo
+                          </h6>
+                        </div>
+                        <div className="mt-2">
+                          <small className="text-start text-dark d-block fw-bold">
+                            Wallet:
                           </small>
-                          <a href="" onClick={e => e.preventDefault()} className="text-primary">
-                            <span className="uil uil-copy"></span>
-                          </a>
+                          <div className="d-flex justify-content-between align-items-center">
+                            <small id="myPublicAddress" className="text-muted">
+                            {account.slice(0, 5) + '...' + account.slice(38, 42)}
+                            </small>
+                            <a href="" onClick={e => e.preventDefault()} className="text-primary">
+                              <span className="uil uil-copy"></span>
+                            </a>
+                          </div>
+                        </div>
+  
+                        <div className="mt-2">
+                          <small className="text-dark">
+                            Balance:{' '}
+                            <span className="text-primary fw-bold">
+                             2,700,000USDC
+                            </span>
+                          </small>
                         </div>
                       </div>
-
-                      <div className="mt-2">
-                        <small className="text-dark">
-                          Balance:{' '}
-                          <span className="text-primary fw-bold">
-                           2,700,000USDC
-                          </span>
-                        </small>
-                      </div>
+                    </div>
+                    <div className="mt-2">
+                      <a
+                        className="dropdown-item small fw-semibold text-dark d-flex align-items-center"
+                        href="/creator-profile"
+                        onClick={e => {
+                          e.preventDefault()
+                          navigate('/creator-profile')
+                        }}
+                      >
+                        <span className="mb-0 d-inline-block me-1">
+                          <i className="uil uil-user align-middle h6 mb-0 me-1"></i>
+                        </span>{' '}
+                        Profile
+                      </a>
+                      <a
+                        className="dropdown-item small fw-semibold text-dark d-flex align-items-center"
+                        href=""
+                        onClick={e => {
+                          e.preventDefault()
+                          setTimeout(() => {
+                            activateMenu()
+                            toggleSwitcher(false)
+                          }, 1000)
+                          // navigate('/creator-profile-edit')
+                        }}
+                      >
+                        <span className="mb-0 d-inline-block me-1">
+                          <i className="uil uil-cog align-middle h6 mb-0 me-1"></i>
+                        </span>{' '}
+                        Settings
+                      </a>
+                      <div className="dropdown-divider border-top"></div>
+                      <a
+                        className="dropdown-item small fw-semibold text-dark d-flex align-items-center"
+                        href=""
+                        onClick={e => {
+                          e.preventDefault()
+                          setTimeout(() => {
+                            activateMenu()
+                            toggleSwitcher(false)
+                          }, 1000)
+                          // navigate('/lock-screen')
+                        }}
+                      >
+                        <span className="mb-0 d-inline-block me-1">
+                          <i className="uil uil-sign-out-alt align-middle h6 mb-0 me-1"></i>
+                        </span>{' '}
+                        Logout
+                      </a>
                     </div>
                   </div>
-                  <div className="mt-2">
-                    <a
-                      className="dropdown-item small fw-semibold text-dark d-flex align-items-center"
-                      href="/creator-profile"
-                      onClick={e => {
-                        e.preventDefault()
-                        navigate('/creator-profile')
-                      }}
-                    >
-                      <span className="mb-0 d-inline-block me-1">
-                        <i className="uil uil-user align-middle h6 mb-0 me-1"></i>
-                      </span>{' '}
-                      Profile
-                    </a>
-                    <a
-                      className="dropdown-item small fw-semibold text-dark d-flex align-items-center"
-                      href=""
-                      onClick={e => {
-                        e.preventDefault()
-                        setTimeout(() => {
-                          activateMenu()
-                          toggleSwitcher(false)
-                        }, 1000)
-                        // navigate('/creator-profile-edit')
-                      }}
-                    >
-                      <span className="mb-0 d-inline-block me-1">
-                        <i className="uil uil-cog align-middle h6 mb-0 me-1"></i>
-                      </span>{' '}
-                      Settings
-                    </a>
-                    <div className="dropdown-divider border-top"></div>
-                    <a
-                      className="dropdown-item small fw-semibold text-dark d-flex align-items-center"
-                      href=""
-                      onClick={e => {
-                        e.preventDefault()
-                        setTimeout(() => {
-                          activateMenu()
-                          toggleSwitcher(false)
-                        }, 1000)
-                        // navigate('/lock-screen')
-                      }}
-                    >
-                      <span className="mb-0 d-inline-block me-1">
-                        <i className="uil uil-sign-out-alt align-middle h6 mb-0 me-1"></i>
-                      </span>{' '}
-                      Logout
-                    </a>
-                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
+          ):(
+            <li>Connect your wallet</li>
+          )}
           </ul>
           {/*Login button End*/}
 
