@@ -12,7 +12,8 @@
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.0.0-beta.0",
     "react-scripts": "4.0.3",
-    "tiny-slider": "^2.9.4"
+    "tiny-slider": "^2.9.4",
+    "ethers": "^5.5.4"
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import { FiArrowRight } from 'react-icons/fi'
+import { ethers } from  "ethers"
 import Countdown from 'react-countdown'
 import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
@@ -14,6 +15,28 @@ import {
 } from '../../components/imageImport'
 
 const DarkVersionThree = () => {
+
+  const [ account, setAccount ] = useState(null)
+  const [nft, setNFT] = useState({})
+  const [marketplace, setMarketplace] = useState({})
+  //Metamask Login/Connect
+  const web3Handler = async() =>{
+    const accounts = await window.ethereum.request({method: "eth_requestAccounts"})
+    setAccount(accounts[0])
+    //Get provider from Metamask
+    const provider = new ethers.providers.Web3Provider(window.ethereum)
+    //set signer
+    const signer = provider.getSigner()
+    // loadContracts(signer)
+  }
+  // const loadContracts = async (signer) => {
+  //   //get deployed copies of contract
+  //   const marketplace = new ethers.Contract(MarketplaceAddress.address, MarketplaceAbi.abi, signer)
+  //   setMarketplace(marketplace)
+  //   const nft = new ethers.Contract(NFTAddress.address, NFTAbi.abi, signer)
+  //   setNFT(nft)
+  //   setLoading(false)
+  // }
   const navigate = useNavigate()
 
   const toggleSwitcher = () => {
@@ -219,6 +242,8 @@ const DarkVersionThree = () => {
   const [type, setType] = useState('all')
   const location = useLocation()
 
+
+
   useEffect(() => {
     setTimeout(() => {
       if (location?.pathname === '/index-three-dark-rtl') {
@@ -243,7 +268,7 @@ const DarkVersionThree = () => {
   return (
     <>
       {/* Navbar */}
-      <Navbar />
+      <Navbar web3Handler={web3Handler} account={account} />
 
       {/* Start Home */}
       <section
