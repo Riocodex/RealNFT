@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import { FiArrowRight } from 'react-icons/fi'
 import Countdown from 'react-countdown'
+import nftData from '../../utils/Nft.json'
+import marketplaceData from '../../utils/Marketplace.json'
 import { ethers } from  "ethers"
 import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
@@ -18,6 +20,14 @@ const DarkVersionThree = () => {
   const [ account, setAccount ] = useState(null)
   const [nft, setNFT] = useState({})
   const [marketplace, setMarketplace] = useState({})
+
+  //contract variables
+  const nftAddress ="0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0"
+  const nftABI = nftData.abi
+  const marketplaceAddress ="0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9"
+  const marketplaceABI = marketplaceData.abi
+
+
   //Metamask Login/Connect
   const web3Handler = async() =>{
     const accounts = await window.ethereum.request({method: "eth_requestAccounts"})
@@ -27,16 +37,16 @@ const DarkVersionThree = () => {
     //set signer
     const signer = provider.getSigner()
     console.log("clicked")
-    // loadContracts(signer)
+    loadContracts(signer)
   }
-  // const loadContracts = async (signer) => {
-  //   //get deployed copies of contract
-  //   const marketplace = new ethers.Contract(MarketplaceAddress.address, MarketplaceAbi.abi, signer)
-  //   setMarketplace(marketplace)
-  //   const nft = new ethers.Contract(NFTAddress.address, NFTAbi.abi, signer)
-  //   setNFT(nft)
+  const loadContracts = async (signer) => {
+    //get deployed copies of contract
+    const marketplace = new ethers.Contract(marketplaceAddress, marketplaceABI, signer)
+    setMarketplace(marketplace)
+    const nft = new ethers.Contract(nftAddress, nftABI, signer)
+    setNFT(nft)
    
-  // }
+  }
   const navigate = useNavigate()
 
   const toggleSwitcher = () => {
