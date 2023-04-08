@@ -16,36 +16,41 @@ import {
   bgImage, bg1, bg2, bg3,home1, home2, home3, home4, home5, home6, home7, home8, home9, home10
 } from '../../components/imageImport'
 
-const DarkVersionThree = () => {
-  const [ account, setAccount ] = useState(null)
-  const [nft, setNFT] = useState({})
-  const [marketplace, setMarketplace] = useState({})
-
-  //contract variables
-  const nftAddress ="0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0"
-  const nftABI = nftData.abi
-  const marketplaceAddress ="0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9"
-  const marketplaceABI = marketplaceData.abi
-
-
-  //Metamask Login/Connect
-  const web3Handler = async() =>{
-    const accounts = await window.ethereum.request({method: "eth_requestAccounts"})
-    setAccount(accounts[0])
-    //Get provider from Metamask
-    const provider = new ethers.providers.Web3Provider(window.ethereum)
-    //set signer
-    const signer = provider.getSigner()
-    console.log("clicked")
-    loadContracts(signer)
+const DarkVersionThree = ({marketplace, nft, web3Handler, account}) => {
+  const [items, setItems] = useState([])
+ 
+  const loadMarketplaceItems = async () => {
+    // Load all unsold items
+    const itemCount = await marketplace.itemCount()
+    let items = []
+    for (let i = 1; i <= itemCount; i++) {
+      const item = await marketplace.items(i)
+      if (!item.sold) {
+        // get uri url from nft contract
+        const uri = await nft.tokenURI(item.tokenId)
+        // use uri to fetch the nft metadata stored on ipfs 
+        const response = await fetch(uri)
+        const metadata = await response.json()
+        // get total price of item (item price + fee)
+        const totalPrice = await marketplace.getTotalPrice(item.itemId)
+        // Add item to items array
+        items.push({
+          totalPrice,
+          itemId: item.itemId,
+          seller: item.seller,
+          name: metadata.name,
+          description: metadata.description,
+          image: metadata.image
+        })
+      }
+    }
+    
+    setItems(items)
   }
-  const loadContracts = async (signer) => {
-    //get deployed copies of contract
-    const marketplace = new ethers.Contract(marketplaceAddress, marketplaceABI, signer)
-    setMarketplace(marketplace)
-    const nft = new ethers.Contract(nftAddress, nftABI, signer)
-    setNFT(nft)
-   
+
+  const buyMarketItem = async (item) => {
+    await (await marketplace.purchaseItem(item.itemId, { value: item.totalPrice })).wait()
+    loadMarketplaceItems()
   }
   const navigate = useNavigate()
 

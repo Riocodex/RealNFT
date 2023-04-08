@@ -138,7 +138,7 @@ export default function Router() {
           path="/index-three-dark-rtl"
           element={<DarkVersionThree />}
         />
-        <Route exact path="/" element={<DarkVersionThree />} />
+        <Route exact path="/" element={<DarkVersionThree marketplace={marketplace} nft={nft} web3Handler={web3Handler} account={account}/>} />
         <Route exact path="/index-three-rtl" element={<DarkVersionThree />} />
 
         <Route exact path="/index-four-dark" element={<DarkVersionFour />} />
