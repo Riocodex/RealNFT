@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Login from './pages/Login'
 import Error from './pages/Error'
 import SignUp from './pages/SignUp'
@@ -39,8 +39,41 @@ import CreatorProfileEdit from './pages/CreatorProfileEdit'
 import Terms from './pages/Terms'
 import Privacy from './pages/Privacy'
 import ChangeLog from './pages/ChangeLog'
+import nftData from './utils/Nft.json'
+import marketplaceData from './utils/Marketplace.json'
+import { ethers } from  "ethers"
+
 
 export default function Router() {
+  const [ account, setAccount ] = useState(null)
+  const [nft, setNFT] = useState({})
+  const [marketplace, setMarketplace] = useState({})
+
+  //contract variables
+  const nftAddress ="0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0"
+  const nftABI = nftData.abi
+  const marketplaceAddress ="0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9"
+  const marketplaceABI = marketplaceData.abi
+
+   //Metamask Login/Connect
+   const web3Handler = async() =>{
+    const accounts = await window.ethereum.request({method: "eth_requestAccounts"})
+    setAccount(accounts[0])
+    //Get provider from Metamask
+    const provider = new ethers.providers.Web3Provider(window.ethereum)
+    //set signer
+    const signer = provider.getSigner()
+    console.log("clicked")
+    loadContracts(signer)
+  }
+  const loadContracts = async (signer) => {
+    //get deployed copies of contract
+    const marketplace = new ethers.Contract(marketplaceAddress, marketplaceABI, signer)
+    setMarketplace(marketplace)
+    const nft = new ethers.Contract(nftAddress, nftABI, signer)
+    setNFT(nft)
+   
+  }
   return (
     <BrowserRouter>
       <Routes>
@@ -68,10 +101,10 @@ export default function Router() {
         <Route exact path="/blogs" element={<Blog />} />
         <Route exact path="/blog-sidebar" element={<BlogSidebar />} />
         <Route exact path="/contact" element={<Contact />} />
-        <Route exact path="/upload-work" element={<UploadWork />} />
+        <Route exact path="/upload-work" element={<UploadWork marketplace={marketplace} nft={nft}/>} />
         <Route exact path="/collections" element={<Collections />} />
         <Route exact path="/become-creator" element={<BecomeCreator />} />
-        <Route exact path="/creator-profile" element={<CreateProfile />} />
+        <Route exact path="/creator-profile" element={<CreateProfile marketplace={marketplace} nft={nft}/>} />
         <Route
           exact
           path="/creator-profile-edit"
@@ -81,11 +114,11 @@ export default function Router() {
         <Route exact path="/wallet" element={<Wallet />} />
         <Route exact path="/activity" element={<Activity />} />
         <Route exact path="/item-detail-one" element={<ItemDetailOne />} />
-        <Route exact path="/item-detail" element={<ItemDetailTwo />} />
+        <Route exact path="/item-detail" element={<ItemDetailTwo  marketplace={marketplace} nft={nft}/>} />
         <Route exact path="/auction" element={<Auction />} />
         <Route exact path="/explore-four" element={<ExploreFour />} />
         <Route exact path="/explore-three" element={<ExploreThree />} />
-        <Route exact path="/explore" element={<ExploreTwo />} />
+        <Route exact path="/explore" element={<ExploreTwo marketplace={marketplace} nft={nft}/>} />
         <Route exact path="/explore-one" element={<ExploreOne />} />
 
         <Route exact path="/index-dark" element={<DarkVersionOne />} />
