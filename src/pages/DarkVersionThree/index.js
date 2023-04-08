@@ -258,7 +258,7 @@ const DarkVersionThree = ({marketplace, nft, web3Handler, account}) => {
   const location = useLocation()
 
   useEffect(() => {
-    loadMarketplaceItems();
+    // loadMarketplaceItems()
     setTimeout(() => {
       if (location?.pathname === '/index-three-dark-rtl') {
         document.getElementById('theme-opt').href = './css/style-dark-rtl.min.css'
@@ -271,9 +271,8 @@ const DarkVersionThree = ({marketplace, nft, web3Handler, account}) => {
       }
       toggleSwitcher(false)
     }, 100)
-  
+    
   }, [location?.pathname])
-  
   
 
   const setFilter = type => {
