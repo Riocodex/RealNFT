@@ -18,6 +18,10 @@ import {
 
 const DarkVersionThree = ({marketplace, nft, web3Handler, account}) => {
   const [items, setItems] = useState([])
+  const checkshii = async()=>{
+    const hello = await marketplace.getString()
+      console.log(hello)
+  }
   const loadMarketplaceItems = async () => {
     // Load all unsold items
     console.log("this is marketplace",marketplace)
@@ -258,7 +262,8 @@ const DarkVersionThree = ({marketplace, nft, web3Handler, account}) => {
   const location = useLocation()
 
   useEffect(() => {
-    loadMarketplaceItems()
+   
+    // loadMarketplaceItems()
     setTimeout(() => {
       if (location?.pathname === '/index-three-dark-rtl') {
         document.getElementById('theme-opt').href = './css/style-dark-rtl.min.css'
