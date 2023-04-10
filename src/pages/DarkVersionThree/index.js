@@ -20,6 +20,7 @@ const DarkVersionThree = ({marketplace, nft, web3Handler, account}) => {
   const [items, setItems] = useState([])
   const loadMarketplaceItems = async () => {
     // Load all unsold items
+    console.log("this is marketplace",marketplace)
     const itemCount = await marketplace.itemCount()
     let items = []
     for (let i = 1; i <= itemCount; i++) {
