@@ -16,46 +16,91 @@ import {
   bgImage, bg1, bg2, bg3,home1, home2, home3, home4, home5, home6, home7, home8, home9, home10
 } from '../../components/imageImport'
 
-const DarkVersionThree = ({marketplace, nft, web3Handler, account}) => {
+const DarkVersionThree = () => {
   const [items, setItems] = useState([])
-  const checkshii = async()=>{
-    const hello = await marketplace.getString()
-      console.log(hello)
-  }
-  const loadMarketplaceItems = async () => {
-    // Load all unsold items
-    console.log("this is marketplace",marketplace)
-    const itemCount = await marketplace.itemCount()
-    let items = []
-    for (let i = 1; i <= itemCount; i++) {
-      const item = await marketplace.items(i)
-      if (!item.sold) {
-        // get uri url from nft contract
-        const uri = await nft.tokenURI(item.tokenId)
-        // use uri to fetch the nft metadata stored on ipfs 
-        const response = await fetch(uri)
-        const metadata = await response.json()
-        // get total price of item (item price + fee)
-        const totalPrice = await marketplace.getTotalPrice(item.itemId)
-        // Add item to items array
-        items.push({
-          totalPrice,
-          itemId: item.itemId,
-          seller: item.seller,
-          name: metadata.name,
-          description: metadata.description,
-          image: metadata.image
-        })
-      }
-    }
-    
-    setItems(items)
-  }
+  const [currentAccount, setCurrentAccount] = useState("");
+  
 
-  const buyMarketItem = async (item) => {
-    await (await marketplace.purchaseItem(item.itemId, { value: item.totalPrice })).wait()
-    loadMarketplaceItems()
+  //contract variables
+  const nftAddress ="0x5FbDB2315678afecb367f032d93F642f64180aa3"
+  const nftABI = nftData.abi
+  const marketplaceAddress ="0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
+  const marketplaceABI = marketplaceData.abi
+  
+
+        // Wallet connection logic
+  const isWalletConnected = async () => {
+    try {
+      const { ethereum } = window;
+
+      const accounts = await ethereum.request({method: 'eth_accounts'})
+      console.log("accounts: ", accounts);
+
+      if (accounts.length > 0) {
+        const account = accounts[0];
+        console.log("wallet is connected! " + account);
+      } else {
+        console.log("make sure MetaMask is connected");
+      }
+    } catch (error) {
+      console.log("error: ", error);
+    }
   }
+  const connectWallet = async () => {
+    try {
+      const {ethereum} = window;
+
+      if (!ethereum) {
+        console.log("please install MetaMask");
+      }
+
+      const accounts = await ethereum.request({
+        method: 'eth_requestAccounts'
+      });
+
+      setCurrentAccount(accounts[0]);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  // const checkshii = async()=>{
+  //   const hello = await marketplace.getString()
+  //     console.log(hello)
+  // }
+  // const loadMarketplaceItems = async () => {
+  //   // Load all unsold items
+  //   console.log("this is marketplace",marketplace)
+  //   const itemCount = await marketplace.itemCount()
+  //   let items = []
+  //   for (let i = 1; i <= itemCount; i++) {
+  //     const item = await marketplace.items(i)
+  //     if (!item.sold) {
+  //       // get uri url from nft contract
+  //       const uri = await nft.tokenURI(item.tokenId)
+  //       // use uri to fetch the nft metadata stored on ipfs 
+  //       const response = await fetch(uri)
+  //       const metadata = await response.json()
+  //       // get total price of item (item price + fee)
+  //       const totalPrice = await marketplace.getTotalPrice(item.itemId)
+  //       // Add item to items array
+  //       items.push({
+  //         totalPrice,
+  //         itemId: item.itemId,
+  //         seller: item.seller,
+  //         name: metadata.name,
+  //         description: metadata.description,
+  //         image: metadata.image
+  //       })
+  //     }
+  //   }
+    
+  //   setItems(items)
+  // }
+
+  // const buyMarketItem = async (item) => {
+  //   await (await marketplace.purchaseItem(item.itemId, { value: item.totalPrice })).wait()
+  //   loadMarketplaceItems()
+  // }
   const navigate = useNavigate()
 
   const toggleSwitcher = () => {
