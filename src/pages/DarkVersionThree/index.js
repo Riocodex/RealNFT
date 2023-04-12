@@ -460,84 +460,100 @@ const DarkVersionThree = () => {
           </div>
           {/*end row*/}
 
-          <div
-            className="row row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 row-cols-1 g-4"
-            id="grid"
-            style={{ justifyContent: "left" }}
-          >
-            {allData?.map(data => {
-              return (
-                <div className="col picture-item" key={data?.title}>
-                  <div className="card bg-white nft-items nft-primary rounded-md shadow overflow-hidden mb-1">
-                    <div className="nft-image position-relative overflow-hidden">
-                      <a
-                        href="/item-detail"
-                        onClick={e => {
-                          e.preventDefault()
-                          navigate('/item-detail')
-                        }}
-                      >
-                        <img src={data?.image} className="img-fluid" alt="" />
-                      </a>
-                      <div className="position-absolute top-0 start-0 m-3">
-                        <a
-                          href=""
-                          onClick={e => e.preventDefault()}
-                          className="badge badge-link bg-primary"
-                        >
-                          {data?.type}
-                        </a>
-                      </div>
-                      <div className="position-absolute top-0 end-0 m-3">
-                        <span className="like-icon shadow-sm">
-                          <a
-                            href=""
-                            onClick={e => e.preventDefault()}
-                            className="text-muted icon"
-                          >
-                            <i className="mdi mdi-18px mdi-heart mb-0"></i>
-                          </a>
-                        </span>
-                      </div>
-                    </div>
+          {items.length > 0 ?
+       <div
+       className="row row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 row-cols-1 g-4"
+       id="grid"
+       style={{ justifyContent: "left" }}
+     >
+       {items.map((item, idx)  => {
+         return (
+           <div className="col picture-item" key={idx}>
+             <div className="card bg-white nft-items nft-primary rounded-md shadow overflow-hidden mb-1">
+               <div className="nft-image position-relative overflow-hidden">
+                 <a
+                   href="/item-detail"
+                   onClick={e => {
+                     e.preventDefault()
+                     navigate('/item-detail')
+                   }}
+                 >
+                   <img src={item.image} className="img-fluid" alt="" />
+                 </a>
+                 {/* <div className="position-absolute top-0 start-0 m-3">
+                   <a
+                     href=""
+                     onClick={e => e.preventDefault()}
+                     className="badge badge-link bg-primary"
+                   >
+                     {data?.type}
+                   </a>
+                 </div> */}
+                 <div className="position-absolute top-0 end-0 m-3">
+                   <span className="like-icon shadow-sm">
+                     <a
+                       href=""
+                       onClick={e => e.preventDefault()}
+                       className="text-muted icon"
+                     >
+                       <i className="mdi mdi-18px mdi-heart mb-0"></i>
+                     </a>
+                   </span>
+                 </div>
+               </div>
 
-                    <div className="card-body content position-relative">
-                      <a
-                        href="/item-detail"
-                        onClick={e => {
-                          e.preventDefault()
-                          navigate('/item-detail')
-                        }}
-                        className="title text-dark h6"
-                      >
-                        {data?.title}
-                      </a>
+               <div className="card-body content position-relative">
+                 <a
+                   href="/item-detail"
+                   onClick={e => {
+                     e.preventDefault()
+                     navigate('/item-detail')
+                   }}
+                   className="title text-dark h6"
+                 >
+                   {item.name}
+                 </a>
+                 <a
+                   href="/item-detail"
+                   onClick={e => {
+                     e.preventDefault()
+                     navigate('/item-detail')
+                   }}
+                   className="title text-dark h6"
+                 >
+                   {item.description}
+                 </a>
 
-                      <div className="d-flex align-items-center justify-content-between mt-3">
-                        <div className="">
-                          <small className="mb-0 d-block fw-semibold">
-                            Current Bid:
-                          </small>
-                          <small className="rate fw-bold">200 USDC</small>
-                        </div>
-                        <a
-                          href="/item-detail"
-                          onClick={e => {
-                            e.preventDefault()
-                            navigate('/item-detail')
-                          }}
-                          className="btn btn-icon btn-pills btn-primary"
-                        >
-                          <i className="uil uil-shopping-bag"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )
-            })}
-            {/*end col*/}
-          </div>
+                 <div className="d-flex align-items-center justify-content-between mt-3">
+                   <div className="">
+                     <small className="mb-0 d-block fw-semibold">
+                       Current Bid:
+                     </small>
+                     <small className="rate fw-bold">{item.totalPrice}</small>
+                   </div>
+                   <a
+                     href="/item-detail"
+                     onClick={e => {
+                       e.preventDefault()
+                       navigate('/item-detail')
+                     }}
+                     className="btn btn-icon btn-pills btn-primary"
+                   >
+                     <i className="uil uil-shopping-bag"></i>
+                   </a>
+                 </div>
+               </div>
+             </div>
+           </div>
+         )
+       })}
+       {/*end col*/}
+     </div>
+        : (
+          <main style={{ padding: "1rem 0" }}>
+            <h2>No listed assets</h2>
+          </main>
+        )}
           {/*end row*/}
 
           <div className="row">
@@ -644,6 +660,18 @@ const DarkVersionThree = () => {
                     </div>
 
                     <div className="card-body content position-relative">
+                      <a
+                        href="/item-detail"
+                        onClick={e => {
+                          e.preventDefault()
+                          navigate('/item-detail')
+                        }}
+                        className="title text-dark h6"
+                      >
+                        {data?.title}
+                      </a>  
+                      <br/>
+                      <br/>
                       <a
                         href="/item-detail"
                         onClick={e => {
