@@ -332,8 +332,8 @@ const DarkVersionThree = () => {
   }
   return (
     <>
-      {/* Navbar */}
-      <Navbar web3Handler={web3Handler} account={account} />
+      {/* /* Navbar */}
+      <Navbar web3Handler={connectWallet} account={currentAccount} />
 
       {/* Start Home */}
       <section
