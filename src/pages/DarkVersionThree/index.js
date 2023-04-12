@@ -325,7 +325,7 @@ const DarkVersionThree = () => {
 
   useEffect(() => {
    
-    // loadMarketplaceItems()
+    loadMarketplaceItems()
     setTimeout(() => {
       if (location?.pathname === '/index-three-dark-rtl') {
         document.getElementById('theme-opt').href = './css/style-dark-rtl.min.css'
