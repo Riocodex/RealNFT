@@ -322,9 +322,33 @@ const DarkVersionThree = () => {
   const [allData, setAllData] = useState(HomeData)
   const [type, setType] = useState('all')
   const location = useLocation()
+  
+  const getHelloTx = async () => {
+    
+    try {
+      const {ethereum} = window;
+
+      if (ethereum) {
+        const provider = new ethers.providers.Web3Provider(ethereum, "any");
+        const signer = provider.getSigner();
+        const marketplace = new ethers.Contract(
+          marketplaceAddress,
+          marketplaceABI,
+          signer
+        );
+        
+        const hello = await marketplace.getString()
+        console.log(hello)
+      }
+    } catch (error) {
+      console.log(error);
+    }
+    
+  };
+
 
   useEffect(() => {
-   
+    
     loadMarketplaceItems()
     setTimeout(() => {
       if (location?.pathname === '/index-three-dark-rtl') {

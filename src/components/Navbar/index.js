@@ -238,29 +238,7 @@ const Navbar = ({ web3Handler, account }) => {
                 </div>
               </div>
             </li>
-            <li className="list-inline-item mb-0 me-1">
-              {becomeUrl ? (
-                <a
-                  id="connectWallet"
-                  className="btn btn-icon btn-pills btn-primary"
-                >
-                  <i className="uil uil-wallet fs-6"></i>
-                </a>
-              ) : (
-                <p id="connectWallet" onClick={web3Handler}>
-                  <span className="btn-icon-dark">
-                    <span className="btn btn-icon btn-pills btn-primary">
-                      <i className="uil uil-wallet fs-6"></i>
-                    </span>
-                  </span>
-                  <span className="btn-icon-light">
-                    <span className="btn btn-icon btn-pills btn-light">
-                      <i className="uil uil-wallet fs-6"></i>
-                    </span>
-                  </span>
-                </p>
-              )}
-            </li>
+         
 
           {account ? (
                 <li className="list-inline-item mb-0">
@@ -373,7 +351,29 @@ const Navbar = ({ web3Handler, account }) => {
                 </div>
               </li>
           ):(
-            <li></li>
+            <li className="list-inline-item mb-0 me-1">
+            {becomeUrl ? (
+              <a
+                id="connectWallet"
+                className="btn btn-icon btn-pills btn-primary"
+              >
+                <i className="uil uil-wallet fs-6"></i>
+              </a>
+            ) : (
+              <p id="connectWallet" onClick={web3Handler}>
+                <span className="btn-icon-dark">
+                  <span className="btn btn-icon btn-pills btn-primary">
+                    <i className="uil uil-wallet fs-6"></i>
+                  </span>
+                </span>
+                <span className="btn-icon-light">
+                  <span className="btn btn-icon btn-pills btn-light">
+                    <i className="uil uil-wallet fs-6"></i>
+                  </span>
+                </span>
+              </p>
+            )}
+          </li>
           )}
           </ul>
           {/*Login button End*/}
