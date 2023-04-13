@@ -570,6 +570,18 @@ const DarkVersionThree = () => {
             <h2>No listed assets</h2>
           </main>
         )}
+
+{/* {toggle  && (
+        <Ahome 
+        item={item} 
+        provider={provider} 
+        account={account} 
+        marketplace={marketplace} 
+        toggleProp={toggleProp}
+        setLoading={setLoading}
+        setItems = {setItems}
+        nft = {nft} />
+      )} */}
           {/*end row*/}
 
           <div className="row">
