@@ -19,6 +19,9 @@ import {
 const DarkVersionThree = () => {
   const [items, setItems] = useState([])
   const [currentAccount, setCurrentAccount] = useState("");
+  const [toggle, setToggle] = useState(false) 
+  const [item, setItem] = useState({})
+  
   
 
   //contract variables
@@ -123,6 +126,12 @@ const DarkVersionThree = () => {
     }
     
   };
+
+  const toggleProp = (item) => {
+    setItem(item)
+    toggle ? setToggle(false) : setToggle(true)
+    
+  }
 
   // const buyMarketItem = async (item) => {
   //   await (await marketplace.purchaseItem(item.itemId, { value: item.totalPrice })).wait()
@@ -483,10 +492,7 @@ const DarkVersionThree = () => {
                <div className="nft-image position-relative overflow-hidden">
                  <a
                    href="/item-detail"
-                   onClick={e => {
-                     e.preventDefault()
-                     navigate('/item-detail')
-                   }}
+                   onClick={() => toggleProp(item)} key={idx} 
                  >
                    <img src={item.image} className="img-fluid" alt="" />
                  </a>
