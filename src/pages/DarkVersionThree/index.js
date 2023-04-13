@@ -100,7 +100,17 @@ const DarkVersionThree = () => {
                 seller: item.seller,
                 name: metadata.name,
                 description: metadata.description,
-                image: metadata.image
+                image: metadata.image,
+                bedrooms: metadata.bedrooms,
+                bathrooms: metadata.bathrooms,
+                yearBuilt: metadata.yearBuilt,
+                units: metadata.units,
+                propertyAddress: metadata.propertyAddress,
+                propertyCity: metadata.propertyCity,
+                propertyState: metadata.propertyState,
+                zipCode: metadata.zipCode,
+                increment: metadata.increment,
+                endTime: metadata.endTime
               })
             }
           }
