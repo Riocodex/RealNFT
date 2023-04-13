@@ -8,6 +8,7 @@ import marketplaceData from '../../utils/Marketplace.json'
 import { ethers } from  "ethers"
 import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
+// import ItemDetail from '../../components/Item'
 import StyleSwitcher from '../../components/StyleSwitcher'
 import {
   client01, client02, client03, client04, client05, client06, client07, client08,
