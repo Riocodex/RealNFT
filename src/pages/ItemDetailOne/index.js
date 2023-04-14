@@ -382,10 +382,10 @@ const ItemDetailOne = () => {
 
                     <div className="nft-image rounded-md mt-3 position-relative overflow-hidden">
                       <a
-                        href="/item-detail-one"
+                        href="/item-detail"
                         onClick={e => {
                           e.preventDefault()
-                          navigate('/item-detail-one')
+                          navigate('/item-detail')
                         }}
                       >
                         <img src={data?.image} className="img-fluid" alt="" />
@@ -444,10 +444,10 @@ const ItemDetailOne = () => {
                           <small className="rate fw-bold">20.5 ETH</small>
                         </div>
                         <a
-                          href="/item-detail-one"
+                          href="/item-detail"
                           onClick={e => {
                             e.preventDefault()
-                            navigate('/item-detail-one')
+                            navigate('/item-detail')
                           }}
                           className="btn btn-icon btn-pills btn-primary"
                         >
