@@ -4,7 +4,7 @@ import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
 import StyleSwitcher from '../../components/StyleSwitcher'
 import Countdown from 'react-countdown'
-import { client01, client02, client03, client08, client09, client10, item1, item2, gif1, gif2, itemDetail1 } from '../../components/imageImport'
+import { client01, client02, client03, client08, client09, client10, item1, item2, gif1, gif2, itemDetail1,home9, home4, home5, home6, home7, home8 } from '../../components/imageImport'
 
 const ItemDetailOne = () => {
   const navigate = useNavigate()
@@ -69,7 +69,7 @@ const ItemDetailOne = () => {
   return (
     <>
       {/* Navbar */}
-      <Navbar />
+      
 
       {/* Start */}
       <section className="bg-item-detail d-table w-100">
@@ -78,7 +78,7 @@ const ItemDetailOne = () => {
             <div className="col-md-6">
               <div className="sticky-bar">
                 <img
-                  src={itemDetail1}
+                  src={home9}
                   className="img-fluid rounded-md shadow"
                   alt=""
                 />
@@ -89,10 +89,10 @@ const ItemDetailOne = () => {
               <div className="ms-lg-5">
                 <div className="title-heading">
                   <h4 className="h3 fw-bold mb-0">
-                    Wolf with Skull{' '}
-                    <span className="text-gradient-primary">Orange</span> <br />{' '}
-                    <span className="text-gradient-primary">Illustration</span>{' '}
-                    T-shirt Tattoo
+                  600{' '}
+                    <span className="text-gradient-primary">Grimsworth Ct</span> <br />{' '}
+                    <span className="text-gradient-primary">Allen</span>{' '}
+                    TX 75002
                   </h4>
                 </div>
 
@@ -168,11 +168,11 @@ const ItemDetailOne = () => {
                           aria-controls="bids"
                           aria-selected="false"
                         >
-                          Bids
+                          Facts and Features
                         </button>
                       </li>
 
-                      <li className="nav-item" role="presentation">
+                      {/* <li className="nav-item" role="presentation">
                         <button
                           className="nav-link"
                           id="activity-tab"
@@ -183,9 +183,9 @@ const ItemDetailOne = () => {
                           aria-controls="activity"
                           aria-selected="false"
                         >
-                          Activity
+                          Home Value
                         </button>
-                      </li>
+                      </li> */}
                     </ul>
 
                     <div className="tab-content mt-4 pt-2" id="myTabContent">
@@ -196,19 +196,16 @@ const ItemDetailOne = () => {
                         aria-labelledby="detail-tab"
                       >
                         <p className="text-muted">
-                          Hey guys! New exploration about NFT Marketplace Web
-                          Design, this time I'm inspired by one of my favorite
-                          NFT website called Superex (with crypto payment)! What
-                          do you think?
+                        No HOA! Welcome to your new home in the heart of Allen! This darling single-story 3 BR 2 BA is situated on a peaceful cul-de-sac in a friendly and quiet neighborhood, perfect for families with kids or pets. With a huge lot, you'll have all the
                         </p>
-                        <p className="text-muted">
+                        {/* <p className="text-muted">
                           What does it mean? Biomechanics is the study of the
                           structure, function and motion of the mechanical
                           aspects of biological systems, at any level from whole
                           organisms to organs, cells and cell organelles, using
                           the methods of mechanics. Biomechanics is a branch of
                           biophysics.
-                        </p>
+                        </p> */}
                         <h6>Owner</h6>
 
                         <div className="creators creator-primary d-flex align-items-center">
@@ -247,85 +244,29 @@ const ItemDetailOne = () => {
                         aria-labelledby="bids-tab"
                       >
                         <div className="creators creator-primary d-flex align-items-center">
-                          <div className="position-relative">
+                          {/* <div className="position-relative">
                             <img
                               src={client01}
                               className="avatar avatar-md-sm shadow-md rounded-pill"
                               alt=""
                             />
-                          </div>
+                          </div> */}
 
                           <div className="ms-3">
-                            <h6 className="mb-0">
-                              2 WETH <span className="text-muted">by</span>{' '}
-                              <a
-                                href="/creator-profile"
-                                onClick={e => {
-                                  e.preventDefault()
-                                  navigate('/creator-profile')
-                                }}
-                                className="text-dark name"
-                              >
-                                0xe849fa28a...ea14
-                              </a>
-                            </h6>
-                            <small className="text-muted">6 hours ago</small>
+                            <h5 className="mb-0">
+                              Bedrooms and Bathrooms <span className="text-muted"></span>{' '}
+                             
+                            </h5>
+                            <br/>
+                            <h6>Bedrooms: <small className="text-muted">4</small></h6>
+                            <h6>Bathrooms: <small className="text-muted">2</small></h6>
+                            <h6>Full Bathrooms: <small className="text-muted">2</small></h6>
                           </div>
                         </div>
 
-                        <div className="creators creator-primary d-flex align-items-center mt-4">
-                          <div className="position-relative">
-                            <img
-                              src={client08}
-                              className="avatar avatar-md-sm shadow-md rounded-pill"
-                              alt=""
-                            />
-                          </div>
+                       
 
-                          <div className="ms-3">
-                            <h6 className="mb-0">
-                              0.001 WETH <span className="text-muted">by</span>{' '}
-                              <a
-                                href="/creator-profile"
-                                onClick={e => {
-                                  e.preventDefault()
-                                  navigate('/creator-profile')
-                                }}
-                                className="text-dark name"
-                              >
-                                VOTwear
-                              </a>
-                            </h6>
-                            <small className="text-muted">6 hours ago</small>
-                          </div>
-                        </div>
-
-                        <div className="creators creator-primary d-flex align-items-center mt-4">
-                          <div className="position-relative">
-                            <img
-                              src={client10}
-                              className="avatar avatar-md-sm shadow-md rounded-pill"
-                              alt=""
-                            />
-                          </div>
-
-                          <div className="ms-3">
-                            <h6 className="mb-0">
-                              1.225 WETH <span className="text-muted">by</span>{' '}
-                              <a
-                                href="/creator-profile"
-                                onClick={e => {
-                                  e.preventDefault()
-                                  navigate('/creator-profile')
-                                }}
-                                className="text-dark name"
-                              >
-                                PandaOne
-                              </a>
-                            </h6>
-                            <small className="text-muted">6 hours ago</small>
-                          </div>
-                        </div>
+                       
                       </div>
 
                       <div

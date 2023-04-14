@@ -17,12 +17,16 @@ import {
   bgImage, bg1, bg2, bg3,home1, home2, home3, home4, home5, home6, home7, home8, home9, home10
 } from '../../components/imageImport'
 
-const DarkVersionThree = ({marketplaceAddress, nftAddress, nftABI, marketplaceABI,hello}) => {
+const DarkVersionThree = () => {
   const [items, setItems] = useState([])
  
   const [toggle, setToggle] = useState(false) 
   const [item, setItem] = useState({})
   
+  const nftAddress ="0x5FbDB2315678afecb367f032d93F642f64180aa3"
+  const nftABI = nftData.abi
+  const marketplaceAddress ="0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
+  const marketplaceABI = marketplaceData.abi
 
   const loadMarketplaceItems = async () => {
     try {
@@ -41,7 +45,9 @@ const DarkVersionThree = ({marketplaceAddress, nftAddress, nftABI, marketplaceAB
           marketplaceABI,
           signer
         );
+       
         const itemCount = await marketplace.itemCount()
+        
           let items = []
           for (let i = 1; i <= itemCount; i++) {
             const item = await marketplace.items(i)
@@ -300,7 +306,7 @@ const DarkVersionThree = ({marketplaceAddress, nftAddress, nftABI, marketplaceAB
   const [type, setType] = useState('all')
   const location = useLocation()
   
-  console.log("contract",hello)
+  
   
 
 
@@ -488,16 +494,7 @@ const DarkVersionThree = ({marketplaceAddress, nftAddress, nftABI, marketplaceAB
                  >
                    {item.name}
                  </a>
-                 <a
-                   href="/item-detail"
-                   onClick={e => {
-                     e.preventDefault()
-                     navigate('/item-detail')
-                   }}
-                   className="title text-dark h6"
-                 >
-                   {item.description}
-                 </a>
+                
 
                  <div className="d-flex align-items-center justify-content-between mt-3">
                    <div className="">
@@ -659,16 +656,7 @@ const DarkVersionThree = ({marketplaceAddress, nftAddress, nftABI, marketplaceAB
                       </a>  
                       <br/>
                       <br/>
-                      <a
-                        href="/item-detail"
-                        onClick={e => {
-                          e.preventDefault()
-                          navigate('/item-detail')
-                        }}
-                        className="title text-dark h6"
-                      >
-                        {data?.title}
-                      </a>
+                     
 
                       <div className="d-flex align-items-center justify-content-between mt-3">
                         <div className="">

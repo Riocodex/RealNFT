@@ -172,7 +172,7 @@ export default function Router() {
 
         <Route exact path="/index-dark" element={<DarkVersionOne />} />
         <Route exact path="/index-dark-rtl" element={<DarkVersionOne />} />
-        <Route exact path="/index" element={<DarkVersionOne marketplaceAddress={marketplaceAddress} nftAddress={nftAddress} nftABI={nftABI} marketplaceABI={marketplaceABI} hello={contractHello}/>} />
+        <Route exact path="/index" element={<DarkVersionOne />} />
         <Route exact path="/index-rtl" element={<DarkVersionOne />} />
 
         <Route exact path="/index-two-dark" element={<DarkVersionTwo />} />
