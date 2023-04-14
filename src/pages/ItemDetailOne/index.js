@@ -88,9 +88,12 @@ const ItemDetailOne = () => {
             <div className="col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0">
               <div className="ms-lg-5">
                 <div className="title-heading">
+                
                   <h4 className="h3 fw-bold mb-0">
                   600{' '}
-                    <span className="text-gradient-primary">Grimsworth Ct</span> <br />{' '}
+                    <span className="text-gradient-primary">Grimsworth Ct</span><button className=' m-2 p-2'>
+                    <h1>X</h1>
+                </button> <br />{' '}
                     <span className="text-gradient-primary">Allen</span>{' '}
                     TX 75002
                   </h4>
