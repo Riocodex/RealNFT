@@ -61,7 +61,7 @@ const AboutUs = () => {
 
   return (
     <>
-      <Navbar />
+      
       {/* Start Home */}
       <section
         className="bg-half-170 d-table w-100"

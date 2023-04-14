@@ -47,6 +47,7 @@ import { ethers } from  "ethers"
 
 export default function Router() {
   const [currentAccount, setCurrentAccount] = useState("");
+  const [contractHello, setContractHello] = useState("");
   //contract variables
   const nftAddress ="0x5FbDB2315678afecb367f032d93F642f64180aa3"
   const nftABI = nftData.abi
@@ -89,8 +90,35 @@ export default function Router() {
       console.log(error);
     }
   }
+  const getHelloTx = async () => {
+    
+    try {
+      const {ethereum} = window;
+
+      if (ethereum) {
+        const provider = new ethers.providers.Web3Provider(ethereum, "any");
+        const signer = provider.getSigner();
+        const marketplace = new ethers.Contract(
+          marketplaceAddress,
+          marketplaceABI,
+          signer
+        );
+        
+        const hello = await marketplace.getString()
+        await hello.wait()
+        console.log(hello)
+        setContractHello(hello)
+        
+      }
+    } catch (error) {
+      console.log(error);
+    }
+    
+  };
+
   useEffect(() => {
-   
+    getHelloTx()
+    
     isWalletConnected();
     
   },[])
@@ -145,7 +173,7 @@ export default function Router() {
 
         <Route exact path="/index-dark" element={<DarkVersionOne />} />
         <Route exact path="/index-dark-rtl" element={<DarkVersionOne />} />
-        <Route exact path="/index" element={<DarkVersionOne marketplaceAddress={marketplaceAddress} nftAddress={nftAddress} nftABI={nftABI} marketplaceABI={marketplaceABI}/>} />
+        <Route exact path="/index" element={<DarkVersionOne marketplaceAddress={marketplaceAddress} nftAddress={nftAddress} nftABI={nftABI} marketplaceABI={marketplaceABI} hello={contractHello}/>} />
         <Route exact path="/index-rtl" element={<DarkVersionOne />} />
 
         <Route exact path="/index-two-dark" element={<DarkVersionTwo />} />

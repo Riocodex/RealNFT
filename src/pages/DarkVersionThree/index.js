@@ -17,7 +17,7 @@ import {
   bgImage, bg1, bg2, bg3,home1, home2, home3, home4, home5, home6, home7, home8, home9, home10
 } from '../../components/imageImport'
 
-const DarkVersionThree = ({marketplaceAddress, nftAddress, nftABI, marketplaceABI}) => {
+const DarkVersionThree = ({marketplaceAddress, nftAddress, nftABI, marketplaceABI,hello}) => {
   const [items, setItems] = useState([])
  
   const [toggle, setToggle] = useState(false) 
@@ -84,6 +84,7 @@ const DarkVersionThree = ({marketplaceAddress, nftAddress, nftABI, marketplaceAB
     
   };
 
+ 
   const toggleProp = (item) => {
     setItem(item)
     toggle ? setToggle(false) : setToggle(true)
@@ -303,7 +304,7 @@ const DarkVersionThree = ({marketplaceAddress, nftAddress, nftABI, marketplaceAB
 
 
   useEffect(() => {
-    
+    console.log("contract",hello)
     // loadMarketplaceItems()
     setTimeout(() => {
       if (location?.pathname === '/index-three-dark-rtl') {
@@ -318,7 +319,7 @@ const DarkVersionThree = ({marketplaceAddress, nftAddress, nftABI, marketplaceAB
       toggleSwitcher(false)
     }, 100)
     
-  }, [location?.pathname])
+  }, [location?.pathname],[hello])
   
 
   const setFilter = type => {
