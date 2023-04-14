@@ -300,12 +300,13 @@ const DarkVersionThree = ({marketplaceAddress, nftAddress, nftABI, marketplaceAB
   const [type, setType] = useState('all')
   const location = useLocation()
   
+  console.log("contract",hello)
   
 
 
   useEffect(() => {
-    console.log("contract",hello)
-    // loadMarketplaceItems()
+    
+    loadMarketplaceItems()
     setTimeout(() => {
       if (location?.pathname === '/index-three-dark-rtl') {
         document.getElementById('theme-opt').href = './css/style-dark-rtl.min.css'
@@ -319,7 +320,7 @@ const DarkVersionThree = ({marketplaceAddress, nftAddress, nftABI, marketplaceAB
       toggleSwitcher(false)
     }, 100)
     
-  }, [location?.pathname],[hello])
+  }, [location?.pathname])
   
 
   const setFilter = type => {

@@ -105,7 +105,6 @@ export default function Router() {
         );
         
         const hello = await marketplace.getString()
-        await hello.wait()
         console.log(hello)
         setContractHello(hello)
         
