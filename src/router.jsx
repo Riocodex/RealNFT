@@ -39,48 +39,65 @@ import CreatorProfileEdit from './pages/CreatorProfileEdit'
 import Terms from './pages/Terms'
 import Privacy from './pages/Privacy'
 import ChangeLog from './pages/ChangeLog'
+import Navbar from './components/Navbar'
 import nftData from './utils/Nft.json'
 import marketplaceData from './utils/Marketplace.json'
 import { ethers } from  "ethers"
 
 
 export default function Router() {
-  // const [ account, setAccount ] = useState(null)
-  // const [nft, setNFT] = useState({})
-  // const [marketplace, setMarketplace] = useState({})
+  const [currentAccount, setCurrentAccount] = useState("");
+  //contract variables
+  const nftAddress ="0x5FbDB2315678afecb367f032d93F642f64180aa3"
+  const nftABI = nftData.abi
+  const marketplaceAddress ="0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
+  const marketplaceABI = marketplaceData.abi
+  
 
-  // //contract variables
-  // const nftAddress ="0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9"
-  // const nftABI = nftData.abi
-  // const marketplaceAddress ="0x5FC8d32690cc91D4c39d9d3abcBD16989F875707"
-  // const marketplaceABI = marketplaceData.abi
+        // Wallet connection logic
+  const isWalletConnected = async () => {
+    try {
+      const { ethereum } = window;
 
-  //  //Metamask Login/Connect
-  //  const web3Handler = async() =>{
-  //   const accounts = await window.ethereum.request({method: "eth_requestAccounts"})
-  //   setAccount(accounts[0])
-  //   //Get provider from Metamask
-  //   const provider = new ethers.providers.Web3Provider(window.ethereum)
-  //   //set signer
-  //   const signer = provider.getSigner()
-  //   console.log("clicked")
-  //   loadContracts(signer)
-  // }
-  // const loadContracts = async (signer) => {
-  //   //get deployed copies of contract
-  //   const marketplaceContract = new ethers.Contract(marketplaceAddress, marketplaceABI, signer)
-  //   setMarketplace(marketplaceContract)
-  //   const nftContract = new ethers.Contract(nftAddress, nftABI, signer)
-  //   setNFT(nftContract)
-  // }
-  // const checkshii = async()=>{
-  //   const hello = await marketplace.getString()
-  //     console.log(hello)
-  // }
-  // checkshii()
-  // console.log("marketplace: ",marketplace, "nft: ",nft)
+      const accounts = await ethereum.request({method: 'eth_accounts'})
+      console.log("accounts: ", accounts);
+
+      if (accounts.length > 0) {
+        const account = accounts[0];
+        console.log("wallet is connected! " + account);
+      } else {
+        console.log("make sure MetaMask is connected");
+      }
+    } catch (error) {
+      console.log("error: ", error);
+    }
+  }
+  const connectWallet = async () => {
+    try {
+      const {ethereum} = window;
+
+      if (!ethereum) {
+        console.log("please install MetaMask");
+      }
+
+      const accounts = await ethereum.request({
+        method: 'eth_requestAccounts'
+      });
+
+      setCurrentAccount(accounts[0]);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  useEffect(() => {
+   
+    isWalletConnected();
+    
+  },[])
   return (
     <BrowserRouter>
+    <Navbar web3Handler={connectWallet} account={currentAccount} />
+    
       <Routes>
    
         {/* auth router  */}
@@ -128,8 +145,7 @@ export default function Router() {
 
         <Route exact path="/index-dark" element={<DarkVersionOne />} />
         <Route exact path="/index-dark-rtl" element={<DarkVersionOne />} />
-        <Route exact path="/index" element={<DarkVersionOne />} />
-        {/* <Route exact path="/" element={<DarkVersionOne />} /> */}
+        <Route exact path="/index" element={<DarkVersionOne marketplaceAddress={marketplaceAddress} nftAddress={nftAddress} nftABI={nftABI} marketplaceABI={marketplaceABI}/>} />
         <Route exact path="/index-rtl" element={<DarkVersionOne />} />
 
         <Route exact path="/index-two-dark" element={<DarkVersionTwo />} />

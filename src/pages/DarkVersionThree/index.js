@@ -17,56 +17,12 @@ import {
   bgImage, bg1, bg2, bg3,home1, home2, home3, home4, home5, home6, home7, home8, home9, home10
 } from '../../components/imageImport'
 
-const DarkVersionThree = () => {
+const DarkVersionThree = ({marketplaceAddress, nftAddress, nftABI, marketplaceABI}) => {
   const [items, setItems] = useState([])
-  const [currentAccount, setCurrentAccount] = useState("");
+ 
   const [toggle, setToggle] = useState(false) 
   const [item, setItem] = useState({})
   
-  
-
-  //contract variables
-  const nftAddress ="0x5FbDB2315678afecb367f032d93F642f64180aa3"
-  const nftABI = nftData.abi
-  const marketplaceAddress ="0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
-  const marketplaceABI = marketplaceData.abi
-  
-
-        // Wallet connection logic
-  const isWalletConnected = async () => {
-    try {
-      const { ethereum } = window;
-
-      const accounts = await ethereum.request({method: 'eth_accounts'})
-      console.log("accounts: ", accounts);
-
-      if (accounts.length > 0) {
-        const account = accounts[0];
-        console.log("wallet is connected! " + account);
-      } else {
-        console.log("make sure MetaMask is connected");
-      }
-    } catch (error) {
-      console.log("error: ", error);
-    }
-  }
-  const connectWallet = async () => {
-    try {
-      const {ethereum} = window;
-
-      if (!ethereum) {
-        console.log("please install MetaMask");
-      }
-
-      const accounts = await ethereum.request({
-        method: 'eth_requestAccounts'
-      });
-
-      setCurrentAccount(accounts[0]);
-    } catch (error) {
-      console.log(error);
-    }
-  }
 
   const loadMarketplaceItems = async () => {
     try {
@@ -348,7 +304,7 @@ const DarkVersionThree = () => {
 
   useEffect(() => {
     
-    loadMarketplaceItems()
+    // loadMarketplaceItems()
     setTimeout(() => {
       if (location?.pathname === '/index-three-dark-rtl') {
         document.getElementById('theme-opt').href = './css/style-dark-rtl.min.css'
@@ -372,8 +328,8 @@ const DarkVersionThree = () => {
   }
   return (
     <>
-      {/* /* Navbar */}
-      <Navbar web3Handler={connectWallet} account={currentAccount} />
+     
+      
 
       {/* Start Home */}
       <section
