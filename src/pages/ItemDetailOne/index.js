@@ -34,32 +34,32 @@ const ItemDetailOne = () => {
   ]
   const createdData = [
     {
-      image: gif1,
-      title: 'Deep Sea Phantasy',
+      image: home4,
+      title: '1406 Chimney Rock Dr, Allen, TX 75002',
       id: 'May 29, 2022 6:0:0',
       type: 'GIFs',
       client: client01,
       author: 'StreetBoy',
     },
     {
-      image: item1,
-      title: 'CyberPrimal 042 LAN',
+      image: home5,
+      title: '1407 Spring St, Allen, TX 75002',
       id: 'June 03, 2022 5:3:1',
       type: 'Arts',
       client: client09,
       author: 'PandaOne',
     },
     {
-      image: gif2,
-      title: 'Crypto Egg Stamp #5',
+      image: home6,
+      title: '1036 Margo Dr, Allen, TX 75013',
       id: 'June 10, 2022 1:0:1',
       type: 'GIFs',
       client: client02,
       author: 'CutieGirl',
     },
     {
-      image: item2,
-      title: 'Colorful Abstract Painting',
+      image: home7,
+      title: '806 Walden Ct, Allen, TX 75002',
       id: 'June 18, 2022 1:2:1',
       type: 'Memes',
       client: client03,
@@ -411,7 +411,7 @@ const ItemDetailOne = () => {
                         </span>
                       </div>
 
-                      <div className="position-absolute bottom-0 start-0 m-2 h5 bg-gradient-primary text-white title-dark rounded-pill px-3">
+                      {/* <div className="position-absolute bottom-0 start-0 m-2 h5 bg-gradient-primary text-white title-dark rounded-pill px-3">
                         <i className="uil uil-clock"></i>{' '}
                         <Countdown
                           date={data?.id}
@@ -421,15 +421,15 @@ const ItemDetailOne = () => {
                             </span>
                           )}
                         />
-                      </div>
+                      </div> */}
                     </div>
 
                     <div className="card-body content position-relative p-0 mt-3">
                       <a
-                        href="/item-detail-one"
+                        href="/item-detail"
                         onClick={e => {
                           e.preventDefault()
-                          navigate('/item-detail-one')
+                          navigate('/item-detail')
                         }}
                         className="title text-dark h6"
                       >
