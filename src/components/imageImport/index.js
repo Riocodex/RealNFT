@@ -152,7 +152,8 @@ import home9 from "../../assets/images/rethestate/home9.png"
 import home10 from "../../assets/images/rethestate/home10.png"
 import iconLogo2 from "../../assets/images/rethestate/12.png"
 
-
+//itemDetail
+import closeSvg from "../../assets/images/rethestate/close.svg"
 //explore
 import exploreidea from "../../assets/images/rethestate/exploreidea.jpg"
 import exploreidea2 from "../../assets/images/rethestate/exploreidea2.jpg"
@@ -185,4 +186,4 @@ export {
   about, cta, creator, logo48, single, lightLogo, office, ofcDesk, prodToCard,
   MetaMask_Fox, aave, Airswap, Compound, DDEX, defiSaver, dYdX, IDEX, Kyber, Maker, NUO, PoolTogether, Sablier, set, Uniswap, Zerion, logoDark, whiteLogo,
   itemDetail, itemDetail1, ErrorImage, united, community,
-  playStore, app, iconLogo, character,home1, home2, home3, home4, home5, home6, home7, home8, home9, home10,iconLogo2,exploreidea,exploreidea2,exploreidea3,tokenLogo,tokenLogo2,aboutUs1,aboutUs2,aboutUs3,getStarted1,getStarted2}
+  playStore, app, iconLogo, character,home1, home2, home3, home4, home5, home6, home7, home8, home9, home10,iconLogo2,exploreidea,exploreidea2,exploreidea3,tokenLogo,tokenLogo2,aboutUs1,aboutUs2,aboutUs3,getStarted1,getStarted2,closeSvg}

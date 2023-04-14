@@ -7,7 +7,7 @@ import StyleSwitcher from './StyleSwitcher'
 
 import { client01, client02, client03, client08, client09, client10, item1, item2, gif1, gif2, itemDetail1,home9, home4, home5, home6, home7, home8 } from './imageImport'
 
-const ItemDetail = () => {
+const ItemDetail = ({item, marketplace, toggleProp, setLoading, setItems, nft}) => {
     const navigate = useNavigate()
   
     const activityData = [

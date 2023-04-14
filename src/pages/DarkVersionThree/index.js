@@ -8,6 +8,7 @@ import marketplaceData from '../../utils/Marketplace.json'
 import { ethers } from  "ethers"
 import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
+import ItemDetail from '../../components/ItemDetail'
 // import ItemDetail from '../../components/Item'
 import StyleSwitcher from '../../components/StyleSwitcher'
 import {
@@ -19,7 +20,8 @@ import {
 
 const DarkVersionThree = () => {
   const [items, setItems] = useState([])
- 
+  const [marketplace, setMarketplace] = useState({})
+  const [nft, setNft] = useState({})
   const [toggle, setToggle] = useState(false) 
   const [item, setItem] = useState({})
   
@@ -40,11 +42,13 @@ const DarkVersionThree = () => {
           nftABI,
           signer
         );
+        setNft(nft)
         const marketplace = new ethers.Contract(
           marketplaceAddress,
           marketplaceABI,
           signer
         );
+        setMarketplace(marketplace)
        
         const itemCount = await marketplace.itemCount()
         
@@ -456,7 +460,7 @@ const DarkVersionThree = () => {
              <div className="card bg-white nft-items nft-primary rounded-md shadow overflow-hidden mb-1">
                <div className="nft-image position-relative overflow-hidden">
                  <a
-                   href="/item-detail"
+                   href="/"
                    onClick={() => toggleProp(item)} key={idx} 
                  >
                    <img src={item.image} className="img-fluid" alt="" />
@@ -527,17 +531,15 @@ const DarkVersionThree = () => {
           </main>
         )}
 
-{/* {toggle  && (
-        <Ahome 
-        item={item} 
-        provider={provider} 
-        account={account} 
-        marketplace={marketplace} 
-        toggleProp={toggleProp}
-        setLoading={setLoading}
-        setItems = {setItems}
-        nft = {nft} />
-      )} */}
+{toggle  && (
+       <ItemDetail
+       item={item} 
+       marketplace={marketplace} 
+       toggleProp={toggleProp}
+       setItems = {setItems}
+       nft = {nft} 
+       />
+      )}
           {/*end row*/}
 
           <div className="row">
