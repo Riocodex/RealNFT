@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
+
 import { FiArrowRight } from 'react-icons/fi'
 import Countdown from 'react-countdown'
 import nftData from '../../utils/Nft.json'
@@ -14,8 +15,7 @@ import StyleSwitcher from '../../components/StyleSwitcher'
 import {
   client01, client02, client03, client04, client05, client06, client07, client08,
   client09, client10, client11, client12, client13,
-  gif8, gif9, gif3, gif4, gif10, gif7, item11, item12, item3, item4, item13, item14,
-  bgImage, bg1, bg2, bg3,home1, home2, home3, home4, home5, home6, home7, home8, home9, home10
+  bgImage, bg1, bg2, bg3, home3, home4, home5, home6, home7, home8, home9, home10
 } from '../../components/imageImport'
 
 const DarkVersionThree = () => {
