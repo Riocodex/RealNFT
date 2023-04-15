@@ -101,10 +101,10 @@ const DarkVersionThree = () => {
     
   }
 
-  // const buyMarketItem = async (item) => {
-  //   await (await marketplace.purchaseItem(item.itemId, { value: item.totalPrice })).wait()
-  //   loadMarketplaceItems()
-  // }
+  const buyMarketItem = async (item) => {
+    await (await marketplace.purchaseItem(item.itemId, { value: item.totalPrice })).wait()
+    loadMarketplaceItems()
+  }
   const navigate = useNavigate()
 
   const toggleSwitcher = () => {
@@ -505,11 +505,8 @@ const DarkVersionThree = () => {
                      <small className="rate fw-bold">{item.totalPrice}</small>
                    </div>
                    <a
-                     href="/item-detail"
-                     onClick={e => {
-                       e.preventDefault()
-                       navigate('/item-detail')
-                     }}
+                     href="/"
+                     onClick={() => toggleProp(item)} key={idx} 
                      className="btn btn-icon btn-pills btn-primary"
                    >
                      <i className="uil uil-shopping-bag"></i>
