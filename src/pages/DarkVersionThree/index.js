@@ -474,7 +474,7 @@ const DarkVersionThree = () => {
                      {data?.type}
                    </a>
                  </div> */}
-                 <div className="position-absolute top-0 end-0 m-3">
+                 {/* <div className="position-absolute top-0 end-0 m-3">
                    <span className="like-icon shadow-sm">
                      <a
                        href=""
@@ -484,16 +484,13 @@ const DarkVersionThree = () => {
                        <i className="mdi mdi-18px mdi-heart mb-0"></i>
                      </a>
                    </span>
-                 </div>
+                 </div> */}
                </div>
 
                <div className="card-body content position-relative">
                  <a
-                   href="/item-detail"
-                   onClick={e => {
-                     e.preventDefault()
-                     navigate('/item-detail')
-                   }}
+                   href="/"
+                   onClick={() => toggleProp(item)} key={idx} 
                    className="title text-dark h6"
                  >
                    {item.name}
