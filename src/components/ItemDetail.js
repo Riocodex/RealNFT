@@ -738,7 +738,7 @@ const ItemDetail = ({item, marketplace, toggleProp, setLoading, setItems, nft}) 
                 <h6 className="text-muted mb-0">
                   You successfully purchased{' '}
                   <a href="" className="text-reset">
-                    <u>XYZ nft</u>
+                    <u>RIO nft</u>
                   </a>{' '}
                   from Superex
                 </h6>
