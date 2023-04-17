@@ -346,6 +346,8 @@ const ItemDetail = ({item, marketplace, toggleProp, setLoading, setItems, nft}) 
           </div>
           {/*end container*/}
   
+
+
           <div className="container mt-100 mt-60">
             <div className="row justify-content-center">
               <div className="col">
@@ -353,7 +355,7 @@ const ItemDetail = ({item, marketplace, toggleProp, setLoading, setItems, nft}) 
                   <h4 className="title mb-4">Related Auction Items</h4>
                   <p className="text-muted para-desc mb-0 mx-auto">
                     We are a huge marketplace dedicated to connecting great
-                    artists of all Superex with their fans and unique token
+                    artists of all RealNFt with their fans and unique token
                     collectors!
                   </p>
                 </div>
@@ -740,7 +742,7 @@ const ItemDetail = ({item, marketplace, toggleProp, setLoading, setItems, nft}) 
                   <a href="" className="text-reset">
                     <u>RIO nft</u>
                   </a>{' '}
-                  from Superex
+                  from RealNFt
                 </h6>
   
                 <ul className="rounded-md shadow p-4 border list-unstyled mt-4">
