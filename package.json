@@ -15,7 +15,7 @@
     "tiny-slider": "^2.9.4",
     "ethers": "^5.5.4",
     "react-dotenv": "^0.1.3",
-    "ipfs-http-client": "^56.0.1",
+    "ipfs-http-client": "^56.0.1"
   },
   "scripts": {
     "start": "react-dotenv && react-scripts --openssl-legacy-provider start",

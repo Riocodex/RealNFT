@@ -1,9 +1,33 @@
+import env from "react-dotenv";
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
 import StyleSwitcher from '../../components/StyleSwitcher'
 import { work1, client01, bg01,getStarted1,getStarted2  } from '../../components/imageImport'
+import { ethers } from "ethers"
+var Buffer = require('buffer/').Buffer
+
+//ipfs authorization 
+const ipfsClient = require('ipfs-http-client');
+const PROJECT_ID = env.PROJECT_ID
+const API_SECRET = env.API_KEY_SECRET
+
+const projectId = PROJECT_ID;   // <---------- my Infura Project ID
+
+const projectSecret = API_SECRET;  // <---------- my Infura Secret
+
+
+const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
+
+const client = ipfsClient.create({
+    host: 'ipfs.infura.io',
+    port: 5001,
+    protocol: 'https',
+    headers: {
+        authorization: auth,
+    },
+});
 
 const UploadWork = () => {
   const navigate = useNavigate()
