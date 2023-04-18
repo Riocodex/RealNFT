@@ -4,8 +4,47 @@ import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
 import StyleSwitcher from '../../components/StyleSwitcher'
 import { work1, client01, bg01,getStarted1,getStarted2  } from '../../components/imageImport'
+import { useState } from 'react'
+import { ethers } from "ethers"
+var Buffer = require('buffer/').Buffer
 
-const UploadWork = () => {
+//ipfs authorization 
+const ipfsClient = require('ipfs-http-client');
+const PROJECT_ID = "2JxLmbuIpIQxW2x2x7Q2UG5qaLv"
+const API_SECRET = "e090f091cad8e0d10abdd17ee55a454e"
+
+const projectId = PROJECT_ID;   // <---------- my Infura Project ID
+
+const projectSecret = API_SECRET;  // <---------- my Infura Secret
+
+
+const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
+
+const client = ipfsClient.create({
+    host: 'ipfs.infura.io',
+    port: 5001,
+    protocol: 'https',
+    headers: {
+        authorization: auth,
+    },
+});
+
+const UploadWork = ({marketplace,nft}) => {
+  const [image, setImage] = useState('')
+  const [price, setPrice] = useState(null)
+  const [name, setName] = useState('')
+  const [description, setDescription] = useState('')
+  const [bedrooms, setBedrooms] = useState('')
+  const [bathrooms, setBathrooms] = useState('')
+  const [yearBuilt, setYearBuilt] = useState('')
+  const [units, setUnits ] = useState('')
+  const [propertyAddress, setPropertyAddress] = useState('')
+  const [propertyCity, setPropetyCity] = useState('')
+  const [propertyState, setPropertyState] = useState('')
+  const [zipCode, setZipCode ] = useState('')
+  const [increment, setIncrement] = useState('')
+  const [endTime, setEndTime ] = useState('')
+  
   const navigate = useNavigate()
   const handleChange = () => {
     const fileUploader = document.querySelector('#input-file')
