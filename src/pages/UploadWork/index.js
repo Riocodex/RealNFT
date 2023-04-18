@@ -75,7 +75,19 @@ const UploadWork = ({marketplace,nft}) => {
       console.log("ipfs uri upload error: ", error)
     }
   }
-  
+  const mintThenList = async (result) => {
+    const uri = `https://gateway.pinata.cloud/ipfs/${result.path}`
+    // mint nft 
+    await(await nft.mint(uri)).wait()
+    // get tokenId of new nft 
+    const id = await nft.tokenCount()
+    // approve marketplace to spend nft
+    await(await nft.setApprovalForAll(marketplace.address, true)).wait()
+    // add nft to marketplace
+    const listingPrice = ethers.utils.parseEther(price.toString())
+    await(await marketplace.makeItem(nft.address, id, listingPrice)).wait()
+    alert("NFT successfully Listed please go to home page")
+  }
   const navigate = useNavigate()
   const handleChange = () => {
     const fileUploader = document.querySelector('#input-file')
