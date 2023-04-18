@@ -48,6 +48,8 @@ import { ethers } from  "ethers"
 export default function Router() {
   const [currentAccount, setCurrentAccount] = useState("");
   const [contractHello, setContractHello] = useState("");
+  const [marketplace, setMarketplace] = useState({})
+  const [nft, setNft] = useState({})
   //contract variables
   const nftAddress ="0x5FbDB2315678afecb367f032d93F642f64180aa3"
   const nftABI = nftData.abi
@@ -98,11 +100,18 @@ export default function Router() {
       if (ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum, "any");
         const signer = provider.getSigner();
+        const nft = new ethers.Contract(
+          nftAddress,
+          nftABI,
+          signer
+        );
+        setNft(nft)
         const marketplace = new ethers.Contract(
           marketplaceAddress,
           marketplaceABI,
           signer
         );
+        setMarketplace(marketplace)
         
         const hello = await marketplace.getString()
         console.log(hello)
