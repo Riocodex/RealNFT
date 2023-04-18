@@ -1,5 +1,5 @@
 import env from "react-dotenv";
-import React from 'react'
+import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
@@ -29,26 +29,23 @@ const client = ipfsClient.create({
     },
 });
 
-const Create = ({ marketplace, nft }) => {
+
+
+const UploadWork = () => {
   const [image, setImage] = useState('')
   const [price, setPrice] = useState(null)
   const [name, setName] = useState('')
   const [description, setDescription] = useState('')
-  const uploadToIPFS = async (event) => {
-    event.preventDefault()
-    const file = event.target.files[0]
-    if (typeof file !== 'undefined') {
-      try {
-        const result = await client.add(file)
-        console.log(result)
-        setImage(`https://gateway.pinata.cloud/ipfs/${result.path}`)
-      } catch (error){
-        console.log("ipfs image upload error: ", error)
-      }
-    }
-  }
-
-const UploadWork = () => {
+  const [bedrooms, setBedrooms] = useState('')
+  const [bathrooms, setBathrooms] = useState('')
+  const [yearBuilt, setYearBuilt] = useState('')
+  const [units, setUnits ] = useState('')
+  const [propertyAddress, setPropertyAddress] = useState('')
+  const [propertyCity, setPropetyCity] = useState('')
+  const [propertyState, setPropertyState] = useState('')
+  const [zipCode, setZipCode ] = useState('')
+  const [increment, setIncrement] = useState('')
+  const [endTime, setEndTime ] = useState('')
   const navigate = useNavigate()
   const handleChange = () => {
     const fileUploader = document.querySelector('#input-file')
