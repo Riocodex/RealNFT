@@ -44,6 +44,21 @@ const UploadWork = ({marketplace,nft}) => {
   const [zipCode, setZipCode ] = useState('')
   const [increment, setIncrement] = useState('')
   const [endTime, setEndTime ] = useState('')
+
+
+  const uploadToIPFS = async (event) => {
+    event.preventDefault()
+    const file = event.target.files[0]
+    if (typeof file !== 'undefined') {
+      try {
+        const result = await client.add(file)
+        console.log(result)
+        setImage(`https://gateway.pinata.cloud/ipfs/${result.path}`)
+      } catch (error){
+        console.log("ipfs image upload error: ", error)
+      }
+    }
+  }
   
   const navigate = useNavigate()
   const handleChange = () => {
