@@ -159,7 +159,7 @@ export default function Router() {
         <Route exact path="/blogs" element={<Blog />} />
         <Route exact path="/blog-sidebar" element={<BlogSidebar />} />
         <Route exact path="/contact" element={<Contact />} />
-        <Route exact path="/upload-work" element={<UploadWork />} />
+        <Route exact path="/upload-work" element={<UploadWork marketplace={marketplace} nft={nft}/>} />
         <Route exact path="/collections" element={<Collections />} />
         <Route exact path="/become-creator" element={<BecomeCreator />} />
         <Route exact path="/creator-profile" element={<CreateProfile/>} />
