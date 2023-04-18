@@ -13,3 +13,5 @@ load smartcontracts✅
 Advanced things to add
 each nft bought can be relisted
 tokemonics
+
+
