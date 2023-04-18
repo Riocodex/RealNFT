@@ -29,6 +29,25 @@ const client = ipfsClient.create({
     },
 });
 
+const Create = ({ marketplace, nft }) => {
+  const [image, setImage] = useState('')
+  const [price, setPrice] = useState(null)
+  const [name, setName] = useState('')
+  const [description, setDescription] = useState('')
+  const uploadToIPFS = async (event) => {
+    event.preventDefault()
+    const file = event.target.files[0]
+    if (typeof file !== 'undefined') {
+      try {
+        const result = await client.add(file)
+        console.log(result)
+        setImage(`https://gateway.pinata.cloud/ipfs/${result.path}`)
+      } catch (error){
+        console.log("ipfs image upload error: ", error)
+      }
+    }
+  }
+
 const UploadWork = () => {
   const navigate = useNavigate()
   const handleChange = () => {
