@@ -61,7 +61,22 @@ const UploadWork = () => {
       }
     }
   }
-  
+
+  const createNFT = async () => {
+    if (
+      !image || !price || !name || !description || !bedrooms || !bathrooms || !yearBuilt || !units
+      || !propertyAddress || !propertyCity || !propertyState || !zipCode || !price || !increment || !endTime ) return
+    try{
+      const result = await client.add(JSON.stringify({
+          image, name, description, bedrooms, bathrooms,
+          yearBuilt, units, propertyAddress, propertyCity, 
+           propertyState, zipCode, price, increment, endTime
+       }))
+      mintThenList(result)
+    } catch(error) {
+      console.log("ipfs uri upload error: ", error)
+    }
+  }
   const navigate = useNavigate()
   const handleChange = () => {
     const fileUploader = document.querySelector('#input-file')
