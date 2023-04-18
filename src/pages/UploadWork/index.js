@@ -1,96 +1,11 @@
-import env from "react-dotenv";
-import React, {useState} from 'react'
+import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
 import StyleSwitcher from '../../components/StyleSwitcher'
 import { work1, client01, bg01,getStarted1,getStarted2  } from '../../components/imageImport'
-import { ethers } from "ethers"
-var Buffer = require('buffer/').Buffer
-
-//ipfs authorization 
-const ipfsClient = require('ipfs-http-client');
-const PROJECT_ID = env.PROJECT_ID
-const API_SECRET = env.API_KEY_SECRET
-
-const projectId = PROJECT_ID;   // <---------- my Infura Project ID
-
-const projectSecret = API_SECRET;  // <---------- my Infura Secret
-
-
-const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
-
-const client = ipfsClient.create({
-    host: 'ipfs.infura.io',
-    port: 5001,
-    protocol: 'https',
-    headers: {
-        authorization: auth,
-    },
-});
-
-
 
 const UploadWork = () => {
-  const [image, setImage] = useState('')
-  const [price, setPrice] = useState(null)
-  const [name, setName] = useState('')
-  const [description, setDescription] = useState('')
-  const [bedrooms, setBedrooms] = useState('')
-  const [bathrooms, setBathrooms] = useState('')
-  const [yearBuilt, setYearBuilt] = useState('')
-  const [units, setUnits ] = useState('')
-  const [propertyAddress, setPropertyAddress] = useState('')
-  const [propertyCity, setPropetyCity] = useState('')
-  const [propertyState, setPropertyState] = useState('')
-  const [zipCode, setZipCode ] = useState('')
-  const [increment, setIncrement] = useState('')
-  const [endTime, setEndTime ] = useState('')
-
-  
-  const uploadToIPFS = async (event) => {
-    event.preventDefault()
-    const file = event.target.files[0]
-    if (typeof file !== 'undefined') {
-      try {
-        const result = await client.add(file)
-        console.log(result)
-        setImage(`https://gateway.pinata.cloud/ipfs/${result.path}`)
-      } catch (error){
-        console.log("ipfs image upload error: ", error)
-      }
-    }
-  }
-
-  const createNFT = async () => {
-    if (
-      !image || !price || !name || !description || !bedrooms || !bathrooms || !yearBuilt || !units
-      || !propertyAddress || !propertyCity || !propertyState || !zipCode || !price || !increment || !endTime ) return
-    try{
-      const result = await client.add(JSON.stringify({
-          image, name, description, bedrooms, bathrooms,
-          yearBuilt, units, propertyAddress, propertyCity, 
-           propertyState, zipCode, price, increment, endTime
-       }))
-      mintThenList(result)
-    } catch(error) {
-      console.log("ipfs uri upload error: ", error)
-    }
-  }
-  
-  const mintThenList = async (result) => {
-    const uri = `https://gateway.pinata.cloud/ipfs/${result.path}`
-    // mint nft 
-    await(await nft.mint(uri)).wait()
-    // get tokenId of new nft 
-    const id = await nft.tokenCount()
-    // approve marketplace to spend nft
-    await(await nft.setApprovalForAll(marketplace.address, true)).wait()
-    // add nft to marketplace
-    const listingPrice = ethers.utils.parseEther(price.toString())
-    await(await marketplace.makeItem(nft.address, id, listingPrice)).wait()
-    alert("NFT successfully Listed please go to home page")
-  }
   const navigate = useNavigate()
   const handleChange = () => {
     const fileUploader = document.querySelector('#input-file')

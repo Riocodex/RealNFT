@@ -18,10 +18,10 @@ import {
   bgImage, bg1, bg2, bg3, home3, home4, home5, home6, home7, home8, home9, home10
 } from '../../components/imageImport'
 
-const DarkVersionThree = () => {
+const DarkVersionThree = ({marketplace,nft}) => {
   const [items, setItems] = useState([])
-  const [marketplace, setMarketplace] = useState({})
-  const [nft, setNft] = useState({})
+  // const [marketplace, setMarketplace] = useState({})
+  // const [nft, setNft] = useState({})
   const [toggle, setToggle] = useState(false) 
   const [item, setItem] = useState({})
   
@@ -35,20 +35,7 @@ const DarkVersionThree = () => {
       const {ethereum} = window;
 
       if (ethereum) {
-        const provider = new ethers.providers.Web3Provider(ethereum, "any");
-        const signer = provider.getSigner();
-        const nft = new ethers.Contract(
-          nftAddress,
-          nftABI,
-          signer
-        );
-        setNft(nft)
-        const marketplace = new ethers.Contract(
-          marketplaceAddress,
-          marketplaceABI,
-          signer
-        );
-        setMarketplace(marketplace)
+      
        
         const itemCount = await marketplace.itemCount()
         
