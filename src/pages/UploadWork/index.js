@@ -33,6 +33,7 @@ const UploadWork = ({marketplace,nft}) => {
   const [image, setImage] = useState('')
   const [price, setPrice] = useState(null)
   const [name, setName] = useState('')
+  const [nameFunc, setNameFunc] = useState('')
   const [description, setDescription] = useState('')
   const [bedrooms, setBedrooms] = useState('')
   const [bathrooms, setBathrooms] = useState('')
@@ -108,6 +109,12 @@ const UploadWork = ({marketplace,nft}) => {
 
       reader.readAsDataURL(uploadedFile)
     }
+  }
+  function nftNamefunction(event){
+    setNameFunc(event.target.value)
+    console.log("this is namefunc",nameFunc)
+
+    
   }
   return (
     <>
@@ -304,6 +311,7 @@ const UploadWork = ({marketplace,nft}) => {
                               type="text"
                               className="form-control"
                               placeholder="832 Callaway Dr, Allen, TX 75013"
+                              onChange={nftNamefunction}
                             />
                           </div>
                           {/*end col*/}
