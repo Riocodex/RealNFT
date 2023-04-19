@@ -48,19 +48,7 @@ const UploadWork = ({marketplace,nft}) => {
   const [endTime, setEndTime ] = useState('')
 
 
-  const uploadToIPFS = async (event) => {
-    event.preventDefault()
-    const file = event.target.files[0]
-    if (typeof file !== 'undefined') {
-      try {
-        const result = await client.add(file)
-        console.log(result)
-        setImage(`https://gateway.pinata.cloud/ipfs/${result.path}`)
-      } catch (error){
-        console.log("ipfs image upload error: ", error)
-      }
-    }
-  }
+  
 
   const createNFT = async () => {
     if (
@@ -91,12 +79,29 @@ const UploadWork = ({marketplace,nft}) => {
     alert("NFT successfully Listed please go to home page")
   }
   const navigate = useNavigate()
+  
   const handleChange = () => {
     const fileUploader = document.querySelector('#input-file')
     const getFile = fileUploader.files
     if (getFile.length !== 0) {
       const uploadedFile = getFile[0]
       readFile(uploadedFile)
+    }
+  }
+
+  const uploadToIPFS = async (event) => {
+    event.preventDefault()
+    const file = event.target.files[0]
+    
+    if (typeof file !== 'undefined') {
+      try {
+        const result = await client.add(file)
+        console.log(result)
+        setImage(`https://gateway.pinata.cloud/ipfs/${result.path}`)
+        readFile(file)
+      } catch (error){
+        console.log("ipfs image upload error: ", error)
+      }
     }
   }
 
