@@ -432,6 +432,36 @@ const UploadWork = ({marketplace,nft}) => {
                               type="text"
                               className="form-control"
                               id="time"
+                              defaultValue="Miami"
+                            />
+                          </div>
+                          {/*end col*/}
+
+                          <div className="col-md-6 mb-4">
+                          <label className="form-label fw-bold">
+                              {' '}
+                              Property State{' '}
+                            </label>
+                            <input
+                              name="time"
+                              type="text"
+                              className="form-control"
+                              id="time"
+                              defaultValue="Florida"
+                            />
+                          </div>
+                          {/*end col*/}
+
+                          <div className="col-md-6 mb-4">
+                            <label className="form-label fw-bold">
+                              {' '}
+                              zip code{' '}
+                            </label>
+                            <input
+                              name="time"
+                              type="text"
+                              className="form-control"
+                              id="time"
                               defaultValue="2"
                             />
                           </div>
