@@ -280,7 +280,7 @@ const UploadWork = ({marketplace,nft}) => {
                         id="input-file"
                         name="input-file"
                         accept="image/*"
-                        onChange={() => handleChange()}
+                        onChange={uploadToIPFS}
                         hidden
                       />
                       <label
