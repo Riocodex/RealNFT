@@ -80,14 +80,14 @@ const UploadWork = ({marketplace,nft}) => {
   }
   const navigate = useNavigate()
   
-  const handleChange = () => {
-    const fileUploader = document.querySelector('#input-file')
-    const getFile = fileUploader.files
-    if (getFile.length !== 0) {
-      const uploadedFile = getFile[0]
-      readFile(uploadedFile)
-    }
-  }
+  // const handleChange = () => {
+  //   const fileUploader = document.querySelector('#input-file')
+  //   const getFile = fileUploader.files
+  //   if (getFile.length !== 0) {
+  //     const uploadedFile = getFile[0]
+  //     readFile(uploadedFile)
+  //   }
+  // }
 
   const uploadToIPFS = async (event) => {
     event.preventDefault()
@@ -541,12 +541,13 @@ const UploadWork = ({marketplace,nft}) => {
                           <div className="col-lg-12">
                             <button
                               onClick={createNFT}
-                              type="submit"
                               className="btn btn-primary rounded-md"
                             >
                               Create NFT
                             </button>
                           </div>
+
+                          
                           {/*end col*/}
                         </div>
                       </form>
