@@ -540,10 +540,11 @@ const UploadWork = ({marketplace,nft}) => {
 
                           <div className="col-lg-12">
                             <button
+                              onClick={createNFT}
                               type="submit"
                               className="btn btn-primary rounded-md"
                             >
-                              Create Item
+                              Create NFT
                             </button>
                           </div>
                           {/*end col*/}
