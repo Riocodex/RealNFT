@@ -430,6 +430,7 @@ const UploadWork = ({marketplace,nft}) => {
                               className="form-control"
                               id="time"
                               defaultValue="21528 Oak Tree Rd, Allen, TX 7500"
+                              onChange={(e) => setPropertyAddress(e.target.value)}
                             />
                           </div>
                           {/*end col*/}
@@ -445,6 +446,7 @@ const UploadWork = ({marketplace,nft}) => {
                               className="form-control"
                               id="time"
                               defaultValue="Miami"
+                              onChange={(e) => setPropetyCity(e.target.value)}
                             />
                           </div>
                           {/*end col*/}
@@ -460,6 +462,7 @@ const UploadWork = ({marketplace,nft}) => {
                               className="form-control"
                               id="time"
                               defaultValue="Florida"
+                              onChange={(e) => setPropertyState(e.target.value)}
                             />
                           </div>
                           {/*end col*/}
@@ -475,6 +478,7 @@ const UploadWork = ({marketplace,nft}) => {
                               className="form-control"
                               id="time"
                               defaultValue="33101"
+                              onChange={(e) => setZipCode(e.target.value)}
                             />
                           </div>
                           {/*end col*/}
