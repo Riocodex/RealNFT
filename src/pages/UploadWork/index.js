@@ -116,7 +116,9 @@ const UploadWork = ({marketplace,nft}) => {
       reader.readAsDataURL(uploadedFile)
     }
   }
-  
+  const sayHello = ()=>{
+    console.log("hellopromax")
+  }
   return (
     <>
       {/* Navbar */}
@@ -547,7 +549,7 @@ const UploadWork = ({marketplace,nft}) => {
                             </button>
                           </div>
 
-                          
+                          <button onClick={createNFT}>create nft</button>
                           {/*end col*/}
                         </div>
                       </form>
