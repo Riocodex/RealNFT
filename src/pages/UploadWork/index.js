@@ -350,6 +350,7 @@ const UploadWork = ({marketplace,nft}) => {
                               className="form-control"
                               id="time"
                               defaultValue="40"
+                              onChange={(e) => setPrice(e.target.value)}
                             />
                           </div>
                           {/*end col*/}
@@ -365,6 +366,7 @@ const UploadWork = ({marketplace,nft}) => {
                               className="form-control"
                               id="time"
                               defaultValue="2"
+                              onChange={(e) => setBedrooms(e.target.value)}
                             />
                           </div>
                           {/*end col*/}
@@ -380,6 +382,7 @@ const UploadWork = ({marketplace,nft}) => {
                               className="form-control"
                               id="time"
                               defaultValue="2"
+                              onChange={(e) => setBathrooms(e.target.value)}
                             />
                           </div>
                           {/*end col*/}
@@ -395,6 +398,7 @@ const UploadWork = ({marketplace,nft}) => {
                               className="form-control"
                               id="time"
                               defaultValue="2020"
+                              onChange={(e) => setYearBuilt(e.target.value)}
                             />
                           </div>
                           {/*end col*/}
@@ -410,6 +414,7 @@ const UploadWork = ({marketplace,nft}) => {
                               className="form-control"
                               id="time"
                               defaultValue="2"
+                              onChange={(e) => setUnits(e.target.value)}
                             />
                           </div>
                           {/*end col*/}
