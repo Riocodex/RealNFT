@@ -459,10 +459,10 @@ const UploadWork = ({marketplace,nft}) => {
                             </label>
                             <input
                               name="time"
-                              type="text"
+                              type="number"
                               className="form-control"
                               id="time"
-                              defaultValue="2"
+                              defaultValue="33101"
                             />
                           </div>
                           {/*end col*/}
