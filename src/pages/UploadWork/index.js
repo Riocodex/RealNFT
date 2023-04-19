@@ -33,7 +33,8 @@ const UploadWork = ({marketplace,nft}) => {
   const [image, setImage] = useState('')
   const [price, setPrice] = useState(null)
   const [name, setName] = useState('')
-  const [nameFunc, setNameFunc] = useState('')
+  const [type, setType] = useState('')
+  const [applicances, setAppliances] = useState('')
   const [description, setDescription] = useState('')
   const [bedrooms, setBedrooms] = useState('')
   const [bathrooms, setBathrooms] = useState('')
@@ -64,12 +65,12 @@ const UploadWork = ({marketplace,nft}) => {
   const createNFT = async () => {
     if (
       !image || !price || !name || !description || !bedrooms || !bathrooms || !yearBuilt || !units
-      || !propertyAddress || !propertyCity || !propertyState || !zipCode || !price || !increment || !endTime ) return
+      || !propertyAddress || !propertyCity || !propertyState || !zipCode || !price || type || applicances || !increment || !endTime ) return
     try{
       const result = await client.add(JSON.stringify({
           image, name, description, bedrooms, bathrooms,
           yearBuilt, units, propertyAddress, propertyCity, 
-           propertyState, zipCode, price, increment, endTime
+           propertyState, zipCode, price, type,applicances, increment, endTime
        }))
       mintThenList(result)
     } catch(error) {
@@ -110,12 +111,7 @@ const UploadWork = ({marketplace,nft}) => {
       reader.readAsDataURL(uploadedFile)
     }
   }
-  function nftNamefunction(event){
-    setNameFunc(event.target.value)
-    console.log("this is namefunc",nameFunc)
-
-    
-  }
+  
   return (
     <>
       {/* Navbar */}
@@ -311,7 +307,7 @@ const UploadWork = ({marketplace,nft}) => {
                               type="text"
                               className="form-control"
                               placeholder="832 Callaway Dr, Allen, TX 75013"
-                              onChange={nftNamefunction}
+                              onChange={(e) => setNameFunc(e.target.value)}
                             />
                           </div>
                           {/*end col*/}
@@ -327,6 +323,7 @@ const UploadWork = ({marketplace,nft}) => {
                               rows="4"
                               className="form-control"
                               placeholder="This beautifully designed home is sure to impress with its many desirable features. The kitchen is a chef's dream, featuring a large island, walk-in pantry, ss appliances, double oven, and gas cooktop. The open concept kitchen and living room are spacious with tall ceilings, the perfect layout for entertaining guests or relaxing with family. The primary suite is a true retreat, featuring a spacious bedroom with a wall of windows, a large walk-in closet, an ensuite bathroom with dual sinks, deep soaker tub and a semi-frameless shower. A huge first floor office and second floor media room are a few of the bonuses you will enjoy.  With this home the phrase, location, location, location comes to life, the neighborhood is a short distance to all of your shopping and dining needs, with instant access to HWY 75. Allen Station Park is right around the corner and offers baseball, softball fields, trails, skate park, BMX track, and more. Don't miss the opportunity to own this incredible property"
+                              onChange={(e) => setDescription(e.target.value)}
                             ></textarea>
                           </div>
                           {/*end col*/}
