@@ -307,7 +307,7 @@ const UploadWork = ({marketplace,nft}) => {
                               type="text"
                               className="form-control"
                               placeholder="832 Callaway Dr, Allen, TX 75013"
-                              onChange={(e) => setNameFunc(e.target.value)}
+                              onChange={(e) => setName(e.target.value)}
                             />
                           </div>
                           {/*end col*/}
@@ -329,7 +329,9 @@ const UploadWork = ({marketplace,nft}) => {
                           {/*end col*/}
 
                           <div className="col-md-6 mb-4">
-                            <label className="form-label fw-bold">Type :</label>
+                            <label 
+                            onChange={(e) => setType(e.target.value)}
+                            className="form-label fw-bold">Type :</label>
                             <select className="form-control">
                               <option>Rental</option>
                               <option>Home</option>
