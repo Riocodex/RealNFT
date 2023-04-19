@@ -494,6 +494,7 @@ const UploadWork = ({marketplace,nft}) => {
                               rows="4"
                               className="form-control"
                               placeholder="Appliances included: Electric Cooktop, Electric Oven"
+                              onChange={(e) => setAppliances(e.target.value)}
                             ></textarea>
                           </div>
                           {/*end col*/}
@@ -512,6 +513,7 @@ const UploadWork = ({marketplace,nft}) => {
                               type="text"
                               className="form-control start"
                               placeholder="Select date :"
+                              onChange={(e) => setIncrement(e.target.value)}
                             />
                           </div>
                           {/*end col*/}
@@ -526,6 +528,7 @@ const UploadWork = ({marketplace,nft}) => {
                               type="text"
                               className="form-control end"
                               placeholder="Select date :"
+                              onChange={(e) => setEndTime(e.target.value)}
                             />
                           </div>
                           {/*end col*/}
