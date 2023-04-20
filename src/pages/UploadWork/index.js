@@ -48,19 +48,17 @@ const UploadWork = ({marketplace,nft}) => {
   const [endTime, setEndTime ] = useState('')
 
 
-  
+   //  console.log("price : ",price, "name : ",name, "description : ",description, "bedrooms : ",bedrooms, "bathrooms : ",bathrooms, "yearbuilt : ", yearBuilt, "units : ",units, "propertyAddress : ",propertyAddress, "propertyCity : ",  propertyCity, "propertyState : ",propertyState, "zipcode : ",zipCode, "price : ",price, "appliances: ",applicances, "increment time : ",increment, "endtime : ",endTime,"image : ",image  )
 
-  const createNFT = async (event) => {
-    event.preventDefault()
- 
+  const createNFT = async () => {
     if (
       !image || !price || !name || !description || !bedrooms || !bathrooms || !yearBuilt || !units
-      || !propertyAddress || !propertyCity || !propertyState || !zipCode || !price  || applicances || !increment || !endTime ) return
+      || !propertyAddress || !propertyCity || !propertyState || !zipCode || !price || !increment || !endTime ) return
     try{
       const result = await client.add(JSON.stringify({
           image, name, description, bedrooms, bathrooms,
           yearBuilt, units, propertyAddress, propertyCity, 
-           propertyState, zipCode, price, type,applicances, increment, endTime
+           propertyState, zipCode, price, increment, endTime
        }))
       mintThenList(result)
     } catch(error) {
