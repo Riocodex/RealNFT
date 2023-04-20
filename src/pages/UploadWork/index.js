@@ -52,7 +52,7 @@ const UploadWork = ({marketplace,nft}) => {
 
   const createNFT = async (event) => {
     event.preventDefault()
-   console.log("price : ",price, "name : ",name, "description : ",description, "bedrooms : ",bedrooms, "bathrooms : ",bathrooms, "yearbuilt : ", yearBuilt, "units : ",units, "propertyAddress : ",propertyAddress,"propertyAddress : ", "propertyCity : ",  propertyCity, "propertyState : ",propertyState, "zipcode : ",zipCode, "price : ",price, "appliances: ",applicances, "increment time : ",increment, "endtime : ",endTime  )
+ 
     if (
       !image || !price || !name || !description || !bedrooms || !bathrooms || !yearBuilt || !units
       || !propertyAddress || !propertyCity || !propertyState || !zipCode || !price  || applicances || !increment || !endTime ) return
