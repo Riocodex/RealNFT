@@ -52,10 +52,10 @@ const UploadWork = ({marketplace,nft}) => {
 
   const createNFT = async (event) => {
     event.preventDefault()
-   console.log("price : ",price, "name : ",name, "description : ",description, "bedrooms : ",bedrooms, "bathrooms : ",bathrooms, "yearbuilt : ", yearBuilt, "units : ",units, "propertyAddress : ",propertyAddress,"propertyAddress : ", "propertyCity : ",  propertyCity, "propertyState : ",propertyState, "zipcode : ",zipCode, "price : ",price, "type : ", type, "appliances: ",applicances, "increment time : ",increment, "endtime : ",endTime  )
+   console.log("price : ",price, "name : ",name, "description : ",description, "bedrooms : ",bedrooms, "bathrooms : ",bathrooms, "yearbuilt : ", yearBuilt, "units : ",units, "propertyAddress : ",propertyAddress,"propertyAddress : ", "propertyCity : ",  propertyCity, "propertyState : ",propertyState, "zipcode : ",zipCode, "price : ",price, "appliances: ",applicances, "increment time : ",increment, "endtime : ",endTime  )
     if (
       !image || !price || !name || !description || !bedrooms || !bathrooms || !yearBuilt || !units
-      || !propertyAddress || !propertyCity || !propertyState || !zipCode || !price || type || applicances || !increment || !endTime ) return
+      || !propertyAddress || !propertyCity || !propertyState || !zipCode || !price  || applicances || !increment || !endTime ) return
     try{
       const result = await client.add(JSON.stringify({
           image, name, description, bedrooms, bathrooms,
@@ -335,7 +335,7 @@ const UploadWork = ({marketplace,nft}) => {
                           </div>
                           {/*end col*/}
 
-                          <div className="col-md-6 mb-4">
+                          {/* <div className="col-md-6 mb-4">
                             <label 
                             onChange={(e) => setType(e.target.value)}
                             className="form-label fw-bold">Type :</label>
@@ -343,7 +343,7 @@ const UploadWork = ({marketplace,nft}) => {
                               <option>Rental</option>
                               <option>Home</option>
                             </select>
-                          </div>
+                          </div> */}
                           {/*end col*/}
 
                           <div className="col-md-6 mb-4">
