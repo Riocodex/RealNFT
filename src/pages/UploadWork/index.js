@@ -548,7 +548,7 @@ const UploadWork = ({marketplace,nft}) => {
                             </button>
                           </div>
 
-                          <button onClick={createNFT}>create nft</button>
+                          {/* <button onClick={createNFT}>create nft</button> */}
                           {/*end col*/}
                         </div>
                       </form>
