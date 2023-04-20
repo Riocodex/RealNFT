@@ -50,7 +50,8 @@ const UploadWork = ({marketplace,nft}) => {
 
   
 
-  const createNFT = async () => {
+  const createNFT = async (event) => {
+    event.preventDefault()
     if (
       !image || !price || !name || !description || !bedrooms || !bathrooms || !yearBuilt || !units
       || !propertyAddress || !propertyCity || !propertyState || !zipCode || !price || type || applicances || !increment || !endTime ) return
@@ -78,7 +79,7 @@ const UploadWork = ({marketplace,nft}) => {
     await(await marketplace.makeItem(nft.address, id, listingPrice)).wait()
     alert("NFT successfully Listed please go to home page")
   }
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   
   // const handleChange = () => {
   //   const fileUploader = document.querySelector('#input-file')
@@ -116,9 +117,7 @@ const UploadWork = ({marketplace,nft}) => {
       reader.readAsDataURL(uploadedFile)
     }
   }
-  const sayHello = ()=>{
-    console.log("hellopromax")
-  }
+ 
   return (
     <>
       {/* Navbar */}
@@ -154,10 +153,10 @@ const UploadWork = ({marketplace,nft}) => {
                 <li className="breadcrumb-item">
                   <a
                     href="/"
-                    onClick={e => {
-                      e.preventDefault()
-                      navigate('/')
-                    }}
+                    // onClick={e => {
+                    //   e.preventDefault()
+                    //   navigate('/')
+                    // }}
                   >
                     RealNFT
                   </a>
@@ -213,10 +212,10 @@ const UploadWork = ({marketplace,nft}) => {
                       <li className="px-0">
                         <a
                           href="/creator-profile"
-                          onClick={e => {
-                            e.preventDefault()
-                            navigate('/creator-profile')
-                          }}
+                          // onClick={e => {
+                          //   e.preventDefault()
+                          //   navigate('/creator-profile')
+                          // }}
                           className="d-flex align-items-center text-dark"
                         >
                           <span className="fs-6 mb-0">
@@ -231,10 +230,10 @@ const UploadWork = ({marketplace,nft}) => {
                       <li className="px-0 mt-2">
                         <a
                           href="/creator-profile-edit"
-                          onClick={e => {
-                            e.preventDefault()
-                            navigate('/creator-profile-edit')
-                          }}
+                          // onClick={e => {
+                          //   e.preventDefault()
+                          //   navigate('/creator-profile-edit')
+                          // }}
                           className="d-flex align-items-center text-dark"
                         >
                           <span className="fs-6 mb-0">
@@ -249,10 +248,10 @@ const UploadWork = ({marketplace,nft}) => {
                       <li className="px-0 mt-2">
                         <a
                           href="/lock-screen"
-                          onClick={e => {
-                            e.preventDefault()
-                            navigate('/lock-screen')
-                          }}
+                          // onClick={e => {
+                          //   e.preventDefault()
+                          //   navigate('/lock-screen')
+                          // }}
                           className="d-flex align-items-center text-dark"
                         >
                           <span className="fs-6 mb-0">
