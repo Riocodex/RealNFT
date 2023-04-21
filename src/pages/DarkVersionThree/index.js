@@ -26,6 +26,8 @@ const DarkVersionThree = ({marketplace,nft}) => {
   const [nft2, setNft2] = useState({})
   const [toggle, setToggle] = useState(false) 
   const [item, setItem] = useState({})
+
+  // 
   
   const nftAddress ="0x5FbDB2315678afecb367f032d93F642f64180aa3"
   const nftABI = nftData.abi
@@ -35,15 +37,31 @@ const DarkVersionThree = ({marketplace,nft}) => {
   const loadMarketplaceItems = async () => {
     try {
       const {ethereum} = window;
-
-      if (ethereum) {
-        
+  if (ethereum) {
+          setMarketplace1(marketplace)
+          setNft1(nft)
+          const provider = new ethers.providers.Web3Provider(ethereum, "any");
+          const signer = provider.getSigner();
+          const nft2 = new ethers.Contract(
+            nftAddress,
+            nftABI,
+            signer
+          );
+          setNft2(nft2)
+          const marketplace2 = new ethers.Contract(
+            marketplaceAddress,
+            marketplaceABI,
+            signer
+          );
+          setMarketplace2(marketplace2)
+        console.log("this is marketplace1",marketplace1)
+        console.log("this is marketplace2", marketplace2)
        
-        const itemCount = await marketplace.itemCount()
+        const itemCount = await marketplace2.itemCount()
         
           let items = []
           for (let i = 1; i <= itemCount; i++) {
-            const item = await marketplace.items(i)
+            const item = await marketplace2.items(i)
             if (!item.sold) {
               // get uri url from nft contract
               const uri = await nft.tokenURI(item.tokenId)
@@ -51,7 +69,7 @@ const DarkVersionThree = ({marketplace,nft}) => {
               const response = await fetch(uri)
               const metadata = await response.json()
               // get total price of item (item price + fee)
-              const totalPrice = await marketplace.getTotalPrice(item.itemId)
+              const totalPrice = await marketplace2.getTotalPrice(item.itemId)
               // Add item to items array
               items.push({
                 totalPrice,
@@ -91,7 +109,7 @@ const DarkVersionThree = ({marketplace,nft}) => {
   }
 
   const buyMarketItem = async (item) => {
-    await (await marketplace.purchaseItem(item.itemId, { value: item.totalPrice })).wait()
+    await (await marketplace1.purchaseItem(item.itemId, { value: item.totalPrice })).wait()
     loadMarketplaceItems()
   }
   const navigate = useNavigate()
@@ -298,6 +316,7 @@ const DarkVersionThree = ({marketplace,nft}) => {
   const [allData, setAllData] = useState(HomeData)
   const [type, setType] = useState('all')
   const location = useLocation()
+ 
   
   
   
@@ -517,7 +536,7 @@ const DarkVersionThree = ({marketplace,nft}) => {
 {toggle  && (
        <ItemDetail
        item={item} 
-       marketplace={marketplace} 
+       marketplace={marketplace1} 
        toggleProp={toggleProp}
        setItems = {setItems}
        nft = {nft} 

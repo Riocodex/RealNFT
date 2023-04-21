@@ -113,6 +113,7 @@ export default function Router() {
         );
         setMarketplace(marketplace)
         
+        
         const hello = await marketplace.getString()
         console.log(hello)
         
@@ -121,11 +122,14 @@ export default function Router() {
     } catch (error) {
       console.log(error);
     }
+
     
   };
+  console.log("from router. ",marketplace)
 
   useEffect(() => {
     getHelloTx()
+    
     
     isWalletConnected();
     
