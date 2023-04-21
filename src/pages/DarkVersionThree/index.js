@@ -64,7 +64,7 @@ const DarkVersionThree = ({marketplace,nft}) => {
             const item = await marketplace2.items(i)
             if (!item.sold) {
               // get uri url from nft contract
-              const uri = await nft.tokenURI(item.tokenId)
+              const uri = await nft2.tokenURI(item.tokenId)
               // use uri to fetch the nft metadata stored on ipfs 
               const response = await fetch(uri)
               const metadata = await response.json()
