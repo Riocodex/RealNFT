@@ -1,4 +1,5 @@
 import React from 'react'
+import env from "react-dotenv";
 import { useNavigate } from 'react-router-dom'
 import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
@@ -8,10 +9,11 @@ import { useState } from 'react'
 import { ethers } from "ethers"
 var Buffer = require('buffer/').Buffer
 
+
 //ipfs authorization 
 const ipfsClient = require('ipfs-http-client');
-const PROJECT_ID = "2JxLmbuIpIQxW2x2x7Q2UG5qaLv"
-const API_SECRET = "e090f091cad8e0d10abdd17ee55a454e"
+const PROJECT_ID = env.PROJECT_ID
+const API_SECRET = env.API_KEY_SECRET
 
 const projectId = PROJECT_ID;   // <---------- my Infura Project ID
 

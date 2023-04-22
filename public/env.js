@@ -12,6 +12,8 @@ window.env = {
   "ComSpec": "C:\\WINDOWS\\system32\\cmd.exe",
   "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
   "EDITOR": "C:\\WINDOWS\\notepad.exe",
+  "FPS_BROWSER_APP_PROFILE_STRING": "Internet Explorer",
+  "FPS_BROWSER_USER_PROFILE_STRING": "Default",
   "HOME": "C:\\Users\\Onwuka Rosario",
   "HOMEDRIVE": "C:",
   "HOMEPATH": "\\Users\\Onwuka Rosario",
