@@ -473,26 +473,7 @@ const DarkVersionThree = ({marketplace,nft}) => {
                  >
                    <img src={item.image} className="img-fluid" alt="" />
                  </a>
-                 {/* <div className="position-absolute top-0 start-0 m-3">
-                   <a
-                     href=""
-                     onClick={e => e.preventDefault()}
-                     className="badge badge-link bg-primary"
-                   >
-                     {data?.type}
-                   </a>
-                 </div> */}
-                 {/* <div className="position-absolute top-0 end-0 m-3">
-                   <span className="like-icon shadow-sm">
-                     <a
-                       href=""
-                       onClick={e => e.preventDefault()}
-                       className="text-muted icon"
-                     >
-                       <i className="mdi mdi-18px mdi-heart mb-0"></i>
-                     </a>
-                   </span>
-                 </div> */}
+                 
                </div>
 
                <div className="card-body content position-relative">
