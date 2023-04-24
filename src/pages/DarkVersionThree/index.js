@@ -279,7 +279,40 @@ const DarkVersionThree = ({marketplace,nft}) => {
       type: 'Music',
     },
   ]
-  
+  const liveAuctions = [
+    {
+      image: home10,
+      title: '9755 Olde Park Dr, Tipp City, OH 45371Contemporary Abstract',
+      id: 'July 01, 2022 1:6:6',
+      
+      client: client11,
+      author: 'Butterfly',
+    },
+    {
+      image: home8,
+      title: '4754 Fox Run, Fairborn, OH 45324',
+      id: 'July 15, 2022 2:5:5',
+      
+      client: client04,
+      author: 'BigBull',
+    },
+    {
+      image: home4,
+      title: '2276 Cobblestone Ct, Beavercreek, OH 45431',
+      id: 'Aug 08, 2022 5:1:4',
+      
+      client: client12,
+      author: 'Princess',
+    },
+    {
+      image: home9,
+      title: '31 S Lafayette St, Camden, OH 45311',
+      id: 'Aug 20, 2022 1:6:3',
+      
+      client: client13,
+      author: 'KristyHoney',
+    },
+  ]
   const [allData, setAllData] = useState(HomeData)
   const [type, setType] = useState('all')
   const location = useLocation()
