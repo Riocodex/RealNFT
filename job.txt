@@ -1,0 +1,19 @@
+Dear Hiring Manager,
+
+I am excited to apply for the Senior Full Stack Engineer position at Pine Protocols. With my skills and experience, I am confident that I would be a perfect fit for your team.
+
+I have been working as a software engineer for several years now, primarily focusing on full-stack development. Over the years, I have built a wide range of projects, including complex NFT applications and smart contracts. One of my most notable works is RestheState, an NFT marketplace that allows users to buy and sell real estate assets as NFTs. This project required in-depth knowledge of NFTs and smart contracts, and I was able to deliver a scalable and user-friendly platform.
+
+In addition, I have extensive experience in working with decentralized exchanges such as Uniswap, Sushiswap, and Pancake Swap. I have cloned v1, v2, and v3 and created various complex trading sites and crypto exchange applications. I have also contributed to several open-source projects, including the Uniswap V3 SDK.
+
+As a developer, I am always eager to learn new technologies and trends in the industry. I have kept up with the latest advancements and applied them to my projects. I am confident that I can leverage this knowledge to develop and maintain the Pine Protocols platform.
+
+I take pride in writing clean, efficient, and maintainable code that adheres to industry best practices. I have experience working with TypeScript, Node.js, React, Redux, and CSS-in-JS, which are all essential skills for this position.
+
+I am confident that my skills, experience, and enthusiasm make me a perfect candidate for the Senior Full Stack Engineer position at Pine Protocols. I am excited about the opportunity to join your team and contribute to the success of your company.
+
+Thank you for considering my application. Please find my GitHub profile here: https://github.com/Riocodex.
+
+Sincerely,
+
+Onwuka Rosario
