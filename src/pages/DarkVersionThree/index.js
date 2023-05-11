@@ -500,7 +500,7 @@ const DarkVersionThree = () => {
                               Current Price:
                             </small>
                             <small className="rate fw-bold">
-                              {item.totalPrice?._hex?.toString()}
+                              {ethers.utils.formatEther(item.totalPrice)}  ETH
                             </small>
                           </div>
                           <a
