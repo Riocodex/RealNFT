@@ -166,7 +166,7 @@ export default function Router() {
         <Route exact path="/upload-work" element={<UploadWork marketplace={marketplace} nft={nft}/>} />
         <Route exact path="/collections" element={<Collections />} />
         <Route exact path="/become-creator" element={<BecomeCreator />} />
-        <Route exact path="/creator-profile" element={<CreateProfile/>} />
+        <Route exact path="/creator-profile" element={<CreateProfile currentAccount={currentAccount}/>} />
         <Route
           exact
           path="/creator-profile-edit"
