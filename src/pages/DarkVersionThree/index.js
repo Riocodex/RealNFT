@@ -502,14 +502,15 @@ const DarkVersionThree = () => {
                               {ethers.utils.formatEther(item.totalPrice)}  ETH
                             </small>
                           </div>
-                          <a
-                            href="/"
+                          {/* <a
+                            href=""
                             onClick={() => toggleProp(item)}
                             key={idx}
                             className="btn btn-icon btn-pills btn-primary"
                           >
                             <i className="uil uil-shopping-bag"></i>
-                          </a>
+                          </a> */}
+                          <i onClick={() => buyMarketItem(item)} className="uil uil-shopping-bag"></i>
                         </div>
                       </div>
                     </div>

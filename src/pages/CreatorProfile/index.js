@@ -207,8 +207,8 @@ const CreateProfile = () => {
   // const [nft1, setNft1] = useState({});
   const [marketplace2, setMarketplace2] = useState({});
   const [nft2, setNft2] = useState({});
-  const [toggle, setToggle] = useState(false);
   const [item, setItem] = useState({});
+  const [purchases, setPurchases] = useState([])
 
   useEffect(() => {
     console.log({ items });
