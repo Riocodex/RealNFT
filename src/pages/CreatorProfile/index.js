@@ -662,7 +662,7 @@ const CreateProfile = ({currentAccount}) => {
                   role="tabpanel"
                   aria-labelledby="Sale-tab"
                 >
-                  {soldItems.length > 0 ?
+                 {soldItems.length > 0 ?
                   <div className="row row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 row-cols-1 g-4">
                     {soldItems.map((item, idx) => (
              
@@ -762,7 +762,11 @@ const CreateProfile = ({currentAccount}) => {
                        </p>
                      </div>
                    </div>
-                  {/*end row*/}
+                   {/* end col */}
+                 </div>
+                )}
+                  
+                  {/* end row */}
                 </div>
                 {/* if value select collection */}
                 <div
