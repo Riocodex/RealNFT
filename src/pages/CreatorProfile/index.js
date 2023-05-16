@@ -209,6 +209,8 @@ const CreateProfile = ({currentAccount}) => {
   const [nft2, setNft2] = useState({});
   const [item, setItem] = useState({});
   const [purchases, setPurchases] = useState([])
+  const [listedItems, setListedItems] = useState([])
+  const [soldItems, setSoldItems] = useState([])
 
   useEffect(() => {
     console.log({ items });
