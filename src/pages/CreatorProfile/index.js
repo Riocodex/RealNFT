@@ -240,7 +240,7 @@ const CreateProfile = () => {
           marketplaceABI,
           signer
         );
-        // Fetch purchased items from marketplace by quering Offered events with the buyer set as the user
+           // Fetch purchased items from marketplace by quering Offered events with the buyer set as the user
       const filter =  marketplace.filters.Bought(null,null,null,null,null,account)
       const results = await marketplace.queryFilter(filter)
       //Fetch metadata of each nft and add that to listedItem object.
@@ -266,9 +266,8 @@ const CreateProfile = () => {
         }
         return purchasedItem
       }))
-      setLoading(false)
+     
       setPurchases(purchases)
-    }
 
 
         
