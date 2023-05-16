@@ -129,38 +129,11 @@ const DarkVersionThree = () => {
     toggle ? setToggle(false) : setToggle(true);
   };
 
-  // const buyMarketItem = async (item) => {
-  //   await (
-  //     await marketplace1.purchaseItem(item.itemId, { value: item.totalPrice })
-  //   ).wait();
-  //   loadMarketplaceItems();
-  // };
-  const buyMarketItem = async () => {
-    
-    try {
-      const { ethereum } = window;
-      if (ethereum) {
-        
-        const provider = new ethers.providers.Web3Provider(ethereum, "any");
-        const signer = provider.getSigner();
-        const nft2 = new ethers.Contract(nftAddress, nftABI, signer);
-        setNft2(nft2);
-        const marketplace2 = new ethers.Contract(
-          marketplaceAddress,
-          marketplaceABI,
-          signer
-        );
-
-        
-        
-       
-      }
-    } catch (error) {
-      console.error(error.message);
-      
-    }
-    
-  };
+ 
+  const buyMarketItem = async (item) => {
+    await (await marketplace2.purchaseItem(item.itemId, { value: item.totalPrice })).wait()
+    loadMarketplaceItems()
+  }
   const navigate = useNavigate();
 
   const toggleSwitcher = () => {
