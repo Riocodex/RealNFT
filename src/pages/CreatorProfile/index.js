@@ -231,7 +231,7 @@ const CreateProfile = () => {
                     aria-controls="CreateItem"
                     aria-selected="true"
                   >
-                    Owned
+                     Listed Items
                   </button>
                 </li>
 
@@ -246,7 +246,7 @@ const CreateProfile = () => {
                     aria-controls="Liked"
                     aria-selected="false"
                   >
-                    Liked
+                    Purchases
                   </button>
                 </li>
 
