@@ -225,6 +225,32 @@ const CreateProfile = () => {
     var image = document.getElementById(event.target.name)
     image.src = URL.createObjectURL(event.target.files[0])
   }
+  const loadPurchasedItems = async () => {
+    try {
+     
+      const {ethereum} = window;
+
+      if (ethereum) {
+        const provider = new ethers.providers.Web3Provider(ethereum, "any");
+        const signer = provider.getSigner();
+        const nft2 = new ethers.Contract(nftAddress, nftABI, signer);
+        setNft2(nft2);
+        const marketplace2 = new ethers.Contract(
+          marketplaceAddress,
+          marketplaceABI,
+          signer
+        );
+
+        
+        
+       
+      }
+    } catch (error) {
+      console.error(error.message);
+      
+    }
+    
+  };
 
   return (
     <>
