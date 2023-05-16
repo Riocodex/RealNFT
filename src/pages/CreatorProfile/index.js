@@ -655,7 +655,7 @@ const CreateProfile = ({currentAccount}) => {
                   
                   {/* end row */}
                 </div>
-                {/* if value select on sale */}
+                {/* if value selected is sold*/}
                 <div
                   className="tab-pane fade"
                   id="Sale"
