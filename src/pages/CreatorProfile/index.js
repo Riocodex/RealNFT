@@ -458,9 +458,21 @@ const CreateProfile = ({currentAccount}) => {
          
                   {/*end row*/}
                 </div> :(
-                  <main style={{ padding: "1rem 0" }}>
-                  <h2>No listed assets</h2>
-                </main>
+                   <div className="row justify-content-center">
+                   <div className="col-lg-5 col-md-8 text-center">
+                     <img src={ofcDesk} className="img-fluid" alt="" />
+
+                     <div className="content">
+                       <h5 className="mb-4">No Items</h5>
+                       <p className="text-muted">
+                         Show your appreciation for other's work by liking the
+                         shots you love. We'll collect all of your likes here
+                         for you to revisit anytime.
+                       </p>
+                     </div>
+                   </div>
+                   {/* end col */}
+                 </div>
                 )}
                   
                 </div>
