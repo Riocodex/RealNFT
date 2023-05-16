@@ -250,7 +250,7 @@ const CreateProfile = () => {
                   </button>
                 </li>
 
-                <li className="nav-item" role="presentation">
+                {/* <li className="nav-item" role="presentation">
                   <button
                     className="nav-link"
                     id="Sale-tab"
@@ -263,7 +263,7 @@ const CreateProfile = () => {
                   >
                     On Sale
                   </button>
-                </li>
+                </li> */}
 
                 {/* <li className="nav-item" role="presentation">
                   <button
