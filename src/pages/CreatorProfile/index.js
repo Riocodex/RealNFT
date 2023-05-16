@@ -307,7 +307,7 @@ const CreateProfile = ({currentAccount}) => {
                     aria-controls="CreateItem"
                     aria-selected="true"
                   >
-                     Listed Items
+                     Purchases
                   </button>
                 </li>
 
@@ -322,7 +322,7 @@ const CreateProfile = ({currentAccount}) => {
                     aria-controls="Liked"
                     aria-selected="false"
                   >
-                    Purchases
+                    Listed Items
                   </button>
                 </li>
 
@@ -375,7 +375,7 @@ const CreateProfile = ({currentAccount}) => {
                   <div className="row row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 row-cols-1 g-4">
                     {purchases.map((item, idx) => (
              
-              <div className="col" key={data?.title}>
+              <div className="col" key={idx}>
                 <div className="card nft-items nft-primary rounded-md shadow overflow-hidden mb-1 p-3">
                   <div className="d-flex justify-content-between">
                     <div className="img-group">
@@ -404,12 +404,12 @@ const CreateProfile = ({currentAccount}) => {
                       }}
                     >
                       <img
-                        src={data?.image}
+                        src={item.image}
                         className="img-fluid"
                         alt=""
                       />
                     </a>
-                    {data?.type && (
+                    {/* {data?.type && (
                       <div className="position-absolute top-0 start-0 m-2">
                         <a
                           href=""
@@ -419,8 +419,8 @@ const CreateProfile = ({currentAccount}) => {
                           Rentals
                         </a>
                       </div>
-                    )}
-                    <div className={`${data?.id ? '' : 'hide-data'} position-absolute bottom-0 start-0 m-2 bg-gradient-primary text-white title-dark rounded-pill px-3`}>
+                    )} */}
+                    {/* <div className={`${data?.id ? '' : 'hide-data'} position-absolute bottom-0 start-0 m-2 bg-gradient-primary text-white title-dark rounded-pill px-3`}>
                       <i className="uil uil-clock"></i>
                       <Countdown
                         date={data?.id}
@@ -430,7 +430,7 @@ const CreateProfile = ({currentAccount}) => {
                           </span>
                         )}
                       />
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="card-body content position-relative p-0 mt-3">
@@ -442,14 +442,14 @@ const CreateProfile = ({currentAccount}) => {
                       }}
                       className="title text-dark h6"
                     >
-                      {data?.title}
+                      {item.name}
                     </a>
 
                     <div className="d-flex justify-content-between mt-2">
-                      <small className="rate fw-bold">200,000 USDC</small>
-                      <small className="text-dark fw-bold">
+                      <small className="rate fw-bold">{ethers.utils.formatEther(item.totalPrice)}  ETH</small>
+                      {/* <small className="text-dark fw-bold">
                         1 out of 10
-                      </small>
+                      </small> */}
                     </div>
                   </div>
                 </div>
