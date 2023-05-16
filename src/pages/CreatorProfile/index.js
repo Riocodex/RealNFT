@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom'
 import { FiCamera } from 'react-icons/fi'
 import Countdown from 'react-countdown'
 import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
 import { ethers } from "ethers"
-import { useState } from 'react'
 import StyleSwitcher from '../../components/StyleSwitcher'
 import {
   client01, client02, client03, client04, client05, client06, client08,
@@ -200,6 +199,25 @@ const CreateProfile = () => {
       image: item5,
     },
   ]
+
+  const [items, setItems] = useState([]);
+  // const [marketplace1, setMarketplace1] = useState({});
+  // const [nft1, setNft1] = useState({});
+  const [marketplace2, setMarketplace2] = useState({});
+  const [nft2, setNft2] = useState({});
+  const [toggle, setToggle] = useState(false);
+  const [item, setItem] = useState({});
+
+  useEffect(() => {
+    console.log({ items });
+  }, [items]);
+
+  //
+
+  const nftAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+  const nftABI = nftData.abi;
+  const marketplaceAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
+  const marketplaceABI = marketplaceData.abi;
 
   const loadFile = function (event) {
     var image = document.getElementById(event.target.name)
