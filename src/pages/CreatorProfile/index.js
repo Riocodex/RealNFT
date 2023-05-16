@@ -515,28 +515,118 @@ const CreateProfile = ({currentAccount}) => {
                 )}
                   
                 </div>
-                {/* if value select like */}
+                {/* if value select Listed */}
                 <div
                   className="tab-pane fade"
                   id="Liked"
                   role="tabpanel"
                   aria-labelledby="Liked-tab"
                 >
-                  <div className="row justify-content-center">
-                    <div className="col-lg-5 col-md-8 text-center">
-                      <img src={ofcDesk} className="img-fluid" alt="" />
-
-                      <div className="content">
-                        <h5 className="mb-4">No Items</h5>
-                        <p className="text-muted">
-                          Show your appreciation for other's work by liking the
-                          shots you love. We'll collect all of your likes here
-                          for you to revisit anytime.
-                        </p>
-                      </div>
+                  
+                  {listedItems.length > 0 ?
+                  <div className="row row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 row-cols-1 g-4">
+                    {listedItems.map((item, idx) => (
+             
+              <div className="col" key={idx}>
+                <div className="card nft-items nft-primary rounded-md shadow overflow-hidden mb-1 p-3">
+                  <div className="d-flex justify-content-between">
+                    <div className="img-group">
+                   
+                    
+                    
                     </div>
-                    {/* end col */}
+
+                    <span className="like-icon shadow-sm">
+                      <a
+                        href=""
+                        onClick={e => e.preventDefault()}
+                        className="text-muted icon"
+                      >
+                        <i className="mdi mdi-18px mdi-heart mb-0"></i>
+                      </a>
+                    </span>
                   </div>
+
+                  <div className="nft-image rounded-md mt-3 position-relative overflow-hidden">
+                    <a
+                      href="/item-detail"
+                      onClick={e => {
+                        e.preventDefault()
+                        navigate('/item-detail')
+                      }}
+                    >
+                      <img
+                        src={item.image}
+                        className="img-fluid"
+                        alt=""
+                      />
+                    </a>
+                    {/* {data?.type && (
+                      <div className="position-absolute top-0 start-0 m-2">
+                        <a
+                          href=""
+                          onClick={e => e.preventDefault()}
+                          className="badge badge-link bg-primary"
+                        >
+                          Rentals
+                        </a>
+                      </div>
+                    )} */}
+                    {/* <div className={`${data?.id ? '' : 'hide-data'} position-absolute bottom-0 start-0 m-2 bg-gradient-primary text-white title-dark rounded-pill px-3`}>
+                      <i className="uil uil-clock"></i>
+                      <Countdown
+                        date={data?.id}
+                        renderer={({ days, hours, minutes, seconds }) => (
+                          <span>
+                            {days}:{hours}:{minutes}:{seconds}
+                          </span>
+                        )}
+                      />
+                    </div> */}
+                  </div>
+
+                  <div className="card-body content position-relative p-0 mt-3">
+                    <a
+                      href="/item-detail"
+                      onClick={e => {
+                        e.preventDefault()
+                        navigate('/item-detail')
+                      }}
+                      className="title text-dark h6"
+                    >
+                      {item.name}
+                    </a>
+
+                    <div className="d-flex justify-content-between mt-2">
+                      <small className="rate fw-bold">{ethers.utils.formatEther(item.totalPrice)}  ETH</small>
+                      {/* <small className="text-dark fw-bold">
+                        1 out of 10
+                      </small> */}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+         
+                  {/*end row*/}
+                </div> :(
+                   <div className="row justify-content-center">
+                   <div className="col-lg-5 col-md-8 text-center">
+                     <img src={ofcDesk} className="img-fluid" alt="" />
+
+                     <div className="content">
+                       <h5 className="mb-4">No Items</h5>
+                       <p className="text-muted">
+                         Show your appreciation for other's work by liking the
+                         shots you love. We'll collect all of your likes here
+                         for you to revisit anytime.
+                       </p>
+                     </div>
+                   </div>
+                   {/* end col */}
+                 </div>
+                )}
+                  
                   {/* end row */}
                 </div>
                 {/* if value select on sale */}
