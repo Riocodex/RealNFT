@@ -269,9 +269,9 @@ const Navbar = ({ web3Handler, account }) => {
                             className="rounded-pill avatar avatar-md-sm img-thumbnail shadow-md"
                             alt=""
                           />
-                          <h6 className="text-dark fw-bold mb-0 ms-1">
+                          {/* <h6 className="text-dark fw-bold mb-0 ms-1">
                             Calvin Carlo
-                          </h6>
+                          </h6> */}
                         </div>
                         <div className="mt-2">
                           <small className="text-start text-dark d-block fw-bold">

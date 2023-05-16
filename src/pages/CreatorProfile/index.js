@@ -4,6 +4,8 @@ import { FiCamera } from 'react-icons/fi'
 import Countdown from 'react-countdown'
 import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
+import { ethers } from "ethers"
+import { useState } from 'react'
 import StyleSwitcher from '../../components/StyleSwitcher'
 import {
   client01, client02, client03, client04, client05, client06, client08,
@@ -206,8 +208,7 @@ const CreateProfile = () => {
 
   return (
     <>
-      {/* Navbar */}
-      <Navbar />
+      
 
       {/* Start Home */}
       <section className="bg-creator-profile">
@@ -250,7 +251,7 @@ const CreateProfile = () => {
                   </button>
                 </li>
 
-                {/* <li className="nav-item" role="presentation">
+                <li className="nav-item" role="presentation">
                   <button
                     className="nav-link"
                     id="Sale-tab"
@@ -261,9 +262,9 @@ const CreateProfile = () => {
                     aria-controls="Sale"
                     aria-selected="false"
                   >
-                    On Sale
+                    Sold
                   </button>
-                </li> */}
+                </li>
 
                 {/* <li className="nav-item" role="presentation">
                   <button
