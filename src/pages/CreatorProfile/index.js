@@ -5,6 +5,8 @@ import Countdown from 'react-countdown'
 import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
 import { ethers } from "ethers"
+import nftData from "../../utils/Nft.json";
+import marketplaceData from "../../utils/Marketplace.json";
 import StyleSwitcher from '../../components/StyleSwitcher'
 import {
   client01, client02, client03, client04, client05, client06, client08,
