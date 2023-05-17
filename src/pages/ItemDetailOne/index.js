@@ -28,63 +28,7 @@ const ItemDetailOne = () => {
     setChoosenItem(item);
   }, [globalItems, id]);
 
-  const activityData = [
-    {
-      title: 'Digital Art Collection',
-      author: 'Panda',
-      time: '1 hours ago',
-      favorite: 'Started Following',
-      image: item1,
-    },
-    {
-      title: 'Skrrt Cobain Official',
-      author: 'ButterFly',
-      time: '2 hours ago',
-      favorite: 'Liked by',
-      image: gif1,
-    },
-    {
-      title: 'Wow! That Brain Is Floating',
-      author: 'ButterFly',
-      time: '2 hours ago',
-      favorite: 'Liked by',
-      image: item2,
-    },
-  ]
-  const createdData = [
-    {
-      image: home4,
-      title: '1406 Chimney Rock Dr, Allen, TX 75002',
-      id: 'May 29, 2022 6:0:0',
-      type: 'GIFs',
-      client: client01,
-      author: 'StreetBoy',
-    },
-    {
-      image: home5,
-      title: '1407 Spring St, Allen, TX 75002',
-      id: 'June 03, 2022 5:3:1',
-      type: 'Arts',
-      client: client09,
-      author: 'PandaOne',
-    },
-    {
-      image: home6,
-      title: '1036 Margo Dr, Allen, TX 75013',
-      id: 'June 10, 2022 1:0:1',
-      type: 'GIFs',
-      client: client02,
-      author: 'CutieGirl',
-    },
-    {
-      image: home7,
-      title: '806 Walden Ct, Allen, TX 75002',
-      id: 'June 18, 2022 1:2:1',
-      type: 'Memes',
-      client: client03,
-      author: 'NorseQueen',
-    },
-  ]
+  
   return (
     <>
       {/* Navbar */}
@@ -122,7 +66,7 @@ const ItemDetailOne = () => {
                 <div className="row">
                   <div className="col-md-6 mt-4 pt-2">
                     <h6>Current Price</h6>
-                    <h4 className="mb-0">{ethers.utils.formatEther(chooseItem.totalPrice)}  ETH</h4>
+                    {/* <h4 className="mb-0">{ethers.utils.formatEther(chooseItem.totalPrice)}  ETH</h4> */}
                     <small className="mb-0 text-muted">$450.48USD</small>
                   </div>
 
@@ -365,127 +309,7 @@ const ItemDetailOne = () => {
         </div>
         {/*end container*/}
 
-        <div className="container mt-100 mt-60">
-          <div className="row justify-content-center">
-            <div className="col">
-              <div className="section-title text-center mb-4 pb-2">
-                <h4 className="title mb-4">Related Auction Items</h4>
-                <p className="text-muted para-desc mb-0 mx-auto">
-                  We are a huge marketplace dedicated to connecting great
-                  artists of all Superex with their fans and unique token
-                  collectors!
-                </p>
-              </div>
-            </div>
-            {/*end col*/}
-          </div>
-          {/*end row*/}
-
-          <div className="row row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 row-cols-1">
-            {createdData?.map(data => {
-              return (
-                <div className="col mt-4 pt-2" key={data?.title}>
-                  <div className="card nft-items nft-primary nft-auction rounded-md shadow overflow-hidden mb-1 p-3">
-                    <div className="d-flex align-items-center justify-content-between">
-                      <div className="d-flex align-items-center">
-                        <img
-                          src={data?.client}
-                          alt="user"
-                          className="avatar avatar-sm-sm img-thumbnail border-0 shadow-sm rounded-circle"
-                        />
-                        <a
-                          href=""
-                          onClick={e => e.preventDefault()}
-                          className="text-dark small creator-name h6 mb-0 ms-2"
-                        >
-                          @{data?.author}
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="nft-image rounded-md mt-3 position-relative overflow-hidden">
-                      <a
-                        href="/item-detail"
-                        onClick={e => {
-                          e.preventDefault()
-                          navigate('/item-detail')
-                        }}
-                      >
-                        <img src={data?.image} className="img-fluid" alt="" />
-                      </a>
-                      <div className="position-absolute top-0 start-0 m-2">
-                        <a
-                          href=""
-                          onClick={e => e.preventDefault()}
-                          className="badge badge-link bg-primary"
-                        >
-                          {data?.type}
-                        </a>
-                      </div>
-                      <div className="position-absolute top-0 end-0 m-2">
-                        <span className="like-icon shadow-sm">
-                          <a
-                            href=""
-                            onClick={e => e.preventDefault()}
-                            className="text-muted icon"
-                          >
-                            <i className="mdi mdi-18px mdi-heart mb-0"></i>
-                          </a>
-                        </span>
-                      </div>
-
-                      {/* <div className="position-absolute bottom-0 start-0 m-2 h5 bg-gradient-primary text-white title-dark rounded-pill px-3">
-                        <i className="uil uil-clock"></i>{' '}
-                        <Countdown
-                          date={data?.id}
-                          renderer={({ days, hours, minutes, seconds }) => (
-                            <span>
-                              {days}:{hours}:{minutes}:{seconds}
-                            </span>
-                          )}
-                        />
-                      </div> */}
-                    </div>
-
-                    <div className="card-body content position-relative p-0 mt-3">
-                      <a
-                        href="/item-detail"
-                        onClick={e => {
-                          e.preventDefault()
-                          navigate('/item-detail')
-                        }}
-                        className="title text-dark h6"
-                      >
-                        {data?.title}
-                      </a>
-
-                      <div className="d-flex align-items-center justify-content-between mt-3">
-                        <div className="">
-                          <small className="mb-0 d-block fw-semibold">
-                            Current Bid:
-                          </small>
-                          <small className="rate fw-bold">20.5 ETH</small>
-                        </div>
-                        <a
-                          href="/item-detail"
-                          onClick={e => {
-                            e.preventDefault()
-                            navigate('/item-detail')
-                          }}
-                          className="btn btn-icon btn-pills btn-primary"
-                        >
-                          <i className="uil uil-shopping-bag"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )
-            })}
-            {/*end col*/}
-          </div>
-          {/*end row*/}
-        </div>
+        
         {/*end container*/}
       </section>
       {/*end section*/}
