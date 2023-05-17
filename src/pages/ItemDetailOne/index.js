@@ -1,13 +1,32 @@
 import React, { useState,useEffect } from 'react'
 import { useNavigate, useParams } from "react-router-dom";
 import Footer from '../../components/Footer'
+import { useItemContext } from "../../contexts/ItemContext";
+import { ethers } from "ethers";
 import Navbar from '../../components/Navbar'
 import StyleSwitcher from '../../components/StyleSwitcher'
 import Countdown from 'react-countdown'
 import { client01, client02, client03, client08, client09, client10, item1, item2, gif1, gif2, itemDetail1,home9, home4, home5, home6, home7, home8,closeSvg } from '../../components/imageImport'
 
 const ItemDetailOne = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const { id } = useParams();
+  const { globalItems } = useItemContext();
+  console.log("ROUTE ID => ", id);
+
+  const [chooseItem, setChoosenItem] = useState({});
+
+  useEffect(() => {
+    if (!globalItems?.length) return;
+
+    const item = globalItems.find((_item) => {
+      const itemID = ethers.utils.formatEther(_item?.itemId);
+      return itemID === id;
+    });
+
+    if (!item) return;
+    setChoosenItem(item);
+  }, [globalItems, id]);
 
   const activityData = [
     {
@@ -78,7 +97,7 @@ const ItemDetailOne = () => {
             <div className="col-md-6">
               <div className="sticky-bar">
                 <img
-                  src={home9}
+                  src={chooseItem.image}
                   className="img-fluid rounded-md shadow"
                   alt=""
                 />
@@ -90,23 +109,24 @@ const ItemDetailOne = () => {
                 <div className="title-heading">
                 
                   <h4 className="h3 fw-bold mb-0">
-                  600{' '}
+                  {/* 600{' '}
                     <span className="text-gradient-primary">Grimsworth Ct</span><button className=' m-2 p-2'>
                     <h1>X</h1>
                 </button> <br />{' '}
                     <span className="text-gradient-primary">Allen</span>{' '}
-                    TX 75002
+                    TX 75002 */}
+                    {chooseItem.name}
                   </h4>
                 </div>
 
                 <div className="row">
                   <div className="col-md-6 mt-4 pt-2">
-                    <h6>Current Bid</h6>
-                    <h4 className="mb-0">4.85 ETH</h4>
+                    <h6>Current Price</h6>
+                    <h4 className="mb-0">{ethers.utils.formatEther(chooseItem.totalPrice)}  ETH</h4>
                     <small className="mb-0 text-muted">$450.48USD</small>
                   </div>
 
-                  <div className="col-md-6 mt-4 pt-2">
+                  {/* <div className="col-md-6 mt-4 pt-2">
                     <h6>Auction Ending In</h6>
                     <Countdown
                       date={'Aug 20, 2022 1:6:3'}
@@ -116,7 +136,7 @@ const ItemDetailOne = () => {
                         </span>
                       )}
                     />
-                  </div>
+                  </div> */}
 
                   <div className="col-12 mt-4 pt-2">
                     <a
@@ -199,7 +219,7 @@ const ItemDetailOne = () => {
                         aria-labelledby="detail-tab"
                       >
                         <p className="text-muted">
-                        No HOA! Welcome to your new home in the heart of Allen! This darling single-story 3 BR 2 BA is situated on a peaceful cul-de-sac in a friendly and quiet neighborhood, perfect for families with kids or pets. With a huge lot, you'll have all the
+                       {chooseItem.description}
                         </p>
                         {/* <p className="text-muted">
                           What does it mean? Biomechanics is the study of the
@@ -261,9 +281,9 @@ const ItemDetailOne = () => {
                              
                             </h5>
                             <br/>
-                            <h6>Bedrooms: <small className="text-muted">4</small></h6>
-                            <h6>Bathrooms: <small className="text-muted">2</small></h6>
-                            <h6>Full Bathrooms: <small className="text-muted">2</small></h6>
+                            <h6>Bedrooms: <small className="text-muted">{chooseItem.bedrooms}</small></h6>
+                            <h6>Bathrooms: <small className="text-muted">{chooseItem.bathrooms}</small></h6>
+                            {/* <h6>Full Bathrooms: <small className="text-muted">2</small></h6> */}
                           </div>
                         </div>
 

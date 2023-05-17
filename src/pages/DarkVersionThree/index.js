@@ -490,14 +490,12 @@ const DarkVersionThree = () => {
                       </div>
 
                       <div className="card-body content position-relative">
-                        <a
-                          // href="/"
-                          onClick={() => toggleProp(item)}
-                          key={idx}
+                        <p
+                         
                           className="title text-dark h6"
                         >
                           {item.name}
-                        </a>
+                        </p>
 
                         <div className="d-flex align-items-center justify-content-between mt-3">
                           <div className="">
