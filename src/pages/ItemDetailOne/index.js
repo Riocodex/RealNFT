@@ -2,6 +2,8 @@ import React, { useState,useEffect } from 'react'
 import { useNavigate, useParams } from "react-router-dom";
 import Footer from '../../components/Footer'
 import { useItemContext } from "../../contexts/ItemContext";
+import nftData from "../../utils/Nft.json";
+import marketplaceData from "../../utils/Marketplace.json";
 import { ethers } from "ethers";
 import Navbar from '../../components/Navbar'
 import StyleSwitcher from '../../components/StyleSwitcher'
@@ -28,7 +30,105 @@ const ItemDetailOne = () => {
     setChoosenItem(item);
   }, [globalItems, id]);
 
-  
+  const activityData = [
+    {
+      title: 'Digital Art Collection',
+      author: 'Panda',
+      time: '1 hours ago',
+      favorite: 'Started Following',
+      image: item1,
+    },
+    {
+      title: 'Skrrt Cobain Official',
+      author: 'ButterFly',
+      time: '2 hours ago',
+      favorite: 'Liked by',
+      image: gif1,
+    },
+    {
+      title: 'Wow! That Brain Is Floating',
+      author: 'ButterFly',
+      time: '2 hours ago',
+      favorite: 'Liked by',
+      image: item2,
+    },
+  ]
+  const createdData = [
+    {
+      image: home4,
+      title: '1406 Chimney Rock Dr, Allen, TX 75002',
+      id: 'May 29, 2022 6:0:0',
+      type: 'GIFs',
+      client: client01,
+      author: 'StreetBoy',
+    },
+    {
+      image: home5,
+      title: '1407 Spring St, Allen, TX 75002',
+      id: 'June 03, 2022 5:3:1',
+      type: 'Arts',
+      client: client09,
+      author: 'PandaOne',
+    },
+    {
+      image: home6,
+      title: '1036 Margo Dr, Allen, TX 75013',
+      id: 'June 10, 2022 1:0:1',
+      type: 'GIFs',
+      client: client02,
+      author: 'CutieGirl',
+    },
+    {
+      image: home7,
+      title: '806 Walden Ct, Allen, TX 75002',
+      id: 'June 18, 2022 1:2:1',
+      type: 'Memes',
+      client: client03,
+      author: 'NorseQueen',
+    },
+  ]
+
+  const [items, setItems] = useState([]);
+  // const [marketplace1, setMarketplace1] = useState({});
+  // const [nft1, setNft1] = useState({});
+  const [marketplace2, setMarketplace2] = useState({});
+  const [nft2, setNft2] = useState({});
+  const [toggle, setToggle] = useState(false);
+  const [item, setItem] = useState({});
+
+  useEffect(() => {
+    console.log({ items });
+  }, [items]);
+
+  //
+
+  const nftAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+  const nftABI = nftData.abi;
+  const marketplaceAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
+  const marketplaceABI = marketplaceData.abi;
+
+  const buyItems = async () => {
+    try {
+      const { ethereum } = window;
+      if (ethereum) {
+        // setMarketplace1(marketplace);
+        // setNft1(nft);
+        const provider = new ethers.providers.Web3Provider(ethereum, "any");
+        const signer = provider.getSigner();
+        
+        setNft2(nft2);
+        const marketplace2 = new ethers.Contract(
+          marketplaceAddress,
+          marketplaceABI,
+          signer
+        );
+        
+        
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       {/* Navbar */}
@@ -66,21 +166,10 @@ const ItemDetailOne = () => {
                 <div className="row">
                   <div className="col-md-6 mt-4 pt-2">
                     <h6>Current Price</h6>
-                    {/* <h4 className="mb-0">{ethers.utils.formatEther(chooseItem.totalPrice)}  ETH</h4> */}
+                    <h4 className="mb-0">{ethers.utils.formatEther(chooseItem.totalPrice)}  ETH</h4>
                     <small className="mb-0 text-muted">$450.48USD</small>
                   </div>
 
-                  {/* <div className="col-md-6 mt-4 pt-2">
-                    <h6>Auction Ending In</h6>
-                    <Countdown
-                      date={'Aug 20, 2022 1:6:3'}
-                      renderer={({ days, hours, minutes, seconds }) => (
-                        <span>
-                          {days}:{hours}:{minutes}:{seconds}
-                        </span>
-                      )}
-                    />
-                  </div> */}
 
                   <div className="col-12 mt-4 pt-2">
                     <a
