@@ -166,7 +166,7 @@ const ItemDetailOne = () => {
                 <div className="row">
                   <div className="col-md-6 mt-4 pt-2">
                     <h6>Current Price</h6>
-                    <h4 className="mb-0">{ethers.utils.formatEther(chooseItem.totalPrice)}  ETH</h4>
+                    {/* <h4 className="mb-0">{ethers.utils.formatEther(chooseItem.totalPrice)}  ETH</h4> */}
                     <small className="mb-0 text-muted">$450.48USD</small>
                   </div>
 
@@ -183,8 +183,7 @@ const ItemDetailOne = () => {
                     <button
                       onclick={buyItems}
                       className="btn btn-l btn-pills btn-primary"
-                      data-bs-toggle="modal"
-                      data-bs-target="#NftBuynow"
+                      
                     >
                       <i className="mdi mdi-cart fs-5 me-2"></i> Buy Now
                     </button>
