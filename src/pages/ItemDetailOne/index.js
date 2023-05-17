@@ -123,7 +123,7 @@ const ItemDetailOne = () => {
           signer
         );
         
-        
+        await (await marketplace2.purchaseItem(item.itemId, { value: item.totalPrice })).wait()
       }
     } catch (error) {
       console.log(error);
@@ -180,14 +180,14 @@ const ItemDetailOne = () => {
                     >
                       <i className="mdi mdi-gavel fs-5 me-2"></i> Place a Bid
                     </a>
-                    <a
-                      href="#"
+                    <button
+                      onclick={buyItems}
                       className="btn btn-l btn-pills btn-primary"
                       data-bs-toggle="modal"
                       data-bs-target="#NftBuynow"
                     >
                       <i className="mdi mdi-cart fs-5 me-2"></i> Buy Now
-                    </a>
+                    </button>
                   </div>
                 </div>
 
