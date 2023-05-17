@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 import { FiArrowRight } from "react-icons/fi";
@@ -474,18 +474,24 @@ const DarkVersionThree = () => {
               style={{ justifyContent: "left" }}
             >
               {items.map((item, idx) => {
+                console.log("this is sis item",item)
+                console.log("itemId",ethers.utils.formatEther(item?.itemId))
+
                 return (
                   <div className="col picture-item" key={idx}>
                     <div className="card bg-white nft-items nft-primary rounded-md shadow overflow-hidden mb-1">
                       <div className="nft-image position-relative overflow-hidden">
-                        <a href="/" onClick={() => toggleProp(item)} key={idx}>
+                        {/* <a  onClick={() => toggleProp(item)} key={idx}>
                           <img src={item.image} className="img-fluid" alt="" />
-                        </a>
+                        </a> */}
+                        <Link to={`/item/${ethers.utils.formatEther(item?.itemId)}`}   key={idx}>
+                          <img src={item.image} className="img-fluid" alt="" />
+                        </Link>
                       </div>
 
                       <div className="card-body content position-relative">
                         <a
-                          href="/"
+                          // href="/"
                           onClick={() => toggleProp(item)}
                           key={idx}
                           className="title text-dark h6"
@@ -502,15 +508,10 @@ const DarkVersionThree = () => {
                               {ethers.utils.formatEther(item.totalPrice)}  ETH
                             </small>
                           </div>
-                          {/* <a
-                            href=""
-                            onClick={() => toggleProp(item)}
-                            key={idx}
-                            className="btn btn-icon btn-pills btn-primary"
-                          >
-                            <i className="uil uil-shopping-bag"></i>
-                          </a> */}
+                         
+                          <button className="btn btn-icon btn-pills btn-primary">
                           <i onClick={() => buyMarketItem(item)} className="uil uil-shopping-bag"></i>
+                          </button>
                         </div>
                       </div>
                     </div>

@@ -1,71 +1,110 @@
-import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
-import Footer from '../../components/Footer'
-import Navbar from '../../components/Navbar'
-import Countdown from 'react-countdown'
-import StyleSwitcher from '../../components/StyleSwitcher'
-import { client01, client02, client03, client08, client09, item1, item2, gif1, gif2, itemDetail,home9,home1, home2, home3, home4, home5, home6, home7, home8 } from '../../components/imageImport'
+import React, { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
+import Countdown from "react-countdown";
+import StyleSwitcher from "../../components/StyleSwitcher";
+import {
+  client01,
+  client02,
+  client03,
+  client08,
+  client09,
+  item1,
+  item2,
+  gif1,
+  gif2,
+  itemDetail,
+  home9,
+  home1,
+  home2,
+  home3,
+  home4,
+  home5,
+  home6,
+  home7,
+  home8,
+} from "../../components/imageImport";
+import { useItemContext } from "../../contexts/ItemContext";
+import { ethers } from "ethers";
 
 const ItemDetailTwo = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const { id } = useParams();
+  const { globalItems } = useItemContext();
+  console.log("ROUTE ID => ", id);
+
+  const [chooseItem, setChoosenItem] = useState({});
+
+  useEffect(() => {
+    if (!globalItems?.length) return;
+
+    const item = globalItems.find((_item) => {
+      const itemID = ethers.utils.formatEther(_item?.itemId);
+      return itemID === id;
+    });
+
+    if (!item) return;
+    setChoosenItem(item);
+  }, [globalItems, id]);
 
   const activityData = [
     {
-      title: 'Digital Art Collection',
-      author: 'Panda',
-      time: '1 hours ago',
-      favorite: 'Started Following',
+      title: "Digital Art Collection",
+      author: "Panda",
+      time: "1 hours ago",
+      favorite: "Started Following",
       image: item1,
     },
     {
-      title: 'Skrrt Cobain Official',
-      author: 'ButterFly',
-      time: '2 hours ago',
-      favorite: 'Liked by',
+      title: "Skrrt Cobain Official",
+      author: "ButterFly",
+      time: "2 hours ago",
+      favorite: "Liked by",
       image: gif1,
     },
     {
-      title: 'Wow! That Brain Is Floating',
-      author: 'ButterFly',
-      time: '2 hours ago',
-      favorite: 'Liked by',
+      title: "Wow! That Brain Is Floating",
+      author: "ButterFly",
+      time: "2 hours ago",
+      favorite: "Liked by",
       image: item2,
     },
-  ]
+  ];
   const createdData = [
     {
       image: home1,
-      title: '7702 Nocona Dr, Parker, TX 75002',
-      id: 'May 29, 2022 6:0:0',
-      type: 'Rentals',
+      title: "7702 Nocona Dr, Parker, TX 75002",
+      id: "May 29, 2022 6:0:0",
+      type: "Rentals",
       client: client01,
-      author: 'StreetBoy',
+      author: "StreetBoy",
     },
     {
       image: home2,
-      title: '205 Douglas Dr, Wylie, TX 75098',
-      id: 'June 03, 2022 5:3:1',
-      type: 'Homes',
+      title: "205 Douglas Dr, Wylie, TX 75098",
+      id: "June 03, 2022 5:3:1",
+      type: "Homes",
       client: client09,
-      author: 'PandaOne',
+      author: "PandaOne",
     },
     {
       image: home4,
-      title: '104 Fairmount Dr, Wylie, TX 75098',
-      id: 'June 10, 2022 1:0:1',
-      type: 'Rentals',
+      title: "104 Fairmount Dr, Wylie, TX 75098",
+      id: "June 10, 2022 1:0:1",
+      type: "Rentals",
       client: client02,
-      author: 'CutieGirl',
+      author: "CutieGirl",
     },
     {
       image: home5,
-      title: 'Buildable plan: Mooreville, Inspiration, Wylie, TX 75098',
-      id: 'June 18, 2022 1:2:1',
-      type: 'Homes',
+      title: "Buildable plan: Mooreville, Inspiration, Wylie, TX 75098",
+      id: "June 18, 2022 1:2:1",
+      type: "Homes",
       client: client03,
-      author: 'NorseQueen',
+      author: "NorseQueen",
     },
-  ]
+  ];
 
   return (
     <>
@@ -80,9 +119,7 @@ const ItemDetailTwo = () => {
         <div className="container">
           <div className="row mt-5">
             <div className="col py-5 py-sm-0 my-5 my-sm-0">
-              <div className="play-icon">
-             
-              </div>
+              <div className="play-icon"></div>
             </div>
             {/*end col*/}
           </div>
@@ -103,14 +140,11 @@ const ItemDetailTwo = () => {
                   <div className="col">
                     <div className="title-heading text-center">
                       <h4 className="h3 fw-bold mb-0">
-                         
-                      1649 Jude Dr{' '}
-                        <span className="text-gradient-primary">Allen,</span>{' '}
-                        <br />{' '}
-                        <span className="text-gradient-primary">
-                        TX
-                        </span>{' '}
-                        75002
+                        {/* 1649 Jude Dr{" "}
+                        <span className="text-gradient-primary">Allen,</span>{" "}
+                        <br /> <span className="text-gradient-primary">TX</span>{" "}
+                        75002 */}
+                        {chooseItem?.name}
                       </h4>
                     </div>
 
@@ -127,7 +161,7 @@ const ItemDetailTwo = () => {
                         <div className="text-center">
                           <h6>Auction Ending In</h6>
                           <Countdown
-                            date={'Aug 20, 2022 1:6:3'}
+                            date={"Aug 20, 2022 1:6:3"}
                             renderer={({ days, hours, minutes, seconds }) => (
                               <span>
                                 {days}:{hours}:{minutes}:{seconds}
@@ -179,7 +213,6 @@ const ItemDetailTwo = () => {
                               Details
                             </button>
                           </li>
-                          
 
                           <li className="nav-item" role="presentation">
                             <button
@@ -195,8 +228,6 @@ const ItemDetailTwo = () => {
                               Bids
                             </button>
                           </li>
-
-                        
                         </ul>
 
                         <div
@@ -209,14 +240,25 @@ const ItemDetailTwo = () => {
                             role="tabpanel"
                             aria-labelledby="detail-tab"
                           >
+                            <div className="text-muted">
+                              <p>
+                                <strong className="text-dark name">4</strong>{" "}
+                                bds |
+                                <strong className="text-dark name"> 5</strong>{" "}
+                                ba |
+                                <strong className="text-dark name">
+                                  {" "}
+                                  3210
+                                </strong>{" "}
+                                sqft
+                              </p>
+                            </div>
                             <p className="text-muted">
-                            <p>
-                            <strong className='text-dark name'>4</strong> bds |
-                            <strong className='text-dark name'> 5</strong> ba  |
-                            <strong className='text-dark name'> 3210</strong> sqft
-                   </p>
+                              <strong className="text-dark name">
+                                Est.payment:{" "}
+                              </strong>
+                              6,675 USDC/mo
                             </p>
-                            <p className='text-muted'><strong className='text-dark name'>Est.payment: </strong>6,675 USDC/mo</p>
                             {/* <p className="text-muted">
                               What does it mean? Biomechanics is the study of
                               the structure, function and motion of the
@@ -243,9 +285,9 @@ const ItemDetailTwo = () => {
                                 <h6 className="mb-0">
                                   <a
                                     href="creator-profile'"
-                                    onClick={e => {
-                                      e.preventDefault()
-                                      navigate('/creator-profile')
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      navigate("/creator-profile");
                                     }}
                                     className="text-dark name"
                                   >
@@ -273,12 +315,13 @@ const ItemDetailTwo = () => {
 
                               <div className="ms-3">
                                 <h6 className="mb-0">
-                                  900,000 USDC <span className="text-muted">by</span>{' '}
+                                  900,000 USDC{" "}
+                                  <span className="text-muted">by</span>{" "}
                                   <a
                                     href="/creator-profile"
-                                    onClick={e => {
-                                      e.preventDefault()
-                                      navigate('/creator-profile')
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      navigate("/creator-profile");
                                     }}
                                     className="text-dark name"
                                   >
@@ -302,13 +345,13 @@ const ItemDetailTwo = () => {
 
                               <div className="ms-3">
                                 <h6 className="mb-0">
-                                  1,000,000 USDC{' '}
-                                  <span className="text-muted">by</span>{' '}
+                                  1,000,000 USDC{" "}
+                                  <span className="text-muted">by</span>{" "}
                                   <a
                                     href="/creator-profile"
-                                    onClick={e => {
-                                      e.preventDefault()
-                                      navigate('/creator-profile')
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      navigate("/creator-profile");
                                     }}
                                     className="text-dark name"
                                   >
@@ -332,13 +375,13 @@ const ItemDetailTwo = () => {
 
                               <div className="ms-3">
                                 <h6 className="mb-0">
-                                  1,225,000 USDC{' '}
-                                  <span className="text-muted">by</span>{' '}
+                                  1,225,000 USDC{" "}
+                                  <span className="text-muted">by</span>{" "}
                                   <a
                                     href="/creator-profile"
-                                    onClick={e => {
-                                      e.preventDefault()
-                                      navigate('/creator-profile')
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      navigate("/creator-profile");
                                     }}
                                     className="text-dark name"
                                   >
@@ -359,7 +402,7 @@ const ItemDetailTwo = () => {
                             aria-labelledby="activity-tab"
                           >
                             <div className="row g-4">
-                              {activityData?.map(data => {
+                              {activityData?.map((data) => {
                                 return (
                                   <div className="col-12" key={data?.title}>
                                     <div className="card activity activity-primary rounded-md shadow p-4">
@@ -373,10 +416,10 @@ const ItemDetailTwo = () => {
 
                                           <div className="position-absolute top-0 start-0 translate-middle px-1 rounded-lg shadow-md bg-white">
                                             {data?.favorite ===
-                                              'Started Following' ? (
+                                            "Started Following" ? (
                                               <i className="mdi mdi-account-check mdi-18px text-success"></i>
                                             ) : data?.favorite ===
-                                              'Liked by' ? (
+                                              "Liked by" ? (
                                               <i className="mdi mdi-heart mdi-18px text-danger"></i>
                                             ) : (
                                               <i className="mdi mdi-format-list-bulleted mdi-18px text-warning"></i>
@@ -387,16 +430,18 @@ const ItemDetailTwo = () => {
                                         <span className="content ms-3">
                                           <a
                                             href=""
-                                            onClick={e => e.preventDefault()}
+                                            onClick={(e) => e.preventDefault()}
                                             className="text-dark title mb-0 h6 d-block"
                                           >
                                             {data?.title}
                                           </a>
                                           <small className="text-muted d-block mt-1">
-                                            {data?.favorite}{' '}
+                                            {data?.favorite}{" "}
                                             <a
                                               href=""
-                                              onClick={e => e.preventDefault()}
+                                              onClick={(e) =>
+                                                e.preventDefault()
+                                              }
                                               className="link fw-bold"
                                             >
                                               @{data?.author}
@@ -410,7 +455,7 @@ const ItemDetailTwo = () => {
                                       </div>
                                     </div>
                                   </div>
-                                )
+                                );
                               })}
                               {/*end col*/}
                             </div>
@@ -447,7 +492,7 @@ const ItemDetailTwo = () => {
           {/*end row*/}
 
           <div className="row row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 row-cols-1">
-            {createdData?.map(data => {
+            {createdData?.map((data) => {
               return (
                 <div className="col mt-4 pt-2" key={data?.title}>
                   <div className="card nft-items nft-primary nft-auction rounded-md shadow overflow-hidden mb-1 p-3">
@@ -460,7 +505,7 @@ const ItemDetailTwo = () => {
                         />
                         <a
                           href=""
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                           className="text-dark small creator-name h6 mb-0 ms-2"
                         >
                           @{data?.author}
@@ -471,9 +516,9 @@ const ItemDetailTwo = () => {
                     <div className="nft-image rounded-md mt-3 position-relative overflow-hidden">
                       <a
                         href="/item-detail"
-                        onClick={e => {
-                          e.preventDefault()
-                          navigate('/item-detail')
+                        onClick={(e) => {
+                          e.preventDefault();
+                          navigate("/item-detail");
                         }}
                       >
                         <img src={data?.image} className="img-fluid" alt="" />
@@ -481,7 +526,7 @@ const ItemDetailTwo = () => {
                       <div className="position-absolute top-0 start-0 m-2">
                         <a
                           href=""
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                           className="badge badge-link bg-primary"
                         >
                           {data?.type}
@@ -491,7 +536,7 @@ const ItemDetailTwo = () => {
                         <span className="like-icon shadow-sm">
                           <a
                             href=""
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                             className="text-muted icon"
                           >
                             <i className="mdi mdi-18px mdi-heart mb-0"></i>
@@ -500,7 +545,7 @@ const ItemDetailTwo = () => {
                       </div>
 
                       <div className="position-absolute bottom-0 start-0 m-2 h5 bg-gradient-primary text-white title-dark rounded-pill px-3">
-                        <i className="uil uil-clock"></i>{' '}
+                        <i className="uil uil-clock"></i>{" "}
                         <Countdown
                           date={data?.id}
                           renderer={({ days, hours, minutes, seconds }) => (
@@ -515,9 +560,9 @@ const ItemDetailTwo = () => {
                     <div className="card-body content position-relative p-0 mt-3">
                       <a
                         href="/item-detail"
-                        onClick={e => {
-                          e.preventDefault()
-                          navigate('/item-detail')
+                        onClick={(e) => {
+                          e.preventDefault();
+                          navigate("/item-detail");
                         }}
                         className="title text-dark h6"
                       >
@@ -533,9 +578,9 @@ const ItemDetailTwo = () => {
                         </div>
                         <a
                           href="/item-detail-one"
-                          onClick={e => {
-                            e.preventDefault()
-                            navigate('/item-detail-one')
+                          onClick={(e) => {
+                            e.preventDefault();
+                            navigate("/item-detail-one");
                           }}
                           className="btn btn-icon btn-pills btn-primary"
                         >
@@ -545,7 +590,7 @@ const ItemDetailTwo = () => {
                     </div>
                   </div>
                 </div>
-              )
+              );
             })}
             {/*end col*/}
           </div>
@@ -782,10 +827,10 @@ const ItemDetailTwo = () => {
                       className="form-check-label text-muted ms-2"
                       htmlFor="AcceptT&C"
                     >
-                      I Accept{' '}
+                      I Accept{" "}
                       <a
                         href=""
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                         className="text-primary"
                       >
                         Terms And Condition
@@ -820,10 +865,10 @@ const ItemDetailTwo = () => {
             <div className="modal-body text-center p-4">
               <h3>Yahhhoooo! 🎉</h3>
               <h6 className="text-muted mb-0">
-                You successfully purchased{' '}
+                You successfully purchased{" "}
                 <a href="" className="text-reset">
                   <u>XYZ nft</u>
-                </a>{' '}
+                </a>{" "}
                 from Rethestate
               </h6>
 
@@ -841,11 +886,11 @@ const ItemDetailTwo = () => {
 
               <ul className="list-unstyled social-icon mb-0 mt-4">
                 {[
-                  'uil uil-facebook-f',
-                  'uil uil-instagram',
-                  'uil uil-linkedin',
-                  'uil uil-dribbble',
-                  'uil uil-twitter',
+                  "uil uil-facebook-f",
+                  "uil uil-instagram",
+                  "uil uil-linkedin",
+                  "uil uil-dribbble",
+                  "uil uil-twitter",
                 ]?.map((data, index) => {
                   return (
                     <li className="list-inline-item lh-1 mr-1" key={index}>
@@ -853,7 +898,7 @@ const ItemDetailTwo = () => {
                         <i className={data}></i>
                       </a>
                     </li>
-                  )
+                  );
                 })}
               </ul>
             </div>
@@ -868,7 +913,7 @@ const ItemDetailTwo = () => {
       {/* Style switcher  */}
       <StyleSwitcher />
     </>
-  )
-}
+  );
+};
 
-export default ItemDetailTwo
+export default ItemDetailTwo;
