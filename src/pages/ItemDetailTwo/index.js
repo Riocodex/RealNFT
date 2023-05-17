@@ -114,7 +114,7 @@ const ItemDetailTwo = () => {
       {/* Start Home */}
       <section
         className="bg-half-260 d-table w-100"
-        style={{ background: `url(${home9}) center` }}
+        style={{ background: `url(${chooseItem.image}) center` }}
       >
         <div className="container">
           <div className="row mt-5">

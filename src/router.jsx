@@ -174,9 +174,9 @@ export default function Router() {
           <Route exact path="/creators" element={<Creator />} />
           <Route exact path="/wallet" element={<Wallet />} />
           <Route exact path="/activity" element={<Activity />} />
-          <Route exact path="/item-detail" element={<ItemDetailOne />} />
+          <Route exact path="/item/:id" element={<ItemDetailOne />} />
           <Route exact path="/item-detail-two" element={<ItemDetailTwo />} />
-          <Route exact path="/item/:id" element={<ItemDetailTwo />} />
+          {/* <Route exact path="/item/:id" element={<ItemDetailTwo />} /> */}
           <Route exact path="/auction" element={<Auction />} />
           <Route exact path="/explore-four" element={<ExploreFour />} />
           <Route exact path="/explore-three" element={<ExploreThree />} />
