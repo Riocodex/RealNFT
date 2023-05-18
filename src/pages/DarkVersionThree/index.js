@@ -134,6 +134,7 @@ const DarkVersionThree = () => {
     await (await marketplace2.purchaseItem(item.itemId, { value: item.totalPrice })).wait()
     loadMarketplaceItems()
   }
+  
   const navigate = useNavigate();
 
   const toggleSwitcher = () => {
