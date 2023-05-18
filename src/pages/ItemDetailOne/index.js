@@ -107,7 +107,71 @@ const ItemDetailOne = () => {
   const marketplaceAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
   const marketplaceABI = marketplaceData.abi;
 
-  const buyItems = async () => {
+  const loadMarketplaceItems = async () => {
+    try {
+      const { ethereum } = window;
+      if (ethereum) {
+        // setMarketplace1(marketplace);
+        // setNft1(nft);
+        const provider = new ethers.providers.Web3Provider(ethereum, "any");
+        const signer = provider.getSigner();
+        const nft2 = new ethers.Contract(nftAddress, nftABI, signer);
+        setNft2(nft2);
+        const marketplace2 = new ethers.Contract(
+          marketplaceAddress,
+          marketplaceABI,
+          signer
+        );
+        setMarketplace2(marketplace2);
+        // console.log("this is marketplace1", marketplace1);
+        console.log("this is marketplace2", marketplace2);
+
+        const itemCount = await marketplace2.itemCount();
+
+        console.log("ITEM COUNT => ", itemCount);
+
+        let items = [];
+        for (let i = 1; i <= itemCount; i++) {
+          const item = await marketplace2.items(i);
+          if (!item.sold) {
+            // get uri url from nft contract
+            const uri = await nft2.tokenURI(item.tokenId);
+            // use uri to fetch the nft metadata stored on ipfs
+            const response = await fetch(uri);
+            const metadata = await response.json();
+            // get total price of item (item price + fee)
+            const totalPrice = await marketplace2.getTotalPrice(item.itemId);
+            // Add item to items array
+            items.push({
+              totalPrice,
+              itemId: item.itemId,
+              seller: item.seller,
+              name: metadata.name,
+              description: metadata.description,
+              image: metadata.image,
+              bedrooms: metadata.bedrooms,
+              bathrooms: metadata.bathrooms,
+              yearBuilt: metadata.yearBuilt,
+              units: metadata.units,
+              propertyAddress: metadata.propertyAddress,
+              propertyCity: metadata.propertyCity,
+              propertyState: metadata.propertyState,
+              zipCode: metadata.zipCode,
+              increment: metadata.increment,
+              endTime: metadata.endTime,
+            });
+          }
+        }
+
+        setItems(items);
+        console.log("these are items", items);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const buyItems = async (chooseItem) => {
     try {
       const { ethereum } = window;
       if (ethereum) {
@@ -123,7 +187,8 @@ const ItemDetailOne = () => {
           signer
         );
         
-        await (await marketplace2.purchaseItem(item.itemId, { value: item.totalPrice })).wait()
+        await (await marketplace2.purchaseItem(chooseItem.itemId, { value: chooseItem.totalPrice })).wait()
+        loadMarketplaceItems()
       }
     } catch (error) {
       console.log(error);
@@ -181,7 +246,7 @@ const ItemDetailOne = () => {
                       <i className="mdi mdi-gavel fs-5 me-2"></i> Place a Bid
                     </a>
                     <button
-                      onclick={buyItems}
+                      onClick={buyItems}
                       className="btn btn-l btn-pills btn-primary"
                       
                     >
@@ -315,8 +380,18 @@ const ItemDetailOne = () => {
                             <br/>
                             <h6>Bedrooms: <small className="text-muted">{chooseItem.bedrooms}</small></h6>
                             <h6>Bathrooms: <small className="text-muted">{chooseItem.bathrooms}</small></h6>
-                            {/* <h6>Full Bathrooms: <small className="text-muted">2</small></h6> */}
-                          </div>
+
+
+                            <h5 className="mb-0">
+                              House Properties <span className="text-muted"></span>{' '}
+                             
+                            </h5>
+                            <h6>State: <small className="text-muted">{chooseItem.propertyState}</small></h6>
+                            <h6>City: <small className="text-muted">{chooseItem.propertyCity}</small></h6>
+                            <h6>Address: <small className="text-muted">{chooseItem.propertyAddress}</small></h6>
+                            <h6>Zipcode: <small className="text-muted">{chooseItem.zipCode}</small></h6>
+                            
+                            </div>
                         </div>
 
                        
