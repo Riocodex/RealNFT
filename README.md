@@ -1,17 +1,2 @@
-STEPS
-update frontend✅
-users can connect with metamask✅
-load smartcontracts✅
-    users can upload works
-        each work uploaded by any user will be showed in the homepage
-        each work uploaded will show in the users dashboard
-    users can buy nft
-        each nft bought will be showed in the dashboard
-        each nft bought will be removed from the home page
-
-
-Advanced things to add
-each nft bought can be relisted
-tokemonics
-
+I want  to share a video showcasing the creation of the Rethestate project a real estate asset marketplace using NFTs. Please find the link to the video here: https://www.loom.com/share/eeb22e5861774b2f86b93563086f8427. I apologize for the audio quality in the video; I understand it may affect the clarity of the explanations.Enjoy!!
 
