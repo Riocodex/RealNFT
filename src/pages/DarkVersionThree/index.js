@@ -94,7 +94,7 @@ const DarkVersionThree = () => {
             const metadata = await response.json();
             // get total price of item (item price + fee)
             const totalPrice = await marketplace2.getTotalPrice(item.itemId);
-            // Add item to items arra
+            // Add item to items array
             items.push({
               totalPrice,
               itemId: item.itemId,
