@@ -188,4 +188,4 @@ export {
   about, cta, creator, logo48, single, lightLogo, office, ofcDesk, prodToCard,
   MetaMask_Fox, aave, Airswap, Compound, DDEX, defiSaver, dYdX, IDEX, Kyber, Maker, NUO, PoolTogether, Sablier, set, Uniswap, Zerion, logoDark, whiteLogo,
   itemDetail, itemDetail1, ErrorImage, united, community,
-  playStore, app, iconLogo, character,home1, home2, home3, home4, home5, home6, home7, home8, home9, home10,iconLogo2,exploreidea,exploreidea2,exploreidea3,tokenLogo,tokenLogo2,aboutUs1,aboutUs2,aboutUs3,getStarted1,getStarted2,closeSvg}
+  playStore, app, iconLogo, character,home1, home2, home3, home4, home5, home6, home7, home8, home9, home10,iconLogo2,exploreidea,exploreidea2,exploreidea3,tokenLogo,tokenLogo2,aboutUs1,aboutUs2,aboutUs3,getStarted1,getStarted2,closeSvg,rio,nick}

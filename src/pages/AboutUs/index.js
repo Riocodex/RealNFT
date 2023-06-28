@@ -17,24 +17,25 @@ const AboutUs = () => {
   const navigate = useNavigate()
   const clientRecord = [
     {
-      image: client01,
-      name: 'Calvin Carlo',
-      position: 'Designer',
+      image: nick,
+      name: 'Nicholas Valladares',
+      position: 'Realtor',
     },
     {
-      image: client02,
-      name: 'Aliana Rosy',
-      position: 'Designer',
+      image: rio,
+      name: 'Onwuka Rosario',
+      position: 'Software Developer',
     },
+    
     {
       image: client08,
       name: 'Micheal Carlo',
-      position: 'Designer',
+      position: 'Mortgage Broker',
     },
     {
       image: client03,
       name: 'Sofia Razaq',
-      position: 'Designer',
+      position: 'Software Developer',
     },
   ]
 
