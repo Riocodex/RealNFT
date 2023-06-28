@@ -25,6 +25,8 @@ import client10 from '../../assets/images/client/10.jpg'
 import client11 from '../../assets/images/client/11.jpg'
 import client12 from '../../assets/images/client/12.jpg'
 import client13 from '../../assets/images/client/13.jpg'
+import rio from '../../assets/images/me.jpeg'
+import nick from '../../assets/images/nic.jpeg'
 
 import c1 from '../../assets/images/collection/01.jpg'
 import c2 from '../../assets/images/collection/02.jpg'

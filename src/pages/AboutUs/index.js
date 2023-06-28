@@ -6,7 +6,7 @@ import Footer from '../../components/Footer'
 // image import
 import {
   bg1, bg2, bg3,
-  client01, client02, client03, client04, client05, client06, client07, client08,
+  client01, client02, client03, client04, client05, client06, client07, client08,rio,nick,
   bg01,
   about, aboutUs1, aboutUs2, aboutUs3, aboutUs4, tokenLogo2,iconLogo2
 } from "../../components/imageImport";
