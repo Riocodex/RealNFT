@@ -6,9 +6,9 @@ import Footer from '../../components/Footer'
 // image import
 import {
   bg1, bg2, bg3,
-  client01, client02, client03, client04, client05, client06, client07, client08,rio,nick,
-  bg01,
-  about, aboutUs1, aboutUs2, aboutUs3, aboutUs4, tokenLogo2,iconLogo2
+  client01, client02, client03, client04, client05, client06, client07, client08,rio,steven,
+  digimintlogo,
+  digimintlogo1, aboutUs1, aboutUs2, aboutUs3, aboutUs4, tokenLogo2,iconLogo2
 } from "../../components/imageImport";
 
 import StyleSwitcher from '../../components/StyleSwitcher'
@@ -17,9 +17,9 @@ const AboutUs = () => {
   const navigate = useNavigate()
   const clientRecord = [
     {
-      image: nick,
-      name: 'Nicholas Valladares',
-      position: 'Realtor',
+      image: steven,
+      name: 'Steven Camilleri',
+      position: 'Mentor, SuperVisor',
     },
     {
       image: rio,
@@ -27,38 +27,9 @@ const AboutUs = () => {
       position: 'Software Developer',
     },
     
-    {
-      image: client08,
-      name: 'Micheal Carlo',
-      position: 'Mortgage Broker',
-    },
-    {
-      image: client03,
-      name: 'Sofia Razaq',
-      position: 'Software Developer',
-    },
   ]
 
-  const blogRecord = [
-    {
-      image: bg1,
-      title: 'Mindfulness Activities for Kids & Toddlers with NFT',
-      createdBy: '@callyjoe',
-      type: 'Arts',
-    },
-    {
-      image: bg2,
-      title: 'Save Thousands Of Lives Through This NFT',
-      createdBy: '@kristyhoney',
-      type: 'Illustration',
-    },
-    {
-      image: bg3,
-      title: 'A place where technology meets craftsmanship',
-      createdBy: '@pandaone',
-      type: 'Music',
-    },
-  ]
+ 
 
   return (
     <>
@@ -66,7 +37,7 @@ const AboutUs = () => {
       {/* Start Home */}
       <section
         className="bg-half-170 d-table w-100"
-        style={{ background: `url(${aboutUs3}) bottom` }}
+        style={{ background: `url(${bg1}) bottom` }}
       >
         <div className="bg-overlay bg-gradient-overlay-2"></div>
         <div className="container">
@@ -99,7 +70,7 @@ const AboutUs = () => {
                       navigate('/')
                     }}
                   >
-                    RealNFT
+                    DIGIMINT
                   </a>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
@@ -134,7 +105,7 @@ const AboutUs = () => {
           <div className="row align-items-center">
             <div className="col-lg-5 col-md-6">
               <div className="about-image position-relative">
-                <img src={iconLogo2} className="img-fluid rounded shadow" alt="" />
+                <img src={digimintlogo} className="img-fluid rounded shadow" alt="" />
               </div>
             </div>
             {/*end col*/}
@@ -145,22 +116,28 @@ const AboutUs = () => {
                   Creative Vision & Mission
                 </h6>
                 <h4 className="title mb-4">
-                  We  buy, sell, and manage <br />  real estate assets. 
+                  We  buy, sell, and manage <br />  digital art assets. 
                 </h4>
                 <p className="text-muted">
-                Our goal is to create a more efficient, transparent, and secure real estate market that is accessible to everyone, regardless of location or background. We do this by using smart contracts on the Ethereum network to digitize real estate assets and automate many of the manual processes that are still done today.
+                Welcome to Digimint, a pioneering force in the world of digital art and Non-Fungible Tokens (NFTs). Founded on the principles of innovation, authenticity, and a passion for the evolving landscape of digital creativity, Digimint stands at the forefront of the NFT market.
                 </p>
                 <p className="text-muted mb-4">
-                The benefits of this system are numerous, including reduced costs and increased liquidity for what has traditionally been a relatively illiquid asset. By simplifying the process and eliminating waste, we believe that we can create a truly decentralized and barrier-free real estate marketplace that is accessible to all types of end users.
+                Our Mission
+At Digimint, our mission is to redefine the art market by providing a seamless platform for the creation, discovery, and exchange of digital art through NFTs. We believe in empowering artists and collectors alike, bridging the gap between the traditional and the digital realms.
                 </p>
                 <p className="text-muted">
-                However, we know that this is a massive undertaking that requires the support and participation of property owners around the world. That’s why we have designed our platform to be governed by property owners, ensuring that their interests are always at the forefront of our decision-making.
+                Trusted Marketplace
+As a trusted marketplace, Digimint facilitates secure transactions for both buyers and sellers. Our cutting-edge technology ensures transparency and authenticity, safeguarding the integrity of every NFT transaction on our platform.
                 </p>
                 <p className="text-muted mb-4">
-                We believe that the adoption of cryptographic blockchain technology by property owners worldwide is the key to unlocking the full potential of the real estate market and creating a more equitable and prosperous future for all.
+                Supporting Artists
+Digimint is dedicated to supporting artists in their digital journey. We provide a platform for artists to showcase their work, connect with a global audience, and monetize their creations in the digital realm. Our commitment extends beyond transactions; we aim to foster a community where artists thrive.
+
+
                 </p>
                 <p className="text-muted mb-0">
-                We believe that the adoption of cryptographic blockchain technology by property owners worldwide is the key to unlocking the full potential of the real estate market and creating a more equitable and prosperous future for all.
+                Join Us in Shaping the Future of Digital Art
+Whether you are an artist looking to share your creations, a collector seeking unique and valuable digital assets, or a supporter of the arts, Digimint welcomes you to join us in shaping the future of digital art and NFTs.
                 </p>
 
 
@@ -230,7 +207,7 @@ const AboutUs = () => {
           </div>
           {/*end row*/}
         </div>
-        {/*end container*/}
+       
 
         <div className="container mt-100 mt-60">
           <div className="row justify-content-center">
@@ -239,7 +216,7 @@ const AboutUs = () => {
                 <h4 className="title mb-4">Our Team</h4>
                 <p className="text-muted para-desc mb-0 mx-auto">
                   We are a huge marketplace dedicated to connecting great
-                  artists of all RealNFT with their fans and unique token
+                  artists of all DIGIMINT with their fans and unique token
                   collectors!
                 </p>
               </div>
@@ -301,7 +278,7 @@ const AboutUs = () => {
       {/* End Section */}
 
       {/* Footer */}
-      <Footer />
+      {/* <Footer  /> */}
 
       {/* Style switcher  */}
       <StyleSwitcher />

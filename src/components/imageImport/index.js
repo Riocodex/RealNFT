@@ -25,8 +25,11 @@ import client10 from '../../assets/images/client/10.jpg'
 import client11 from '../../assets/images/client/11.jpg'
 import client12 from '../../assets/images/client/12.jpg'
 import client13 from '../../assets/images/client/13.jpg'
-import rio from '../../assets/images/me.jpeg'
-import nick from '../../assets/images/nic.jpeg'
+import rio from '../../assets/images/me.jpg'
+import steven from '../../assets/images/steven.png'
+import digimintlogo from "../../assets/images/digimintlogo.png"
+import digimintlogo1 from "../../assets/images/digimintlogo1.webp"
+
 
 import c1 from '../../assets/images/collection/01.jpg'
 import c2 from '../../assets/images/collection/02.jpg'
@@ -163,6 +166,7 @@ import exploreidea3 from "../../assets/images/rethestate/exploreidea3.jpg"
 import tokenLogo from "../../assets/images/rethestate/08.png"
 import tokenLogo2 from "../../assets/images/rethestate/13.png"
 
+
 //aboutus
 import aboutUs1 from "../../assets/images/rethestate/aboutus1.jpg"
 import aboutUs2 from "../../assets/images/rethestate/aboutus1.jpeg"
@@ -188,4 +192,4 @@ export {
   about, cta, creator, logo48, single, lightLogo, office, ofcDesk, prodToCard,
   MetaMask_Fox, aave, Airswap, Compound, DDEX, defiSaver, dYdX, IDEX, Kyber, Maker, NUO, PoolTogether, Sablier, set, Uniswap, Zerion, logoDark, whiteLogo,
   itemDetail, itemDetail1, ErrorImage, united, community,
-  playStore, app, iconLogo, character,home1, home2, home3, home4, home5, home6, home7, home8, home9, home10,iconLogo2,exploreidea,exploreidea2,exploreidea3,tokenLogo,tokenLogo2,aboutUs1,aboutUs2,aboutUs3,getStarted1,getStarted2,closeSvg,rio,nick}
+  playStore, app, iconLogo, character,home1, home2, home3, home4, home5, home6, home7, home8, home9, home10,iconLogo2,exploreidea,exploreidea2,exploreidea3,tokenLogo,tokenLogo2,aboutUs1,aboutUs2,aboutUs3,getStarted1,getStarted2,closeSvg,rio,steven,digimintlogo,digimintlogo1}

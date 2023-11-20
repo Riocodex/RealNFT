@@ -42,8 +42,6 @@ import {
 
 const DarkVersionThree = () => {
   const [items, setItems] = useState([]);
-  // const [marketplace1, setMarketplace1] = useState({});
-  // const [nft1, setNft1] = useState({});
   const [marketplace2, setMarketplace2] = useState({});
   const [nft2, setNft2] = useState({});
   const [toggle, setToggle] = useState(false);
@@ -383,12 +381,10 @@ const DarkVersionThree = () => {
             <div className="col-12">
               <div className="title-heading text-center">
                 <h4 className="heading text-white mb-4 title-dark fw-bold">
-                  The Biggest <br /> Collections of Digital Assets
+                  The Biggest <br /> Collections of Digital Art Assets
                 </h4>
                 <p className="text-white title-dark mb-0 para-desc mx-auto">
-                  Welcome to RETHESTATE, a real estate-based blockchain project
-                  that aims to revolutionize the way we buy, sell, and manage
-                  real estate assets.
+                  Welcome to DIGIMINT
                 </p>
 
                 <div className="mt-4 pt-2">
@@ -424,47 +420,13 @@ const DarkVersionThree = () => {
           <div className="row align-items-end mb-5 pb-3">
             <div className="col-lg-4">
               <div className="section-title mb-4 mb-lg-0">
-                <h4 className="title mb-2">Home Recommendations</h4>
-                <p className="text-muted mb-0">Best Home Recommendations</p>
+                <h4 className="title mb-2">Art Recommendations</h4>
+                <p className="text-muted mb-0">Best Art Recommendations</p>
               </div>
             </div>
             {/*end slide*/}
 
-            <div className="col-lg-8 filters-group-wrap">
-              <div className="filters-group">
-                <ul className="container-filter mb-0 categories-filter text-center list-unstyled">
-                  <li
-                    className={`list-inline-item categories position-relative text-dark ${
-                      type === "all" ? "active" : ""
-                    }`}
-                    data-group="all"
-                    onClick={() => setFilter("all")}
-                  >
-                    <i className="uil uil-browser"></i> All
-                  </li>
-                  <li
-                    className={`list-inline-item categories position-relative text-dark ${
-                      type === "rental" ? "active" : ""
-                    }`}
-                    data-group="rental"
-                    onClick={() => setFilter("rental")}
-                  >
-                    <i className="uil uil-house"></i> Rental
-                  </li>
-
-                  <li
-                    className={`list-inline-item categories position-relative text-dark ${
-                      type === "homes" ? "active" : ""
-                    }`}
-                    data-group="homes"
-                    onClick={() => setFilter("homes")}
-                  >
-                    <i className="uil uil-house"></i> Homes
-                  </li>
-                </ul>
-              </div>
-            </div>
-            {/*end col*/}
+           
           </div>
           {/*end row*/}
 
@@ -521,7 +483,7 @@ const DarkVersionThree = () => {
             </div>
           ) : (
             <main style={{ padding: "1rem 0" }}>
-              <h2>No listed assets</h2>
+              <h2>No listed art works yet.....</h2>
             </main>
           )}
 
@@ -537,231 +499,14 @@ const DarkVersionThree = () => {
           {/*end row*/}
 
           <div className="row">
-            <div className="col mt-4">
-              <div className="text-center">
-                <a
-                  href="/explore"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    navigate("/explore");
-                  }}
-                  className="btn btn-primary rounded-md"
-                >
-                  View More <i className="uil uil-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-            {/*end col*/}
+
           </div>
           {/*end row*/}
         </div>
         {/*end container*/}
 
-        <div className="container mt-100 mt-60">
-          <div className="row align-items-end mb-5 pb-3">
-            <div className="col-lg-4">
-              <div className="section-title mb-4 mb-lg-0">
-                <h4 className="title mb-2">NFT Rentals</h4>
-                <p className="text-muted mb-0">Best NFT Rentals</p>
-              </div>
-            </div>
-            {/*end slide*/}
-
-            <div className="col-lg-8 filters-group-wrap">
-              <div className="filters-group">
-                <ul className="container-filter mb-0 categories-filter text-center list-unstyled">
-                  <li
-                    className={`list-inline-item categories position-relative text-dark ${
-                      type === "all" ? "active" : ""
-                    }`}
-                    data-group="all"
-                    onClick={() => setFilter("all")}
-                  >
-                    <i className="uil uil-browser"></i> All
-                  </li>
-                  <li
-                    className={`list-inline-item categories position-relative text-dark ${
-                      type === "rental" ? "active" : ""
-                    }`}
-                    data-group="rental"
-                    onClick={() => setFilter("rental")}
-                  >
-                    <i className="uil uil-house"></i> Rental
-                  </li>
-                </ul>
-              </div>
-            </div>
-            {/*end col*/}
-          </div>
-          {/*end row*/}
-
-          <div
-            className="row row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 row-cols-1 g-4"
-            id="grid"
-            style={{ justifyContent: "left" }}
-          >
-            {allData?.map((data) => {
-              return (
-                <div className="col picture-item" key={data?.title}>
-                  <div className="card bg-white nft-items nft-primary rounded-md shadow overflow-hidden mb-1">
-                    <div className="nft-image position-relative overflow-hidden">
-                      <a
-                        href="/item-detail"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          navigate("/item-detail");
-                        }}
-                      >
-                        <img src={data?.image} className="img-fluid" alt="" />
-                      </a>
-                      <div className="position-absolute top-0 start-0 m-3">
-                        <a
-                          href=""
-                          onClick={(e) => e.preventDefault()}
-                          className="badge badge-link bg-primary"
-                        >
-                          {data?.type}
-                        </a>
-                      </div>
-                      <div className="position-absolute top-0 end-0 m-3">
-                        <span className="like-icon shadow-sm">
-                          <a
-                            href=""
-                            onClick={(e) => e.preventDefault()}
-                            className="text-muted icon"
-                          >
-                            <i className="mdi mdi-18px mdi-heart mb-0"></i>
-                          </a>
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="card-body content position-relative">
-                      <a
-                        href="/item-detail"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          navigate("/item-detail");
-                        }}
-                        className="title text-dark h6"
-                      >
-                        {data?.title}
-                      </a>
-                      <br />
-                      <br />
-
-                      <div className="d-flex align-items-center justify-content-between mt-3">
-                        <div className="">
-                          <small className="mb-0 d-block fw-semibold">
-                            Current Bid:
-                          </small>
-                          <small className="rate fw-bold">200 USDC</small>
-                        </div>
-                        <a
-                          href=""
-                          onClick={(e) => {
-                            e.preventDefault();
-                            // navigate('/item-detail-one')
-                          }}
-                          className="btn btn-icon btn-pills btn-primary"
-                        >
-                          <i className="uil uil-shopping-bag"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-            {/*end col*/}
-          </div>
-          {/*end row*/}
-
-          <div className="row">
-            <div className="col mt-4">
-              <div className="text-center">
-                <a
-                  href="/explore"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    navigate("/explore");
-                  }}
-                  className="btn btn-primary rounded-md"
-                >
-                  View More <i className="uil uil-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-            {/*end col*/}
-          </div>
-          {/*end row*/}
-        </div>
-        {/* end container */}
-        <div className="container mt-100 mt-60">
-          <div className="row justify-content-center">
-            <div className="col">
-              <div className="section-title text-center mb-5 pb-3">
-                <h4 className="title mb-4">Popular Realtors</h4>
-                <p className="text-muted para-desc mb-0 mx-auto">
-                  Our mission and main focus at RETHESTATE is to simplify what
-                  can often be a tedious and time-consuming process for
-                  homeowners, prospective buyers, and tenants.
-                </p>
-              </div>
-            </div>
-            {/*end col*/}
-          </div>
-          {/*end row*/}
-
-          <div className="row g-4">
-            {bestCreator?.map((data) => {
-              return (
-                <div className="col-lg-3 col-md-4" key={data?.name}>
-                  <div className="creators creator-primary creators-two bg-white d-flex align-items-center p-3 rounded-md shadow">
-                    <div className="d-flex align-items-center">
-                      <div className="position-relative d-inline-flex">
-                        <img
-                          src={data?.image}
-                          className="avatar avatar-md-sm shadow-md rounded-pill"
-                          alt=""
-                        />
-                        {data?.profileIcon && (
-                          <>
-                            <span className="verified text-primary">
-                              <i className="mdi mdi-check-decagram"></i>
-                            </span>
-                            <span className="online text-success">
-                              <i className="mdi mdi-circle"></i>
-                            </span>
-                          </>
-                        )}
-                      </div>
-
-                      <div className="ms-3">
-                        <h6 className="mb-0">
-                          <a
-                            href=""
-                            onClick={(e) => {
-                              e.preventDefault();
-                              // navigate('/creators')
-                            }}
-                            className="text-dark name"
-                          >
-                            {data?.name}
-                          </a>
-                        </h6>
-                        <small className="text-muted">2000 USDC</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-            {/*end col*/}
-          </div>
-          {/*end row*/}
-        </div>
-        {/*end container*/}
+       
+        
 
         <div className="container mt-100 mt-60">
           <div className="row">
@@ -786,21 +531,7 @@ const DarkVersionThree = () => {
                   </div>
                   {/*end col*/}
 
-                  <div className="col-md-4 mt-4 pt-2 mt-sm-0 pt-sm-0">
-                    <div className="text-md-end text-center">
-                      <a
-                        href=""
-                        onClick={(e) => {
-                          e.preventDefault();
-                          // navigate('/become-creator')
-                        }}
-                        className="btn btn-primary rounded-md"
-                      >
-                        Click here <i className="uil uil-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                  {/*end col*/}
+                 
                 </div>
                 {/*end row*/}
               </div>
@@ -811,131 +542,14 @@ const DarkVersionThree = () => {
         </div>
         {/*end container*/}
 
-        <div className="container mt-100 mt-60">
-          <div className="row justify-content-center">
-            <div className="col">
-              <div className="section-title text-center mb-5 pb-3">
-                <h4 className="title mb-4">Live Auctions</h4>
-                <p className="text-muted para-desc mb-0 mx-auto">
-                  We are a huge marketplace a real estate-based blockchain
-                  project that aims to revolutionize the way we buy, sell, and
-                  manage real estate assets.
-                </p>
-              </div>
-            </div>
-            {/*end col*/}
-          </div>
-          {/*end row*/}
-
-          <div className="row row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 row-cols-1 g-4">
-            {liveAuctions?.map((data, index) => {
-              return (
-                <div className="col" key={index}>
-                  <div className="card nft-items nft-primary rounded-md shadow overflow-hidden mb-1 p-3">
-                    <div className="d-flex align-items-center justify-content-between">
-                      <div className="d-flex align-items-center">
-                        <img
-                          src={data?.client}
-                          alt="user"
-                          className="avatar avatar-sm-sm img-thumbnail border-0 shadow-sm rounded-circle"
-                        />
-                        <a
-                          href=""
-                          onClick={(e) => e.preventDefault()}
-                          className="text-dark small creator-name h6 mb-0 ms-2"
-                        >
-                          @{data?.author}
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="nft-image rounded-md mt-3 position-relative overflow-hidden">
-                      <a
-                        href=""
-                        onClick={(e) => {
-                          e.preventDefault();
-                          // navigate('/item-detail-one')
-                        }}
-                      >
-                        <img src={data?.image} className="img-fluid" alt="" />
-                      </a>
-                      <div className="position-absolute top-0 start-0 m-2">
-                        <span className="badge badge-link bg-primary">
-                          {data?.type}
-                        </span>
-                      </div>
-                      <div className="position-absolute top-0 end-0 m-2">
-                        <span className="like-icon shadow-sm">
-                          <a
-                            href=""
-                            onClick={(e) => e.preventDefault()}
-                            className="text-muted icon"
-                          >
-                            <i className="mdi mdi-18px mdi-heart mb-0"></i>
-                          </a>
-                        </span>
-                      </div>
-
-                      <div className="position-absolute bottom-0 start-0 m-2 bg-gradient-primary text-white title-dark rounded-pill px-3">
-                        <i className="uil uil-clock"></i>{" "}
-                        <Countdown
-                          date={data?.id}
-                          renderer={({ days, hours, minutes, seconds }) => (
-                            <span>
-                              {days}:{hours}:{minutes}:{seconds}
-                            </span>
-                          )}
-                        />
-                      </div>
-                    </div>
-
-                    <div className="card-body content position-relative p-0 mt-3">
-                      <a
-                        href=""
-                        onClick={(e) => {
-                          e.preventDefault();
-                          // navigate('/item-detail-one')
-                        }}
-                        className="title text-dark h6"
-                      >
-                        {data?.title}
-                      </a>
-
-                      <div className="d-flex align-items-center justify-content-between mt-3">
-                        <div className="">
-                          <small className="mb-0 d-block fw-semibold">
-                            Current Bid:
-                          </small>
-                          <small className="rate fw-bold">20.5 ETH</small>
-                        </div>
-                        <a
-                          href=""
-                          onClick={(e) => {
-                            e.preventDefault();
-                            // navigate('/item-detail-one')
-                          }}
-                          className="btn btn-icon btn-pills btn-primary"
-                        >
-                          <i className="uil uil-shopping-bag"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-            {/*end col*/}
-          </div>
-          {/*end row*/}
-        </div>
-        {/*end container*/}
+       
 
         {/*end container*/}
       </section>
       {/*end section*/}
       {/* End */}
       {/* footer */}
-      <Footer />
+      {/* <Footer /> */}
 
       {/* Style switcher  */}
       <StyleSwitcher />

@@ -12,8 +12,8 @@ var Buffer = require('buffer/').Buffer
 
 //ipfs authorization 
 const ipfsClient = require('ipfs-http-client');
-const PROJECT_ID = env.PROJECT_ID
-const API_SECRET = env.API_KEY_SECRET
+const PROJECT_ID = "2JxLmbuIpIQxW2x2x7Q2UG5qaLv"
+const API_SECRET = "e090f091cad8e0d10abdd17ee55a454e"
 
 const projectId = PROJECT_ID;   // <---------- my Infura Project ID
 
@@ -53,11 +53,10 @@ const UploadWork = ({marketplace,nft}) => {
    
 
   const createNFT = async (event) => {
-    console.log("price : ",price, "name : ",name, "description : ",description, "bedrooms : ",bedrooms, "bathrooms : ",bathrooms, "yearbuilt : ", yearBuilt, "units : ",units, "propertyAddress : ",propertyAddress, "propertyCity : ",  propertyCity, "propertyState : ",propertyState, "zipcode : ",zipCode, "price : ",price, "appliances: ",applicances, "increment time : ",increment, "endtime : ",endTime,"image : ",image  )
+    console.log("price : ",price, "name : ",name, "description : ",description, "image : ",image  )
     event.preventDefault()
     if (
-      !image || !price || !name || !description || !bedrooms || !bathrooms || !yearBuilt || !units
-      || !propertyAddress || !propertyCity || !propertyState || !zipCode || !price || !increment || !endTime ) return
+      !image || !price || !name || !description) return
     try{
       const result = await client.add(JSON.stringify({
           image, name, description, bedrooms, bathrooms,
@@ -82,16 +81,7 @@ const UploadWork = ({marketplace,nft}) => {
     await(await marketplace.makeItem(nft.address, id, listingPrice)).wait()
     alert("NFT successfully Listed please go to home page")
   }
-  // const navigate = useNavigate()
-  
-  // const handleChange = () => {
-  //   const fileUploader = document.querySelector('#input-file')
-  //   const getFile = fileUploader.files
-  //   if (getFile.length !== 0) {
-  //     const uploadedFile = getFile[0]
-  //     readFile(uploadedFile)
-  //   }
-  // }
+ 
 
   const uploadToIPFS = async (event) => {
     event.preventDefault()
@@ -128,7 +118,7 @@ const UploadWork = ({marketplace,nft}) => {
       {/* Start Home */}
       <section
         className="bg-half-170 d-table w-100"
-        style={{ background: `url(${getStarted2}) bottom` }}
+        style={{ background: `url(${bg01}) bottom` }}
       >
         <div className="bg-overlay bg-gradient-overlay-2"></div>
         <div className="container">
@@ -139,7 +129,7 @@ const UploadWork = ({marketplace,nft}) => {
                   Upload Your NFT
                 </h5>
                 <p className="text-white-50 para-desc mx-auto mb-0">
-                  Add your digital assets
+                  Add your digital art assets
                 </p>
               </div>
             </div>
@@ -161,7 +151,7 @@ const UploadWork = ({marketplace,nft}) => {
                     //   navigate('/')
                     // }}
                   >
-                    RealNFT
+                    DIGIMINT
                   </a>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
@@ -230,41 +220,7 @@ const UploadWork = ({marketplace,nft}) => {
                         </a>
                       </li>
 
-                      <li className="px-0 mt-2">
-                        <a
-                          href="/creator-profile-edit"
-                          // onClick={e => {
-                          //   e.preventDefault()
-                          //   navigate('/creator-profile-edit')
-                          // }}
-                          className="d-flex align-items-center text-dark"
-                        >
-                          <span className="fs-6 mb-0">
-                            <i className="uil uil-setting"></i>
-                          </span>
-                          <small className="d-block fw-semibold mb-0 ms-2">
-                            Settings
-                          </small>
-                        </a>
-                      </li>
-
-                      <li className="px-0 mt-2">
-                        <a
-                          href="/lock-screen"
-                          // onClick={e => {
-                          //   e.preventDefault()
-                          //   navigate('/lock-screen')
-                          // }}
-                          className="d-flex align-items-center text-dark"
-                        >
-                          <span className="fs-6 mb-0">
-                            <i className="uil uil-sign-in-alt"></i>
-                          </span>
-                          <small className="d-block fw-semibold mb-0 ms-2">
-                            Logout
-                          </small>
-                        </a>
-                      </li>
+                      
                     </ul>
                   </div>
                 </div>
@@ -315,7 +271,7 @@ const UploadWork = ({marketplace,nft}) => {
                               id="name"
                               type="text"
                               className="form-control"
-                              placeholder="832 Callaway Dr, Allen, TX 75013"
+                              placeholder="My First NFT"
                               onChange={(e) => setName(e.target.value)}
                             />
                           </div>
@@ -331,27 +287,17 @@ const UploadWork = ({marketplace,nft}) => {
                               id="comments"
                               rows="4"
                               className="form-control"
-                              placeholder="This beautifully designed home is sure to impress with its many desirable features. The kitchen is a chef's dream, featuring a large island, walk-in pantry, ss appliances, double oven, and gas cooktop. The open concept kitchen and living room are spacious with tall ceilings, the perfect layout for entertaining guests or relaxing with family. The primary suite is a true retreat, featuring a spacious bedroom with a wall of windows, a large walk-in closet, an ensuite bathroom with dual sinks, deep soaker tub and a semi-frameless shower. A huge first floor office and second floor media room are a few of the bonuses you will enjoy.  With this home the phrase, location, location, location comes to life, the neighborhood is a short distance to all of your shopping and dining needs, with instant access to HWY 75. Allen Station Park is right around the corner and offers baseball, softball fields, trails, skate park, BMX track, and more. Don't miss the opportunity to own this incredible property"
+                              placeholder="My first NFT"
                               onChange={(e) => setDescription(e.target.value)}
                             ></textarea>
                           </div>
                           {/*end col*/}
 
-                          {/* <div className="col-md-6 mb-4">
-                            <label 
-                            onChange={(e) => setType(e.target.value)}
-                            className="form-label fw-bold">Type :</label>
-                            <select className="form-control">
-                              <option>Rental</option>
-                              <option>Home</option>
-                            </select>
-                          </div> */}
-                          {/*end col*/}
 
                           <div className="col-md-6 mb-4">
                             <label className="form-label fw-bold">
                               {' '}
-                              Price in Eth{' '}
+                              Price in Eth{' '} <span className="text-danger">*</span>
                             </label>
                             <input
                               name="time"
@@ -363,184 +309,7 @@ const UploadWork = ({marketplace,nft}) => {
                             />
                           </div>
                           {/*end col*/}
-                          
-                          <div className="col-md-6 mb-4">
-                          <label className="form-label fw-bold">
-                              {' '}
-                              Bedrooms{' '}
-                            </label>
-                            <input
-                              name="time"
-                              type="number"
-                              className="form-control"
-                              id="time"
-                              defaultValue="2"
-                              onChange={(e) => setBedrooms(e.target.value)}
-                            />
-                          </div>
-                          {/*end col*/}
 
-                          <div className="col-md-6 mb-4">
-                            <label className="form-label fw-bold">
-                              {' '}
-                              Bathrooms{' '}
-                            </label>
-                            <input
-                              name="time"
-                              type="number"
-                              className="form-control"
-                              id="time"
-                              defaultValue="2"
-                              onChange={(e) => setBathrooms(e.target.value)}
-                            />
-                          </div>
-                          {/*end col*/}
-
-                          <div className="col-md-6 mb-4">
-                          <label className="form-label fw-bold">
-                              {' '}
-                              Year built{' '}
-                            </label>
-                            <input
-                              name="time"
-                              type="number"
-                              className="form-control"
-                              id="time"
-                              defaultValue="2020"
-                              onChange={(e) => setYearBuilt(e.target.value)}
-                            />
-                          </div>
-                          {/*end col*/}
-
-                          <div className="col-md-6 mb-4">
-                            <label className="form-label fw-bold">
-                              {' '}
-                              Units{' '}
-                            </label>
-                            <input
-                              name="time"
-                              type="number"
-                              className="form-control"
-                              id="time"
-                              defaultValue="2"
-                              onChange={(e) => setUnits(e.target.value)}
-                            />
-                          </div>
-                          {/*end col*/}
-
-                          <div className="col-md-6 mb-4">
-                          <label className="form-label fw-bold">
-                              {' '}
-                              Property Address{' '}
-                            </label>
-                            <input
-                              name="time"
-                              type="text"
-                              className="form-control"
-                              id="time"
-                              defaultValue="21528 Oak Tree Rd, Allen, TX 7500"
-                              onChange={(e) => setPropertyAddress(e.target.value)}
-                            />
-                          </div>
-                          {/*end col*/}
-
-                          <div className="col-md-6 mb-4">
-                            <label className="form-label fw-bold">
-                              {' '}
-                              property city{' '}
-                            </label>
-                            <input
-                              name="time"
-                              type="text"
-                              className="form-control"
-                              id="time"
-                              defaultValue="Miami"
-                              onChange={(e) => setPropetyCity(e.target.value)}
-                            />
-                          </div>
-                          {/*end col*/}
-
-                          <div className="col-md-6 mb-4">
-                          <label className="form-label fw-bold">
-                              {' '}
-                              Property State{' '}
-                            </label>
-                            <input
-                              name="time"
-                              type="text"
-                              className="form-control"
-                              id="time"
-                              defaultValue="Florida"
-                              onChange={(e) => setPropertyState(e.target.value)}
-                            />
-                          </div>
-                          {/*end col*/}
-
-                          <div className="col-md-6 mb-4">
-                            <label className="form-label fw-bold">
-                              {' '}
-                              zip code{' '}
-                            </label>
-                            <input
-                              name="time"
-                              type="number"
-                              className="form-control"
-                              id="time"
-                              defaultValue="33101"
-                              onChange={(e) => setZipCode(e.target.value)}
-                            />
-                          </div>
-                          {/*end col*/}
-
-                          <div className="col-12 mb-4">
-                            <label className="form-label fw-bold">
-                              {' '}
-                              Appliances :{' '}
-                            </label>
-                            <textarea
-                              name="comments"
-                              id="comments"
-                              rows="4"
-                              className="form-control"
-                              placeholder="Appliances included: Electric Cooktop, Electric Oven"
-                              onChange={(e) => setAppliances(e.target.value)}
-                            ></textarea>
-                          </div>
-                          {/*end col*/}
-
-                          <div className="col-12">
-                            <h6>Auction :</h6>
-                          </div>
-
-                          <div className="col-md-6 mb-4">
-                            <label className="form-label fw-bold">
-                              {' '}
-                              Starting Date :{' '}
-                            </label>
-                            <input
-                              name="date"
-                              type="text"
-                              className="form-control start"
-                              placeholder="Select date :"
-                              onChange={(e) => setIncrement(e.target.value)}
-                            />
-                          </div>
-                          {/*end col*/}
-
-                          <div className="col-md-6 mb-4">
-                            <label className="form-label fw-bold">
-                              {' '}
-                              Expiration date :{' '}
-                            </label>
-                            <input
-                              name="date"
-                              type="text"
-                              className="form-control end"
-                              placeholder="Select date :"
-                              onChange={(e) => setEndTime(e.target.value)}
-                            />
-                          </div>
-                          {/*end col*/}
 
                           <div className="col-lg-12">
                             <button
@@ -572,7 +341,7 @@ const UploadWork = ({marketplace,nft}) => {
       {/* End */}
 
       {/* footer */}
-      <Footer />
+      {/* <Footer /> */}
 
       {/* Style switcher  */}
       <StyleSwitcher />

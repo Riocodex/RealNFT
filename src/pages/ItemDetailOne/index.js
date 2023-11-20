@@ -149,16 +149,6 @@ const ItemDetailOne = () => {
               name: metadata.name,
               description: metadata.description,
               image: metadata.image,
-              bedrooms: metadata.bedrooms,
-              bathrooms: metadata.bathrooms,
-              yearBuilt: metadata.yearBuilt,
-              units: metadata.units,
-              propertyAddress: metadata.propertyAddress,
-              propertyCity: metadata.propertyCity,
-              propertyState: metadata.propertyState,
-              zipCode: metadata.zipCode,
-              increment: metadata.increment,
-              endTime: metadata.endTime,
             });
           }
         }
@@ -232,26 +222,7 @@ const ItemDetailOne = () => {
                   <div className="col-md-6 mt-4 pt-2">
                     <h6>Current Price</h6>
                     {/* <h4 className="mb-0">{ethers.utils.formatEther(chooseItem.totalPrice)}  ETH</h4> */}
-                    <small className="mb-0 text-muted">$450.48USD</small>
-                  </div>
-
-
-                  <div className="col-12 mt-4 pt-2">
-                    <a
-                      href="#"
-                      className="btn btn-l btn-pills btn-primary me-2"
-                      data-bs-toggle="modal"
-                      data-bs-target="#NftBid"
-                    >
-                      <i className="mdi mdi-gavel fs-5 me-2"></i> Place a Bid
-                    </a>
-                    <button
-                      onClick={buyItems}
-                      className="btn btn-l btn-pills btn-primary"
-                      
-                    >
-                      <i className="mdi mdi-cart fs-5 me-2"></i> Buy Now
-                    </button>
+                    <small className="mb-0 text-muted">{chooseItem.price} eth</small>
                   </div>
                 </div>
 
@@ -262,50 +233,10 @@ const ItemDetailOne = () => {
                       id="myTab"
                       role="tablist"
                     >
-                      <li className="nav-item" role="presentation">
-                        <button
-                          className="nav-link active"
-                          id="detail-tab"
-                          data-bs-toggle="tab"
-                          data-bs-target="#detailItem"
-                          type="button"
-                          role="tab"
-                          aria-controls="detailItem"
-                          aria-selected="true"
-                        >
-                          Details
-                        </button>
-                      </li>
+                 
 
-                      <li className="nav-item" role="presentation">
-                        <button
-                          className="nav-link"
-                          id="bids-tab"
-                          data-bs-toggle="tab"
-                          data-bs-target="#bids"
-                          type="button"
-                          role="tab"
-                          aria-controls="bids"
-                          aria-selected="false"
-                        >
-                          Facts and Features
-                        </button>
-                      </li>
-
-                      {/* <li className="nav-item" role="presentation">
-                        <button
-                          className="nav-link"
-                          id="activity-tab"
-                          data-bs-toggle="tab"
-                          data-bs-target="#activity"
-                          type="button"
-                          role="tab"
-                          aria-controls="activity"
-                          aria-selected="false"
-                        >
-                          Home Value
-                        </button>
-                      </li> */}
+                  
+                  
                     </ul>
 
                     <div className="tab-content mt-4 pt-2" id="myTabContent">
@@ -316,16 +247,9 @@ const ItemDetailOne = () => {
                         aria-labelledby="detail-tab"
                       >
                         <p className="text-muted">
-                       {chooseItem.description}
+                       Description: {chooseItem.description}
                         </p>
-                        {/* <p className="text-muted">
-                          What does it mean? Biomechanics is the study of the
-                          structure, function and motion of the mechanical
-                          aspects of biological systems, at any level from whole
-                          organisms to organs, cells and cell organelles, using
-                          the methods of mechanics. Biomechanics is a branch of
-                          biophysics.
-                        </p> */}
+                      
                         <h6>Owner</h6>
 
                         <div className="creators creator-primary d-flex align-items-center">
@@ -363,40 +287,7 @@ const ItemDetailOne = () => {
                         role="tabpanel"
                         aria-labelledby="bids-tab"
                       >
-                        <div className="creators creator-primary d-flex align-items-center">
-                          {/* <div className="position-relative">
-                            <img
-                              src={client01}
-                              className="avatar avatar-md-sm shadow-md rounded-pill"
-                              alt=""
-                            />
-                          </div> */}
-
-                          <div className="ms-3">
-                            <h5 className="mb-0">
-                              Bedrooms and Bathrooms <span className="text-muted"></span>{' '}
-                             
-                            </h5>
-                            <br/>
-                            <h6>Bedrooms: <small className="text-muted">{chooseItem.bedrooms}</small></h6>
-                            <h6>Bathrooms: <small className="text-muted">{chooseItem.bathrooms}</small></h6>
-
-
-                            <h5 className="mb-0">
-                              House Properties <span className="text-muted"></span>{' '}
-                             
-                            </h5>
-                            <h6>State: <small className="text-muted">{chooseItem.propertyState}</small></h6>
-                            <h6>City: <small className="text-muted">{chooseItem.propertyCity}</small></h6>
-                            <h6>Address: <small className="text-muted">{chooseItem.propertyAddress}</small></h6>
-                            <h6>Zipcode: <small className="text-muted">{chooseItem.zipCode}</small></h6>
-                            
-                            </div>
-                        </div>
-
-                       
-
-                       
+ 
                       </div>
 
                       <div
@@ -784,7 +675,7 @@ const ItemDetailOne = () => {
       </div>
       {/* Buy Now NFt Modal */}
       {/* footer */}
-      <Footer />
+      {/* <Footer /> */}
 
       {/* Style switcher  */}
       <StyleSwitcher />

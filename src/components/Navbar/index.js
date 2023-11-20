@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect, useMemo } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import { character, client01, lightLogo, logoDark } from '../imageImport'
+import { character, client01, lightLogo, logoDark,digimintlogo } from '../imageImport'
 
 const Navbar = ({ web3Handler, account }) => {
   const [myPublicAddress, setMyPublicAddress] = useState('qhut0...hfteh45')
@@ -130,10 +130,10 @@ const Navbar = ({ web3Handler, account }) => {
           {/* Logo Start*/}
           <a
             className="logo"
-            href="/index"
+            href="/"
             onClick={e => {
               e.preventDefault()
-              navigate('/index')
+              navigate('/')
               setTimeout(() => {
                 activateMenu()
                 toggleSwitcher(false)
@@ -142,13 +142,13 @@ const Navbar = ({ web3Handler, account }) => {
           >
             <span className="">
               <img  
-                src={logoDark}
+                src={digimintlogo}
                 height="26"
                 className={becomeUrl ? 'logo-light-mode' : 'l-dark'}
                 alt=""
               />
               <img
-                src={lightLogo}
+                src={digimintlogo}
                 height="26"
                 className={becomeUrl ? 'logo-dark-mode' : 'l-light'}
                 alt=""
@@ -401,7 +401,7 @@ const Navbar = ({ web3Handler, account }) => {
               
            
               </li>
-              <li className="has-submenu parent-parent-menu-item">
+              {/* <li className="has-submenu parent-parent-menu-item">
                 <a 
                  href="/explore"
                  onClick={e => {
@@ -417,7 +417,7 @@ const Navbar = ({ web3Handler, account }) => {
                 </a>
               
            
-              </li>
+              </li> */}
 
               <li className="has-submenu parent-parent-menu-item">
                 <a 
